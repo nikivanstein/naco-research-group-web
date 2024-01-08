@@ -1,18 +1,6 @@
 
-prof-a:
-    display_name: "Prof A"
-    role: faculty
-
-prof-b:
-    display_name: "Prof B"
-    role: faculty
-
-prof-c:
-    display_name: "Prof C"
-    role: faculty
-
-profx:
-    display_name: "Professor X"
+back:
+    display_name: "Prof. Thomas Bäck"
     webpage: "http://en.wikipedia.org/wiki/Professor_X"
     github: profx
     role: faculty

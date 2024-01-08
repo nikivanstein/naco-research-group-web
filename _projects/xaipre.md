@@ -1,5 +1,6 @@
 ---
 title: Logo Project
+status: active
 
 notitle: true
 

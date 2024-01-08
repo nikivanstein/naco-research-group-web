@@ -1,5 +1,5 @@
-name: Awesome Research Group
-url: http://awesome.example.edu
+name: Natural Computing Group
+url: https://naco.liacs.nl
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
 
@@ -47,7 +47,7 @@ navigation:
     link: /#people
   - title: Research
     link: /research.html
-  - title: Publications
-    link: /publications.html
-  - title: Code
-    link: /code.html
+  - title: Education
+    link: /education.html
+  - title: Contact
+    link: /contact.html
