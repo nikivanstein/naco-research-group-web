@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>{{ site.name }}: {{ page.title }}</title>
+
+        {% include seo.html %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet"
@@ -49,6 +51,12 @@
 
                 </ul>
             </div>
+
+            {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+        </div>
+                {% include page__hero.html %}
+        <div class="container">
+            {% endif %}
 
             {% if page.image %}
                 <img src="{{ page.image }}"

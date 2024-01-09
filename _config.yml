@@ -1,5 +1,6 @@
 name: Natural Computing Group
 url: https://naco.liacs.nl/_site/
+author: "Niki van Stein"
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
 
@@ -32,7 +33,7 @@ roles:
 front_page_news: 8
 
 # Base pathname for links.
-base: '/_site'
+base: ''
 
 # make pages for the _projects folder
 collections:
@@ -51,3 +52,19 @@ navigation:
     link: /education.html
   - title: Contact
     link: /contact.html
+
+
+# Social Sharing
+twitter:
+  username               : &twitter "naco_liacs"
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :  '/img/og-image.png'
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : 'Organization' # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
