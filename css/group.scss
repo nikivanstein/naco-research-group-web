@@ -3,10 +3,20 @@
 
 $gray: #999;
 $light-gray: #EEE;
+$naco-green: #5a9b50;
 
 /* Space out content a bit */
 body {
     padding-top: 20px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: $naco-green;
+}
+
+a {
+    color: $naco-green;
 }
 
 .header {
@@ -53,9 +63,14 @@ a > .fa {
 
 /* Group logo */
 #logo {
-    width: 154px;
-    height: 35px;
+    width: auto;
+    height: 64px;
     margin: 2px 0 8px 0;
+}
+
+.card-columns .card {
+    display: flex;
+    width: 100%;
 }
 
 /* Front page news. */

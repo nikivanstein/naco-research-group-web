@@ -1,5 +1,5 @@
 name: Natural Computing Group
-url: https://naco.liacs.nl
+url: https://naco.liacs.nl/_site/
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
 
@@ -13,16 +13,16 @@ permalink: /blog/:year/:month/:day/:title.html
 roles:
   - key: faculty
     name: Faculty
+  - key: prof
+    name: Group leader
+  - key: aprof
+    name: Senior Researchers
   - key: staff
     name: Staff
   - key: postdoc
     name: Researchers
   - key: grad
     name: Graduate Students
-  - key: ugrad
-    name: Undergraduate Students
-  - key: ugrad-alum
-    name: Past Undergraduate Students
   - key: collab
     name: Collaborators
   - key: alum
@@ -32,7 +32,7 @@ roles:
 front_page_news: 8
 
 # Base pathname for links.
-base: ''
+base: '/_site'
 
 # make pages for the _projects folder
 collections:

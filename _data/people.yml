@@ -1,149 +1,287 @@
 
 back:
     display_name: "Prof. Thomas Bäck"
-    webpage: "http://en.wikipedia.org/wiki/Professor_X"
-    github: profx
-    role: faculty
-    image: /img/people/prof-x.png
-    bio: Professor
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/thomas-back#tab-1"
+    role: prof
+    image: /img/people/back.jpg
+    bio: Professor of Natural Computing
+stein:
+    display_name: "Niki van Stein"
+    webpage: "https://nikivanstein.nl/"
+    github: BasvanStein
+    image: /img/people/stein.jpg
+    bio: Assistant Professor of Explainable AI
+    role: aprof
 
-scott:
-    display_name: "Scott Summers"
-    webpage: "http://en.wikipedia.org/wiki/Cyclops_(comics)"
-    role: staff
-    image: /img/people/scott.png
-    bio: aka Cyclops
+wang:
+    display_name: "Hao Wang"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/hao-wang#tab-1"
+    role: aprof
+    image: /img/people/wang.jpg
+    bio: Assistant Professor of Optimization and Learning
 
-wolverine:
-    display_name: "Wolverine"
-    webpage: "http://en.wikipedia.org/wiki/Wolverine_%28comics%29"
-    github: wolverine
+kononova:
+    display_name: "Anna V. Kononova"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/anna-kononova#tab-1"
+    role: aprof
+    image: /img/people/kononova.png
+    bio: Assistant Professor of Efficient Heuristic Optimization
+
+raponi:
+    display_name: "Elena Raponi"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/elena-raponi#tab-1"
+    role: aprof
+    image: /img/people/raponi.jpg
+    bio: Assistant Professor of Bayesian Optimization
+
+fan:
+    display_name: "Yingjie Fan"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/yingjie-fan#tab-1"
+    role: aprof
+    image: /img/people/fan.png
+    bio: Assistant Professor of Logistics Optimization
+
+emmerich:
+    display_name: "Michael Emmerich"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/michael-emmerich#tab-1"
+    role: aprof
+    image: /img/people/emmerich.png
+    bio: Guest researcher
+
+emmerich:
+    display_name: "Michael Emmerich"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/michael-emmerich#tab-1"
+    role: aprof
+    image: /img/people/emmerich.png
+    bio: Guest researcher
+
+deutz:
+    display_name: "Andre Deutz"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/andre-deutz#tab-1"
+    role: aprof
+    image: /img/people/deutz.jpg
+    bio: Guest lecturer
+
+
+huang:
+    display_name: "Qi Huang"
+    image: /img/people/huang.jpg
+    role: grad
+
+wei:
+    display_name: "Xiaohan Wei"
+    role: grad
+
+saib:
+    display_name: "Waheeda Saib"
+    image: /img/people/saib.jpg
+    role: grad
+
+saib:
+    display_name: "Burak Gülmez"
+    image: /img/people/gulmez.jpg
     role: postdoc
 
-storm:
-    display_name: "Storm"
-    webpage: "http://en.wikipedia.org/wiki/Storm_%28Marvel_Comics%29"
-    role: grad
-    image: /img/people/storm.png
-
-grad-a:
-    display_name: "Grad A"
+chen:
+    display_name: "Chen Chen"
     role: grad
 
-grad-b:
-    display_name: "Graduate Student B With Long Name"
+lamers:
+    display_name: "Christian Lamers"
+    image: /img/people/lamers.jpg
     role: grad
 
-grad-c:
-    display_name: "Grad C"
+antonov:
+    display_name: "Kirill Antonov"
+    image: /img/people/antonov.jpg
     role: grad
 
-grad-d:
-    display_name: "Grad D"
+long:
+    display_name: "Fu-Xing Long"
+    image: /img/people/long.jpg
     role: grad
 
-grad-e:
-    display_name: "Grad E"
+winter:
+    display_name: "Roy de Winter"
+    image: /img/people/winter.jpg
     role: grad
 
-grad-f:
-    display_name: "Grad F"
+zeiser:
+    display_name: "Alexander Zeiser"
+    image: /img/people/zeiser.jpg
     role: grad
 
-grad-g:
-    display_name: "Grad G"
+nguyen:
+    display_name: "Anh Nguyen"
+    image: /img/people/nguyen.jpg
     role: grad
 
-grad-h:
-    display_name: "Grad H"
+nobel:
+    display_name: "Jacob de Nobel"
+    image: /img/people/nobel.png
     role: grad
 
-grad-i:
-    display_name: "Grad I"
+vermetten:
+    display_name: "Diederick Vermetten"
+    image: /img/people/vermetten.jpg
     role: grad
 
-alum-a:
-    display_name: "Alum A"
+wong:
+    display_name: "Annie Wong"
+    image: /img/people/wong.jpg
+    role: grad
+
+yin:
+    display_name: "Haoran Yin"
+    role: grad
+
+pan:
+    display_name: "Shuaiqun Pan"
+    image: /img/people/pan.jpg
+    role: grad
+
+kocaman:
+    display_name: "Veysel Kocaman"
+    image: /img/people/kocaman.png
+    role: grad
+
+liu:
+    display_name: "Wei Liu"
+    role: grad
+
+kong:
+    display_name: "Jiawen Kong"
+    image: /img/people/kong.png
+    role: grad
+
+pereverdieva:
+    display_name: "Ksenia Pereverdieva"
+    image: /img/people/pereverdieva.jpg
+    role: grad
+
+alum-rios:
+    display_name: "Thiago Rios"
     role: alum
-    bio: "Ph.D., 2013. Now at Microsoft Research."
+    image: /img/people/rios.jpg
+    bio: "Ph.D., 2022. Now at HRI Europe."
 
-alum-b:
-    display_name: "Alum B With Way Longer Name"
+alum-bagheri:
+    display_name: "Samineh Bagheri"
     role: alum
 
-alum-c:
-    display_name: "Alum C"
-    role: alum
-    webpage: "https://www.google.com"
-
-alum-d:
-    display_name: "Alum D"
+alum-blom:
+    display_name: "Koen van der Blom"
     role: alum
 
-alum-e:
-    display_name: "Alum E"
+alum-breukelaar:
+    display_name: "Ron Breukelaar"
     role: alum
 
-alum-f:
-    display_name: "Alum F"
+alum-echtenbruck:
+    display_name: "Martina Echtenbruck"
     role: alum
 
-alum-g:
-    display_name: "Alum G"
+alum-idgahi:
+    display_name: "Ramin Etemadi Idgahi"
     role: alum
 
-alum-h:
-    display_name: "Alum H"
+alum-gaida:
+    display_name: "Daniel Gaida"
     role: alum
 
-alum-i:
-    display_name: "Alum I"
+alum-georgiou:
+    display_name: "Theodoros Georgiou"
     role: alum
 
-collab-a:
-    display_name: "Collaborator A"
+alum-hag:
+    display_name: "Alexander Hagg"
+    role: alum
+
+alum-kefalas:
+    display_name: "Marios Kefalas"
+    role: alum
+
+alum-kieft:
+    display_name: "Natasa Kieft"
+    role: alum
+
+alum-koch:
+    display_name: "Milan Koch"
+    role: alum
+
+alum-p-koch:
+    display_name: "Patrick Koch"
+    role: alum
+
+alum-kruisselbrink:
+    display_name: "Johannes Willem Kruisselbrink"
+    role: alum
+
+alum-li:
+    display_name: "Rui Li"
+    role: alum
+
+alum-proenca:
+    display_name: "Hugo Manuel Proenca"
+    role: alum
+
+alum-matthias:
+    display_name: "Ingo Matthias"
+    role: alum
+
+alum-moelana:
+    display_name: "Asep Moelana"
+    role: alum
+
+alum-moussa:
+    display_name: "Charles Moussa"
+    role: alum
+
+alum-reehuis:
+    display_name: "Edgar Reehuis"
+    role: alum
+
+alum-sir:
+    display_name: "Ofer Michael Sir"
+    role: alum
+
+alum-soltani:
+    display_name: "Mozhan Soltani"
+    role: alum
+
+alum-tleis:
+    display_name: "Mohamed Tleis"
+    role: alum
+
+alum-ywang:
+    display_name: "Yali Wang"
+    role: alum
+
+alum-yang:
+    display_name: "Zhiwei Yang"
+    role: alum
+
+alum-yarkoni:
+    display_name: "Sheir Yarkoni"
+    role: alum
+
+collab-bmw:
+    display_name: "BMW"
     role: collab
 
 collab-b:
-    display_name: "Collaborator B With Long Name"
+    display_name: "HRI Europe"
     role: collab
 
 collab-c:
-    display_name: "Collaborator C"
+    display_name: "Heerema Marine Contractors"
     role: collab
 
 collab-d:
-    display_name: "Collaborator D"
+    display_name: "ASML"
     role: collab
 
 collab-e:
-    display_name: "Collaborator E"
+    display_name: "Hanze Hogeschool"
     role: collab
 
-ugrad-a:
-    display_name: "Ugrad A"
-    role: ugrad
-
-ugrad-b:
-    display_name: "Ugrad Student B With Long Name"
-    role: ugrad
-
-ugrad-c:
-    display_name: "Ugrad C"
-    role: ugrad
-
-ugrad-d:
-    display_name: "Ugrad D"
-    role: ugrad
-
-ugrad-e:
-    display_name: "Ugrad E"
-    role: ugrad
-
-ugrad-alum-a:
-    display_name: "Past Ugrad A"
-    role: ugrad-alum
-
-ugrad-alum-b:
-    display_name: "Past Ugrad Student B With Long Name"
-    role: ugrad-alum
