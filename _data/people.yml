@@ -87,7 +87,7 @@ chen:
     role: grad
 
 lamers:
-    display_name: "Christian Lamers"
+    display_name: "Christiaan Lamers"
     image: /img/people/lamers.jpg
     role: grad
 
@@ -147,6 +147,27 @@ kocaman:
 
 liu:
     display_name: "Wei Liu"
+    role: grad
+
+
+thomaser:
+    display_name: "Andre Thomaser"
+    role: grad
+
+vonk:
+    display_name: "Maarten Vonk"
+    role: grad
+
+correia:
+    display_name: "Lucas Correia"
+    role: grad
+
+oosterzee:
+    display_name: "Anna van Oosterzee"
+    role: grad
+    
+ellmaier:
+    display_name: "Sebastian Ellmaier"
     role: grad
 
 kong:

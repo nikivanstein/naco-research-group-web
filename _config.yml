@@ -17,11 +17,11 @@ roles:
   - key: prof
     name: Group leader
   - key: aprof
-    name: Senior Researchers
+    name: Assistant Professors
   - key: staff
     name: Staff
   - key: postdoc
-    name: Researchers
+    name: Post Doctoral Researchers
   - key: grad
     name: Graduate Students
   - key: collab
