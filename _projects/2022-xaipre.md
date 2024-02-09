@@ -8,8 +8,9 @@ description: |
   eXplainable AI for Predictive Maintenance
 
 people:
-  - stein
   - huang
+  - back
+  - stein
 
 layout: project
 image: "/img/projects/xaipre.png"

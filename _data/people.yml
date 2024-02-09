@@ -153,6 +153,7 @@ liu:
 thomaser:
     display_name: "Andre Thomaser"
     role: grad
+    image: /img/people/thomaser.jpg
 
 vonk:
     display_name: "Maarten Vonk"
@@ -161,6 +162,7 @@ vonk:
 correia:
     display_name: "Lucas Correia"
     role: grad
+    image: /img/people/correia.jpg
 
 oosterzee:
     display_name: "Anna van Oosterzee"
@@ -169,6 +171,7 @@ oosterzee:
 ellmaier:
     display_name: "Sebastian Ellmaier"
     role: grad
+    image: /img/people/ellmaier.jpg
 
 kong:
     display_name: "Jiawen Kong"

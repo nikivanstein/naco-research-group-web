@@ -8,9 +8,10 @@ description: |
   Optimization of Complex Lens Designs
 
 people:
-  - stein
-  - kononova
   - antonov
+  - kononova
+  - stein
+  - back
 
 layout: project
 image: "/img/projects/lens.png"

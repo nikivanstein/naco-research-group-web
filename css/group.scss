@@ -71,6 +71,7 @@ a > .fa {
 .card-columns .card {
     display: flex;
     width: 100%;
+    overflow: hidden;
 }
 
 /* Front page news. */
