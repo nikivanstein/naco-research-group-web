@@ -41,12 +41,12 @@ fan:
     image: /img/people/fan.png
     bio: Assistant Professor of Logistics Optimization
 
-emmerich:
-    display_name: "Michael Emmerich"
-    webpage: "https://www.universiteitleiden.nl/en/staffmembers/michael-emmerich#tab-1"
+neukart:
+    display_name: "Florian Neukart"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/florian-neukart#tab-1"
     role: aprof
-    image: /img/people/emmerich.png
-    bio: Guest researcher
+    image: /img/people/neukart.png
+    bio: Assistant Professor
 
 emmerich:
     display_name: "Michael Emmerich"
@@ -158,6 +158,7 @@ thomaser:
 vonk:
     display_name: "Maarten Vonk"
     role: grad
+    image: /img/people/vonk.jpg
 
 correia:
     display_name: "Lucas Correia"
@@ -181,6 +182,14 @@ kong:
 pereverdieva:
     display_name: "Ksenia Pereverdieva"
     image: /img/people/pereverdieva.jpg
+    role: grad
+
+wagner:
+    display_name: "Bernd Wagner"
+    role: grad
+
+kitharidis:
+    display_name: "Sofoklis Kitharidis"
     role: grad
 
 alum-rios:

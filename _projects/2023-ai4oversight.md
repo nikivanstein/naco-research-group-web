@@ -8,12 +8,15 @@ description: |
   AI for Oversight ICAI lab
 
 people:
+  - kitharidis
   - stein
   - back
 
 layout: project
 image: "/img/projects/oversight.png"
+largeimage: "/img/projects/oversight-wide.png"
 last-updated: 2024-01-08
+
 ---
 
 **Partners:** Human Environment and Transport Inspectorate (ILT), Netherlands Labour Authority, Inspectorate of Education, Netherlands Food and Consumer Product Safety Authority, TNO and Utrecht University    

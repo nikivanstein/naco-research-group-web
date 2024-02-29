@@ -62,11 +62,18 @@
         <div class="container">
             {% endif %}
 
-            {% if page.image %}
-                <img src="{{ page.image }}"
+            {% if page.largeimage %}
+                <img src="{{ page.largeimage }}"
                      alt="{{ page.title }}"
-                     style="max-width: 400px"
+                     style="width: 100%; object-fit: cover;"
                      class="img-fluid mx-auto d-block mb-4"/>
+            {% else %}
+                {% if page.image %}
+                    <img src="{{ page.image }}"
+                        alt="{{ page.title }}"
+                        style="max-width: 400px"
+                        class="img-fluid mx-auto d-block mb-4"/>
+                {% endif %}
             {% endif %}
 
             {% if page.notitle != true %}

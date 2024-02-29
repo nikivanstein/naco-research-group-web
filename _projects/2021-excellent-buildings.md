@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 description: |
-  Realistic Geometries for optimal structural, thermal, and lighting performance
+  Realistic Geometries for optimal performance
 
 people:
   - pereverdieva

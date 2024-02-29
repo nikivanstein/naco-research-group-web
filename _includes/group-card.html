@@ -1,0 +1,49 @@
+
+{% assign group = include.group %}
+
+{% if group.link %}
+    {% assign group-url = group.link %}
+{% else %}
+    {% capture group-url %}{{site.base}}{{group.url}}.html{% endcapture %}
+{% endif %}
+
+<div class="card group-card">
+    <div class="card-body">
+        {% if group.image %}
+            {% assign imgurl = group.image %}
+            {% capture init %}{{ group.image | slice: 0,1 }}{% endcapture %}
+            {% if init == "/" %}
+                {% capture imgurl %}{{site.base}}{{group.image}}{% endcapture %}
+            {% endif %}
+            <a href="{{ group-url }}">
+                <img class="img-fluid mb-3" src="{{imgurl}}" alt="{{group.title}}"/>
+            </a>
+        {% endif %}
+        <!-- {% if group.notitle != true %}
+            <h4 class="card-title">
+                {{  group.title }}
+            </h4>
+        {% endif %}
+        {% if group.subtitle != null and group.subtitle != "" %}
+            <h6 class="card-subtitle mb-2 text-muted">
+                {{  group.subtitle }}
+            </h6>
+        {% endif %}
+        <div class="card-text">
+            {{ group.description | markdownify }}
+        </div> -->
+        {% if group.no-link != true or group.link %}
+            <a href="{{ group-url }}"> Read more &raquo;</a>
+        {% endif %}
+    </div>
+    {% if group.people %}
+        <div class="card-footer d-flex flex-row flex-wrap justify-content-center">
+            {% for uname in group.people %}
+                <div>
+                    {% assign person = site.data.people[uname]  %}
+                    {% include person-image.html person=person %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

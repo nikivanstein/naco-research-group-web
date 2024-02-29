@@ -93,9 +93,12 @@ ul.news {
 }
 
 @media (min-width: 768px) {
-    .role.grad      { column-count: 2 }
+    .role.grad      { column-count: 3 }
+    .role.aprof     { column-count: 3 }
+    .role.alum      { column-count: 3 }
     .project-people { column-count: 3 }
     .card-columns   { column-count: 3 }
+    .group-columns   { column-count: 4 }
 }
 
 .title img {
@@ -194,4 +197,8 @@ svg {
     z-index: 5;
     opacity: 0.5;
     border-radius: 0px 0 0px 0;
+}
+
+.card-text {
+    min-height:60px;
 }

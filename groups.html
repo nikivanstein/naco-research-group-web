@@ -1,0 +1,10 @@
+---
+layout: default
+title: Special interest groups
+---
+
+<div class="group-columns">
+    {% for group in site.groups %}
+        {% include group-card.html group=group %}
+    {% endfor %}
+</div>

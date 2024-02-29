@@ -14,10 +14,11 @@ people:
 
 layout: project
 image: "/img/projects/xaipre.png"
+largeimage: "/img/projects/xaipre-wide.png"
 last-updated: 2024-01-08
 ---
 
-**Partners:** Hanze Hogeschool, Heerema marine contractors  
+**Partners:** <a href="https://www.hanze.nl/nl" target="_blank">Hanze Hogeschool</a>, <a href="https://www.heerema.com/heerema-marine-contractors" target="_blank">Heerema marine contractors</a>   
 
 The XAIPre project (pronounce “Xyper”) aims at developing Explainable Predictive Maintenance (XPdM) algorithms that do not only provide the engineers with a prediction but in addition, with 1) a risk analysis should the maintenance be delayed 2) the criteria or indicators used to make that analysis.  By providing more insight into the state of the machine, the engineers are empowered and given control over their maintenance process.
 

@@ -9,17 +9,20 @@ header:
 
 # groups of columns of {roles: list, width: num, image: bool}
 role-tables:
-- - roles: [prof, aprof]
+- - roles: [prof]
     width: 4
     image: true
-  - roles: [postdoc,grad]
+  - roles: [aprof]
+    width: 12
+    image: true
+  - roles: [postdoc]
     width: 8
     image: true
-- - roles: [collab]
-    width: 6
+  - roles: [grad]
+    width: 12
     image: true
   - roles: [alum]
-    width: 6
+    width: 12
     image: false
 
 ---
@@ -27,9 +30,9 @@ role-tables:
 
 
 <div class="jumbotron">
-    <h2>Welcome to the Natural Computing Group</h2>
+    <h2>Welcome to the Natural Computing Cluster</h2>
     <p>
-        At the <strong>Natural Computing Group</strong>, Univerisity Leiden, we delve into the fascinating world where natural phenomena intersect with computational algorithms. 
+        At the <strong>Natural Computing Cluster</strong>, University Leiden, we delve into the fascinating world where natural phenomena intersect with computational algorithms. 
         Our team of dedicated senior researchers and PhD students is committed to advancing the frontiers of knowledge in areas like evolutionary algorithms, neural networks, and the principles of natural processes that inspire 
         computational techniques.
     </p>
@@ -79,10 +82,24 @@ role-tables:
 </section>
 
 <section>
+    <h2>Special Interest Groups</h2>
+
+    The Natural Computing Cluster consists of a few special interest groups (SiGs). Each of these groups focuses on a different part within Natural Computing.
+    <br/>
+    <div class="group-columns">
+        {% for p in site.groups %}
+            {% if p.status != "inactive" %}
+                {% include group-card.html group=p %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<section>
     <h2>Research</h2>
 
     We engage in cutting-edge research that spans a variety of disciplines. 
-    Our group collaborates with international researchers and industry partners, creating a vibrant community that shares a passion for exploring the untapped potential of natural computing.
+    Our research cluster collaborates with international researchers and industry partners, creating a vibrant community that shares a passion for exploring the untapped potential of natural computing.
     We are proud to be at the forefront of this dynamic field, contributing to groundbreaking discoveries and technologies.
     <br/>
     <div class="card-columns">
