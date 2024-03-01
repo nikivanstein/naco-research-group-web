@@ -32,7 +32,7 @@ role-tables:
 <div class="jumbotron">
     <h2>Welcome to the Natural Computing Cluster</h2>
     <p>
-        At the <strong>Natural Computing Cluster</strong>, University Leiden, we delve into the fascinating world where natural phenomena intersect with computational algorithms. 
+        At the <strong>Natural Computing Cluster</strong>, LIACS, University Leiden, we delve into the fascinating world where natural phenomena intersect with computational algorithms. 
         Our team of dedicated senior researchers and PhD students is committed to advancing the frontiers of knowledge in areas like evolutionary algorithms, neural networks, and the principles of natural processes that inspire 
         computational techniques.
     </p>
@@ -81,6 +81,7 @@ role-tables:
     {% endif %}
 </section>
 
+{% if false %}
 <section>
     <h2>Special Interest Groups</h2>
 
@@ -93,7 +94,8 @@ role-tables:
             {% endif %}
         {% endfor %}
     </div>
-</section>
+</section> 
+{% endif %}
 
 <section>
     <h2>Research</h2>
@@ -117,7 +119,6 @@ role-tables:
 </section>
 
 <div id="people">
-    <h2>People</h2>
     {% for role-table in page.role-tables %}
         <section class="people row justify-content-between">
             {% for role-column in role-table %}
