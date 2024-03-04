@@ -12,6 +12,10 @@ people:
   - back
   - stein
 
+projects:
+  - 2022-xaipre
+  - 2023-ai4oversight
+
 layout: project
 image: "/img/projects/xaipre.png"
 largeimage: "/img/projects/xaipre-wide.png"

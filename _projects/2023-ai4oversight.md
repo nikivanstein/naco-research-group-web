@@ -12,6 +12,10 @@ people:
   - stein
   - back
 
+projects:
+  - 2022-xaipre
+  - 2018-cimplo
+
 layout: project
 image: "/img/projects/oversight.png"
 largeimage: "/img/projects/oversight-wide.png"
