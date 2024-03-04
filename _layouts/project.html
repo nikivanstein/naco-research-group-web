@@ -5,9 +5,24 @@ layout: default
 {{ content }}
 
 <h2> People involved: </h2>
+<hr/>
 <section class="people project-people">
     {% for uname in page.people %}
         {% assign person = site.data.people[uname] %}
         {% include person.html person=person image=true%}
     {% endfor %}
 </section>
+
+{% if page.projects %}
+<h2> Related Projects: </h2>
+<hr/>
+<div class="card-columns">
+    {% for project in site.projects %}
+        {% for pname in page.projects %}
+            {% if project.id contains pname %}
+                {% include project-card.html project=project image=true%}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endif %}

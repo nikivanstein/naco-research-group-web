@@ -133,6 +133,7 @@ wong:
 
 yin:
     display_name: "Haoran Yin"
+    image: /img/people/yin.jpg
     role: grad
 
 pan:
@@ -190,6 +191,7 @@ wagner:
 
 kitharidis:
     display_name: "Sofoklis Kitharidis"
+    image: /img/people/kitharidis.png
     role: grad
 
 alum-rios:

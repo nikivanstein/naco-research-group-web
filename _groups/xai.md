@@ -14,6 +14,7 @@ people:
   - wagner
 
 projects:
+  - 2018-cimplo
   - 2022-xaipre
   - 2023-ai4oversight
   - 2022-lens-design
