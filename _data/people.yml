@@ -198,14 +198,17 @@ alum-rios:
     display_name: "Thiago Rios"
     role: alum
     image: /img/people/rios.jpg
+    webpage: https://www.linkedin.com/in/thiago-rios-36922a47/
     bio: "Ph.D., 2022. Now at HRI Europe."
 
 alum-bagheri:
     display_name: "Samineh Bagheri"
+    webpage: https://www.linkedin.com/in/samineh-bagheri/
     role: alum
 
 alum-blom:
     display_name: "Koen van der Blom"
+    webpage: https://www.linkedin.com/in/koen-van-der-blom-a36b21282/
     role: alum
 
 alum-breukelaar:
@@ -214,6 +217,7 @@ alum-breukelaar:
 
 alum-echtenbruck:
     display_name: "Martina Echtenbruck"
+    webpage: https://www.linkedin.com/in/martinafriese/
     role: alum
 
 alum-idgahi:
@@ -234,6 +238,8 @@ alum-hag:
 
 alum-kefalas:
     display_name: "Marios Kefalas"
+    image: /img/people/kefalas.jpg
+    webpage: https://www.linkedin.com/in/marios-kefalas/
     role: alum
 
 alum-kieft:
@@ -258,6 +264,7 @@ alum-li:
 
 alum-proenca:
     display_name: "Hugo Manuel Proenca"
+    webpage: https://www.linkedin.com/in/hugo-manuel-proenca/
     role: alum
 
 alum-matthias:
@@ -270,10 +277,12 @@ alum-moelana:
 
 alum-moussa:
     display_name: "Charles Moussa"
+    webpage: https://www.linkedin.com/in/moussacharles/
     role: alum
 
 alum-reehuis:
     display_name: "Edgar Reehuis"
+    webpage: https://www.linkedin.com/in/edgar-reehuis/
     role: alum
 
 alum-sir:
@@ -290,14 +299,18 @@ alum-tleis:
 
 alum-ywang:
     display_name: "Yali Wang"
+    image: /img/people/ywang.jpg
+    webpage: https://www.linkedin.com/in/yali-wang-61305110b/
     role: alum
 
 alum-yang:
     display_name: "Zhiwei Yang"
+    webpage: https://www.linkedin.com/in/zhiwei-yang-47a14362/
     role: alum
 
 alum-yarkoni:
     display_name: "Sheir Yarkoni"
+    webpage: https://www.linkedin.com/in/sheiryarkoni/
     role: alum
 
 collab-bmw:
