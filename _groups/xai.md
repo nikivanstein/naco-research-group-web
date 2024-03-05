@@ -12,12 +12,17 @@ people:
   - huang
   - kitharidis
   - wagner
+  - lamers
+  - long
+  - antonov
+  - winter
+  - zeiser
 
 projects:
-  - 2018-cimplo
   - 2022-xaipre
   - 2023-ai4oversight
   - 2022-lens-design
+  - 2018-cimplo
 
 layout: group
 image: "/img/groups/xai logo-512px.png"
