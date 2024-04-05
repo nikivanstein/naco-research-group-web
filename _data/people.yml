@@ -187,6 +187,7 @@ pereverdieva:
 
 wagner:
     display_name: "Bernd Wagner"
+    image: /img/people/wagner.jpg
     role: grad
 
 kitharidis:
@@ -331,5 +332,10 @@ collab-d:
 
 collab-e:
     display_name: "Hanze Hogeschool"
+    role: collab
+
+cor-veenman:
+    display_name: "Cor Veenman"
+    image: /img/people/veenman.jpg
     role: collab
 
