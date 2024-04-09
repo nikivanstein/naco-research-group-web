@@ -336,6 +336,7 @@ collab-e:
 
 cor-veenman:
     display_name: "Cor Veenman"
+    webpage: https://www.universiteitleiden.nl/medewerkers/cor-veenman
     image: /img/people/veenman.jpg
     role: collab
 

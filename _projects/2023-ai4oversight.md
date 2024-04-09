@@ -9,6 +9,7 @@ description: |
 
 people:
   - kitharidis
+  - cor-veenman
   - stein
   - back
 
