@@ -195,6 +195,15 @@ kitharidis:
     image: /img/people/kitharidis.png
     role: grad
 
+laag:
+    display_name: "Robin van der Laag"
+    role: collab
+
+rizzato:
+    display_name: "Agnese Rizzato"
+    role: collab
+
+
 alum-rios:
     display_name: "Thiago Rios"
     role: alum
