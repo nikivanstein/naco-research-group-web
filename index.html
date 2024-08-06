@@ -1,67 +1,61 @@
 ---
 layout: default
-title: Home
+title: FOGA 2025
 notitle: true
 
 header:
-    overlay_image: "naco-bg4.png"
-    og_image: "og-image.png"
+    overlay_image: "foga-bg.png"
+    og_image: "foga-og.png"
 
 # groups of columns of {roles: list, width: num, image: bool}
 role-tables:
-- - roles: [prof]
-    width: 4
+- - roles: [organizer]
+    width: 6
     image: true
-  - roles: [aprof]
-    width: 12
-    image: true
-  - roles: [postdoc]
-    width: 8
-    image: true
-  - roles: [grad]
-    width: 12
-    image: true
-  - roles: [alum]
-    width: 12
-    image: false
-
 ---
 
-
+<!--  roles: [pc]
+    width: 12
+    image: false
+-->
 
 <div class="jumbotron">
-    <h2>Welcome to the Natural Computing Cluster</h2>
+    <h2>18th ACM/SIGEVO Conference on Foundations of Genetic Algorithms</h2>
+    <h3>FOGA XVIII, Aug 27 – 29, 2025, Leiden, The Netherlands</h3>
     <p>
-        At the <strong>Natural Computing Cluster</strong>, LIACS, University Leiden, we delve into the fascinating world where natural phenomena intersect with computational algorithms. 
-        Our team of dedicated senior researchers and PhD students is committed to advancing the frontiers of knowledge in areas like evolutionary algorithms, neural networks, and the principles of natural processes that inspire 
-        computational techniques.
+        FOGA 2025 is a conference organized by ACM/SIGEVO and hosted by the Leiden Institute of Computer Science (LIACS) in Leiden, The Netherlands. 
+        The first FOGA conference was held in 1990 in Boston, USA. The conference will this year take place on three days (Wed – Fri)
     </p>
 </div>
 
 <section>
-    <h2>Research</h2>
-    Our mission is to foster a deep understanding of natural computing and to develop innovative solutions that can address some of the world's most complex problems. 
-    By harnessing the power of nature-inspired computing, we aim to contribute to scientific advancement and create a positive impact on society.
+    <h2>Call for Papers</h2>
 
-    Research in natural computing is at the core of our activities, covering theoretical foundations, the development of new algorithms, and interdisciplinary applications of natural computing methods. Some of our current projects, in particular, focus on the following areas:
-
+    <p>The FOGA series aims at advancing our understanding of the working principles behind evolutionary algorithms and related randomized search heuristics, such as local search algorithms, differential evolution, ant colony optimization, particle swarm optimization, artificial immune systems, simulated annealing, and other Monte Carlo methods for search and optimization. Connections to related areas, such as Bayesian optimization and direct search, are of interest as well. FOGA is the premier event to discuss advances on the theoretical foundations of these algorithms, tools needed to analyze them, and different aspects of comparing algorithms’ performance. Topics of interest include, but are not limited to:</p>
     <ul>
-        <li>Robust optimization using evolutionary algorithms</li>
-        <li>Multiple criteria decision support</li>
-        <li>Mixed-integer evolutionary strategies (MIES)</li>
-        <li>Cellular automata for simulation applications</li>
-        <li>Particle swarm algorithms</li>
-        <li>Multiparameter physics applications (e.g., quantum control)</li>
-        <li>Medical image analysis applications</li>
-        <li>Drug design by interactive and automatic evolution</li>
-        <li>Protein folding and docking applications</li>
-        <li>Supply chain applications</li>
-        <li>Predictive Maintenance</li>
-        <li>eXplainable Artificial Intelligence</li>
+        <li>Run time analysis</li>
+        <li>Mathematical tools suitable for the analysis of search heuristics</li>
+        <li>Fitness landscapes and problem difficulty</li>
+        <li>(On- and offline) configuration and selection of algorithms, heuristics, operators, and parameters</li>
+        <li>Stochastic and dynamic environments, noisy evaluations</li>
+        <li>Constrained optimization</li>
+        <li>Problem representation</li>
+        <li>Complexity theory for search heuristics</li>
+        <li>Multi-objective optimization</li>
+        <li>Benchmarking aspects, including performance measures, the selection of meaningful benchmark problems, and statistical aspects</li>
+        <li>Connection between black-box optimization and machine learning</li>
     </ul>
-    Beyond this, we are also executing projects in direct cooperation with industry (see collaborations for more information).
-
-    The driving force behind our research is the mission to increase our understanding of natural systems as models of computation, with a focus on the development of new algorithms and applications to challenging problems.
+    <p><strong>Submissions covering the entire spectrum of work, ranging from rigorously derived mathematical results to carefully crafted empirical studies, are invited.</strong></p>
+    <h3>List of important dates (all times are “Anywhere on Earth”):</h3>
+    <ul>
+        <li>Submission: May 1, 2025</li>
+        <li>Acceptance notification: June 6, 2025</li>
+        <li>Camera ready: June 20, 2025</li>
+        <li>Early registration: June 22, 2025</li>
+        <li>Conference: Aug 27 – 29, 2025</li>
+    </ul>
+    <p>By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy.</p>
+    <p>Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and we have recently made a commitment to collect ORCID IDs from all of our published authors. The collection process has started and will roll out as a requirement throughout 2022. We are committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts.</p>
 
 </section>
 
@@ -81,50 +75,6 @@ role-tables:
     {% endif %}
 </section>
 
-{% if false %}
-<section>
-    <h2>Special Interest Groups</h2>
-
-    The Natural Computing Cluster consists of a few special interest groups (SiGs). Each of these groups focuses on a different part within Natural Computing.
-    <br/>
-    <div class="group-columns">
-        {% for p in site.groups %}
-            {% if p.status != "inactive" %}
-                {% include group-card.html group=p %}
-            {% endif %}
-        {% endfor %}
-    </div>
-</section> 
-{% endif %}
-
-<section>
-    <h2>Research</h2>
-
-    We engage in cutting-edge research that spans a variety of disciplines. 
-    Our research cluster collaborates with international researchers and industry partners, creating a vibrant community that shares a passion for exploring the untapped potential of natural computing.
-    We are proud to be at the forefront of this dynamic field, contributing to groundbreaking discoveries and technologies.
-    <br/>
-    <div class="card-columns">
-        {% comment %}
-        Sort the projects by date, putting those without dates last
-        {% endcomment %}
-        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-        {% assign projects_by_date = projects_by_date | reverse %}
-        {% for p in projects_by_date %}
-            {% if p.status != "inactive" %}
-                {% include project-card.html project=p %}
-            {% endif %}
-        {% endfor %}
-    </div>
-</section>
-
-<section>
-    <h2>Event partnerships</h2>
-    The Natural Computing Cluster is an academic partner of the <a href="https://ecta.scitevents.org/CallForPapers.aspx" target="_blank">International Conference on Evolutionary Computation Theory and Applications (ECTA)</a>. 
-    This conference intends to be a major forum for scientists, engineers and practitioners interested in the study, analysis, design, modeling and implementation of evolvable systems, both theoretically and in a broad range of application fields. ECTA welcomes both theoretical research and practical applications.
-The conference also aims to foster hybrid approaches within evolutionary computation and also involving fuzzy computation and neural computation.
-    <a href="https://ecta.scitevents.org/CallForPapers.aspx" target="_blank"><img src="/img/bannerduplo_ECTA_2024-01.png" style="width:100%;"/></a> 
-</section>
 
 <div id="people">
     {% for role-table in page.role-tables %}

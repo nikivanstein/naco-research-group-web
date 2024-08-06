@@ -1,5 +1,5 @@
-name: Natural Computing Group
-url: https://naco.liacs.nl/
+name: ACM FOGA 2025
+url: https://naco.liacs.nl/foga2025/
 author: "Niki van Stein"
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
@@ -12,53 +12,53 @@ permalink: /blog/:year/:month/:day/:title.html
 
 # Sections on the "people" page.
 roles:
-  - key: faculty
-    name: Faculty
-  - key: prof
-    name: Group leader
-  - key: aprof
-    name: Assistant Professors
-  - key: staff
-    name: Staff
-  - key: postdoc
-    name: Post Doctoral Researchers
-  - key: grad
-    name: Graduate Students
+  - key: organizer
+    name: Organizers
+  - key: chair
+    name: Conference Chair
+  - key: pc
+    name: Program Committee
+  - key: keynote
+    name: Keynote Speakers
   - key: collab
     name: Collaborators
-  - key: alum
-    name: Alumni
+  - key: sponsor
+    name: Sponsors
 
 # Number of news stories on the front page.
 front_page_news: 3
 
 # Base pathname for links.
-base: ''
+base: 'https://naco.liacs.nl/foga2025/'
 
 # make pages for the _projects folder
 collections:
   projects:
-    output: true
+    output: false
   groups:
-    output: true
+    output: false
 
 # Navigation bar links.
 navigation:
   - title: Home
-    link: /
-  - title: People
-    link: /#people
-  - title: Research
-    link: /research.html
-  - title: Education
-    link: /education.html
-  - title: Contact
-    link: /contact.html
+    link: ''
+  - title: Paper Submission
+    link: /submission.html
+  - title: Registration
+    link: /registration.html
+  # - title: Program
+  #   link: /program.html
+  - title: Local Info
+    link: /local.html
+  - title: Organizers
+    link: organizers.html
+  # - title: About
+  #   link: /about.html
 
 
 # Social Sharing
 twitter:
-  username               : &twitter "naco_liacs"
+  username               : &twitter "foga2025"
 facebook:
   username               :
   app_id                 :

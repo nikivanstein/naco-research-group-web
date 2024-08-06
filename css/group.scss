@@ -64,7 +64,7 @@ a > .fa {
 /* Group logo */
 #logo {
     width: auto;
-    height: 64px;
+    height: 112px;
     margin: 2px 0 8px 0;
 }
 
@@ -170,12 +170,8 @@ svg {
 .page__hero {
     position: relative;
     top:-20px;
-    margin-bottom: 2em;
     padding: 3em 0;
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -120px;
-    background-attachment: fixed;
     min-height: 300px;
 }
 

@@ -1,14 +1,13 @@
 ---
 layout: default
 title: People
+notitle: true
 
 picture-role-groups:
-- {roles: [prof, aprof, postdoc, staff], width: 4}
-- {roles: [grad], width: 8}
+- {roles: [organizer], width: 12}
 
 no-picture-role-groups:
-- {roles: [collab, ugrad, ugrad-alum], width: 5}
-- {roles: [alum], width: 7}
+- {roles: [pc], width: 12}
 ---
 
 <section class="people row justify-content-between">
@@ -21,7 +20,7 @@ no-picture-role-groups:
     {% endfor %}
 </section>
 
-<section class="people row justify-content-between">
+<!-- <section class="people row justify-content-between">
     {% for role-group in page.no-picture-role-groups %}
         <div class="col-md-{{ role-group.width }}">
             {% for role in role-group.roles %}
@@ -29,4 +28,4 @@ no-picture-role-groups:
             {% endfor %}
         </div>
     {% endfor %}
-</section>
+</section> -->
