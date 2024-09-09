@@ -68,6 +68,62 @@ huang:
     image: /img/people/huang.jpg
     role: grad
 
+huang:
+    display_name: "Tobias Preintner"
+    image: /img/people/preintner.jpg
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/tobias-preintner#tab-1
+    role: grad
+
+rizzato:
+    display_name: "Agnese Rizzato"
+    image: /img/people/rizzato.jpg
+    role: grad
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/agnese-rizzato#tab-1
+
+rizzato:
+    display_name: "Agnese Rizzato"
+    image: /img/people/rizzato.jpg
+    role: grad
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/agnese-rizzato#tab-1
+
+
+rodriguez:
+    display_name: "Ivan Olarte Rodriguez"
+    #image: /img/people/rodriguez.jpg
+    role: grad
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/ivan-olarte-rodriguez#tab-1
+
+laag:
+    display_name: "Robin van der Laag"
+    #image: /img/people/rodriguez.jpg
+    role: grad
+    #webpage: https://www.universiteitleiden.nl/en/staffmembers/ivan-olarte-rodriguez#tab-1
+
+dollen:
+    display_name: "David van Dollen"
+    image: /img/people/dollen.jpg
+    role: grad
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/david-von-dollen#tab-1
+    
+raeyatdoost:
+    display_name: "Niloofar Raeyatdoost"
+    #image: /img/people/raeyatdoost.jpg
+    role: grad
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/niloofar-raeyatdoost#tab-1
+
+patel:
+    display_name: "Yash Patel"
+    image: /img/people/patel.jpg
+    role: grad
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/yash-patel#tab-1
+
+irawan:
+    display_name: "Dani Irawan"
+    image: /img/people/irawan.jpg
+    role: grad
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/dani-irawan#tab-1
+
+
 wei:
     display_name: "Xiaohan Wei"
     role: grad
@@ -149,7 +205,7 @@ pan:
 kocaman:
     display_name: "Veysel Kocaman"
     image: /img/people/kocaman.png
-    role: grad
+    role: alum
 
 liu:
     display_name: "Wei Liu"
@@ -183,7 +239,7 @@ ellmaier:
 kong:
     display_name: "Jiawen Kong"
     image: /img/people/kong.png
-    role: grad
+    role: alum
 
 pereverdieva:
     display_name: "Ksenia Pereverdieva"
