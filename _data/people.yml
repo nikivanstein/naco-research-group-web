@@ -80,6 +80,11 @@ saib:
 gulmez:
     display_name: "Burak Gülmez"
     image: /img/people/gulmez.jpg
+    role: alum
+
+ye:
+    display_name: "Furong Ye"
+    image: /img/people/ye.jpg
     role: postdoc
 
 chen:

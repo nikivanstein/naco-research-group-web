@@ -17,6 +17,7 @@ people:
   - antonov
   - winter
   - zeiser
+  - ye
 
 projects:
   - 2022-xaipre
