@@ -9,7 +9,7 @@ kononova:
 
 
 back:
-    display_name: "Prof. Thomas Bäck"
+    display_name: "Thomas Bäck"
     webpage: "https://www.universiteitleiden.nl/en/staffmembers/thomas-back#tab-1"
     role: organizer
     image: /img/people/back.jpg
@@ -109,10 +109,15 @@ saib:
     image: /img/people/saib.jpg
     role: grad
 
+ye:
+    display_name: "Furong Ye"
+    image: /img/people/ye.jpg
+    role: postdoc
+
 gulmez:
     display_name: "Burak Gülmez"
     image: /img/people/gulmez.jpg
-    role: postdoc
+    role: alum
 
 chen:
     display_name: "Chen Chen"
