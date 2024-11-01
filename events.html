@@ -1,0 +1,10 @@
+---
+layout: default
+title: Events
+---
+
+<div class="group-columns">
+    {% for group in site.events %}
+        {% include group-card.html group=group %}
+    {% endfor %}
+</div>

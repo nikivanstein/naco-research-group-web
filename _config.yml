@@ -41,6 +41,8 @@ collections:
     output: true
   groups:
     output: true
+  events:
+    output: true
 
 # Navigation bar links.
 navigation:

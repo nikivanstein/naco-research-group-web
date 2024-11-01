@@ -165,7 +165,7 @@ long:
 winter:
     display_name: "Roy de Winter"
     image: /img/people/winter.jpg
-    role: grad
+    role: alum
 
 zeiser:
     display_name: "Alexander Zeiser"
@@ -175,7 +175,7 @@ zeiser:
 nguyen:
     display_name: "Anh Nguyen"
     image: /img/people/nguyen.jpg
-    role: grad
+    role: alum
 
 nobel:
     display_name: "Jacob de Nobel"
@@ -214,7 +214,7 @@ liu:
 
 thomaser:
     display_name: "Andre Thomaser"
-    role: grad
+    role: alum
     image: /img/people/thomaser.jpg
 
 vonk:
@@ -410,3 +410,16 @@ cor-veenman:
     image: /img/people/veenman.jpg
     role: collab
 
+senkerik: 
+    display_name: "Roman Senkerik"
+    webpage: https://ailab.fai.utb.cz/our-team/
+    image: /img/people/senkerik.jpg
+    role: collab
+    bio: Professor at Tomas Bata University, Zlin.
+
+pluhacek: 
+    display_name: "Michal Pluháček"
+    webpage: https://ailab.fai.utb.cz/our-team/
+    image: /img/people/pluhacek.jpg
+    role: collab
+    bio: Associate Professor at Tomas Bata University, Zlin.
