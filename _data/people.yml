@@ -89,15 +89,15 @@ rizzato:
 
 rodriguez:
     display_name: "Ivan Olarte Rodriguez"
-    #image: /img/people/rodriguez.jpg
+    image: /img/people/rodriguez.jpg
     role: grad
     webpage: https://www.universiteitleiden.nl/en/staffmembers/ivan-olarte-rodriguez#tab-1
 
 laag:
     display_name: "Robin van der Laag"
-    #image: /img/people/rodriguez.jpg
+    image: /img/people/laag.jpg
     role: grad
-    #webpage: https://www.universiteitleiden.nl/en/staffmembers/ivan-olarte-rodriguez#tab-1
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/robin-van-der-laag#tab-1
 
 dollen:
     display_name: "David van Dollen"

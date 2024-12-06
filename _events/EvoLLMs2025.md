@@ -12,6 +12,7 @@ people:
   - back
   - kononova
 
+eventdate: 2025-04-23
 layout: event
 image: /img/posts/evollms-header.png
 header:

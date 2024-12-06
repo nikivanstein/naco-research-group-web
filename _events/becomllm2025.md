@@ -14,6 +14,7 @@ people:
   - senkerik
   - pluhacek
 
+eventdate: 2025-07-05
 layout: event
 image: /img/posts/becomllm-header.png
 header:
@@ -64,7 +65,7 @@ The intersection of LLMs and Evolutionary Computing brings forth various topics 
 
 Join us and be part of the community shaping the future of AI through LLM-EC hybridization!
 
-### Organizers
+<!-- ### Organizers
 
 **Niki van Stein**: Assistant Professor at Leiden University specializing in Explainable AI, evolutionary computing, and machine learning applications. 
 
@@ -74,4 +75,4 @@ Join us and be part of the community shaping the future of AI through LLM-EC hyb
 
 **Roman Senkerik**: Professor at Tomas Bata University, Zlin, known for his work on evolutionary algorithms, swarm intelligence, and optimization in cyber-security and complexity.
 
-**Michal Pluháček**: Associate Professor at Tomas Bata University in Zlin, specializing in particle swarm optimization and swarm intelligence applications, with a research focus on evolutionary computation techniques.
+**Michal Pluháček**: Associate Professor at Tomas Bata University in Zlin, specializing in particle swarm optimization and swarm intelligence applications, with a research focus on evolutionary computation techniques. -->

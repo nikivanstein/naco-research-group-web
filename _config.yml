@@ -52,8 +52,10 @@ navigation:
     link: /#people
   - title: Research
     link: /research.html
-  - title: Education
-    link: /education.html
+  - title: Events
+    link: /events.html
+  # - title: Education
+  #   link: /education.html
   - title: Contact
     link: /contact.html
 

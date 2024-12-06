@@ -3,8 +3,14 @@ layout: default
 title: Events
 ---
 
+Welcome to the Events page of the Natural Computing Cluster. 
+Here, we showcase a diverse array of academic and professional gatherings that our group organizes or co-organizes. 
+These events include conferences, workshops, seminars, and tutorials, all aimed at fostering collaboration and advancing research in natural computing and related fields. 
+We invite you to explore our upcoming and past events to engage with the latest developments and connect with experts in the community.
+
 <div class="group-columns">
-    {% for group in site.events %}
-        {% include group-card.html group=group %}
+    {% assign events_by_date = site.events | sort: 'eventdate', 'last' %}
+    {% for group in events_by_date %}
+        {% include event-card.html group=group %}
     {% endfor %}
 </div>
