@@ -423,3 +423,17 @@ pluhacek:
     image: /img/people/pluhacek.jpg
     role: collab
     bio: Associate Professor at Tomas Bata University, Zlin.
+
+caraffini: 
+    display_name: "Fabio Caraffini"
+    webpage: https://www.swansea.ac.uk/staff/fabio.caraffini/
+    image: /img/people/caraffini.jpeg
+    role: collab
+    bio: Associate Professor at Swansea University.
+
+zaharie: 
+    display_name: "Daniela Zaharie"
+    webpage: https://scholar.google.com/citations?user=SkQ526sAAAAJ&hl=en
+    image: /img/people/zaharie.png
+    role: collab
+    bio: West University of Timisoara
