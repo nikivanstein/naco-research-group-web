@@ -1,6 +1,7 @@
 ---
 title: "AABOH Workshop at GECCO 2025"
 status: active
+type: workshop
 
 notitle: false
 

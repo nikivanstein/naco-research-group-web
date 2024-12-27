@@ -1,6 +1,7 @@
 ---
 title: "EvoLLMs at EvoStar 2025"
 status: active
+type: workshop
 
 notitle: false
 

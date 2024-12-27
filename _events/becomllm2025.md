@@ -1,6 +1,8 @@
 ---
 title: "BEComLLM Workshop at IEEE CAI 2025"
 status: active
+type: workshop
+
 
 notitle: false
 
