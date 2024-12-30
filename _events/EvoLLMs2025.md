@@ -15,9 +15,9 @@ people:
 
 eventdate: 2025-04-23
 layout: event
-image: /img/posts/evollms-header.png
+image: /img/events/evollms-header.png
 header:
-    og_image: posts/evollms.png
+    og_image: events/evollms.png
 last-updated: 2024-11-01
 ---
 

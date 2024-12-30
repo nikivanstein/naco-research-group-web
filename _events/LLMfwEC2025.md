@@ -11,9 +11,9 @@ description: |
 
 eventdate: 2025-07-14
 layout: event
-image: /img/posts/llmfwec-header.png
+image: /img/events/llmfwec-header.png
 header:
-    og_image: posts/llmfwec.png
+    og_image: events/llmfwec.png
 last-updated: 2024-12-25
 ---
 

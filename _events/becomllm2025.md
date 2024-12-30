@@ -18,9 +18,9 @@ people:
 
 eventdate: 2025-07-05
 layout: event
-image: /img/posts/becomllm-header.png
+image: /img/events/becomllm-header.png
 header:
-    og_image: posts/becomllm.png
+    og_image: events/becomllm.png
 last-updated: 2024-11-01
 ---
 
