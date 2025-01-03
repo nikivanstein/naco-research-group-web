@@ -12,10 +12,12 @@ We invite you to explore our upcoming and past events to engage with the latest 
 <h3 class="pt-3"> {{ type.name }} - Upcoming Events</h3>
 <div class="type {{ type.key }}">
 
-    <div class="group-columns">
-        {% assign upcoming_events = site.events | where: "type", type.key | where_exp: "event", "event.eventdate >= site.time" | sort: 'eventdate' %}
+    <div class="group-columns" id="upcoming-{{ type.key }}">
+        {% assign upcoming_events = site.events | where: "type", type.key | sort: 'eventdate' %}
         {% for event in upcoming_events %}
-            {% include event-card.html group=event %}
+            <div class="event-card" data-eventdate="{{ event.eventdate }}">
+                {% include event-card.html group=event %}
+            </div>
         {% endfor %}
     </div>
 </div>
@@ -23,10 +25,36 @@ We invite you to explore our upcoming and past events to engage with the latest 
 
 <h3 class="pt-3">Past Events</h3>
 <div class="type past-events">
-    <div class="group-columns">
-        {% assign past_events = site.events | where_exp: "event", "event.eventdate < site.time" | sort: 'eventdate' | reverse %}
+    <div class="group-columns" id="past-events">
+        {% assign past_events = site.events | sort: 'eventdate' %}
         {% for event in past_events %}
-            {% include event-card.html group=event %}
+            <div class="event-card" data-eventdate="{{ event.eventdate }}">
+                {% include event-card.html group=event %}
+            </div>
         {% endfor %}
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const today = new Date();
+
+        function filterEvents(containerId, isUpcoming) {
+            const container = document.getElementById(containerId);
+            const events = container.querySelectorAll('.event-card');
+            events.forEach(event => {
+                const eventDate = new Date(event.getAttribute('data-eventdate'));
+                if (isUpcoming && eventDate < today) {
+                    event.style.display = 'none';
+                } else if (!isUpcoming && eventDate >= today) {
+                    event.style.display = 'none';
+                }
+            });
+        }
+
+        {% for type in site.event_types %}
+        filterEvents('upcoming-{{ type.key }}', true);
+        {% endfor %}
+        filterEvents('past-events', false);
+    });
+</script>
