@@ -58,9 +58,9 @@ The intersection of LLMs and Evolutionary Computing brings forth various topics 
 
 ### Key Dates
 
-- **Paper Submission Deadline**: 15 January, 2025 AoE
-- **Notification of Acceptance**: 1 March, 2025
-- **Final Camera-Ready copy deadline**: 7 March, 2025
+- **Paper Submission Deadline**: 10 March, 2025 AoE
+- **Notification of Acceptance**: 1 April, 2025
+- **Final Camera-Ready copy deadline**: 5 April, 2025
 - **Workshop Date**: During IEEE CAI 2025
 
 <a class="btn btn-success" href="https://easychair.org/my/conference?conf=cai2025" target="_blank">Submit your paper</a>
