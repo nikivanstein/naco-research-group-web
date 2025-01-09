@@ -14,9 +14,9 @@ people:
 
 eventdate: 2025-07-14
 layout: event
-image: /img/posts/sb-header.png
+image: /img/events/sb-CEC.png
 header:
-    og_image: posts/sb.png
+    og_image: events/sb-CEC.png
 last-updated: 2024-12-25
 ---
 

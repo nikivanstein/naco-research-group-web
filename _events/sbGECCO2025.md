@@ -14,9 +14,9 @@ people:
 
 eventdate: 2025-07-14
 layout: event
-image: /img/events/sbGECCO2025-header.png
+image: /img/events/sb-gecco.png
 header:
-    og_image: events/sb.png
+    og_image: events/sb-gecco.png
 last-updated: 2024-12-25
 ---
 

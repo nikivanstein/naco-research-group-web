@@ -14,7 +14,7 @@ people:
 
 eventdate: 2025-10-22
 layout: event
-image: /img/events/explains2025-header.png
+image: /img/events/explains2025.png
 header:
     og_image: events/explains2025.png
 last-updated: 2024-12-30

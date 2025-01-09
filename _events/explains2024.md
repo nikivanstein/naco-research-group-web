@@ -14,7 +14,7 @@ people:
 
 eventdate: 2024-11-20
 layout: event
-image: /img/events/explains2024-header.png
+image: /img/events/explains2024.png
 header:
     og_image: events/explains2024.png
 last-updated: 2024-12-30
