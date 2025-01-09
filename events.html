@@ -12,7 +12,7 @@ We invite you to explore our upcoming and past events to engage with the latest 
 <h3 class="pt-3"> {{ type.name }} - Upcoming Events</h3>
 <div class="type {{ type.key }}">
 
-    <div class="group-columns" id="upcoming-{{ type.key }}">
+    <div class="event-columns" id="upcoming-{{ type.key }}">
         {% assign upcoming_events = site.events | where: "type", type.key | sort: 'eventdate' %}
         {% for event in upcoming_events %}
             <div class="event-card" data-eventdate="{{ event.eventdate }}">
@@ -25,7 +25,7 @@ We invite you to explore our upcoming and past events to engage with the latest 
 
 <h3 class="pt-3">Past Events</h3>
 <div class="type past-events">
-    <div class="group-columns" id="past-events">
+    <div class="event-columns" id="past-events">
         {% assign past_events = site.events | sort: 'eventdate' %}
         {% for event in past_events %}
             <div class="event-card" data-eventdate="{{ event.eventdate }}">
