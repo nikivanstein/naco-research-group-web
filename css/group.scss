@@ -74,6 +74,18 @@ a > .fa {
     overflow: hidden;
 }
 
+.event-columns .card {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.group-columns .card {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
 /* Front page news. */
 ul.news {
 
@@ -202,4 +214,8 @@ svg {
 
 .card-text {
     min-height:60px;
+}
+
+.event-card {
+    margin-bottom: 1rem;
 }
