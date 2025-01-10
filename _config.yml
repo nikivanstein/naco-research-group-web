@@ -37,8 +37,6 @@ event_types:
     name: Workshops
   - key: tutorial
     name: Tutorials
-  - key: other
-    name: Other events
 
 # Number of news stories on the front page.
 front_page_news: 3
