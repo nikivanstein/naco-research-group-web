@@ -8,8 +8,8 @@ back:
 stein:
     display_name: "Niki van Stein"
     webpage: "https://nikivanstein.nl/"
-    github: BasvanStein
-    image: /img/people/stein.jpg
+    github: nikivanstein
+    image: /img/people/stein.png
     bio: Assistant Professor of Explainable AI
     role: aprof
 

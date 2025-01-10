@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://naco.liacs.nl/sitemap.xml

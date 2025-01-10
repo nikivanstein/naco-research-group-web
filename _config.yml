@@ -88,3 +88,6 @@ social:
 
 plugins:
   - jekyll-sitemap
+
+compress_images:
+  images_path: "/img/**/*.{gif,png,jpg,jpeg,svg}"
