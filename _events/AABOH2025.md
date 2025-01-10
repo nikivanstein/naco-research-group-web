@@ -18,6 +18,7 @@ people:
 eventdate: 2025-07-14
 layout: event
 image: /img/events/aaboh.png
+largeimage: "/img/events/aaboh-header.png"
 header:
     og_image: events/aaboh.png
 last-updated: 2024-12-25

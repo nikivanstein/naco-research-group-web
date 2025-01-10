@@ -1,5 +1,5 @@
 name: Natural Computing Group
-url: https://naco.liacs.nl/
+url: https://naco.liacs.nl
 author: "Niki van Stein"
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
@@ -85,3 +85,6 @@ social:
   type                   : 'Organization' # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+
+plugins:
+  - jekyll-sitemap
