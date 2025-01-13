@@ -68,17 +68,11 @@ huang:
     image: /img/people/huang.jpg
     role: grad
 
-huang:
+preintner:
     display_name: "Tobias Preintner"
     image: /img/people/preintner.jpg
     webpage: https://www.universiteitleiden.nl/en/staffmembers/tobias-preintner#tab-1
     role: grad
-
-rizzato:
-    display_name: "Agnese Rizzato"
-    image: /img/people/rizzato.jpg
-    role: grad
-    webpage: https://www.universiteitleiden.nl/en/staffmembers/agnese-rizzato#tab-1
 
 rizzato:
     display_name: "Agnese Rizzato"

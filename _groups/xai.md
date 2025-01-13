@@ -15,7 +15,7 @@ people:
   - lamers
   - long
   - antonov
-  - winter
+  - preintner
   - zeiser
   - ye
 
