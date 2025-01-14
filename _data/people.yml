@@ -118,6 +118,18 @@ irawan:
     webpage: https://www.universiteitleiden.nl/en/staffmembers/dani-irawan#tab-1
 
 
+cherpitel:
+    display_name: "Mathieu Cherpitel"
+    image: /img/people/cherpitel.jpg
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/mathieu-cherpitel#tab-1
+    role: grad
+
+pavert:
+    display_name: "Daniël Pavert"
+    image: /img/people/pavert.jpg
+    webpage: https://www.linkedin.com/in/dani%C3%ABl-van-de-pavert-630ba514a/?originalSubdomain=nl
+    role: grad
+
 wei:
     display_name: "Xiaohan Wei"
     role: grad
@@ -159,6 +171,7 @@ long:
 winter:
     display_name: "Roy de Winter"
     image: /img/people/winter.jpg
+    bio: "PhD, 2024. Now at TU-Delft."
     role: alum
 
 zeiser:
@@ -167,8 +180,10 @@ zeiser:
     role: grad
 
 nguyen:
-    display_name: "Anh Nguyen"
+    display_name: "Duc Anh Nguyen"
     image: /img/people/nguyen.jpg
+    webpage: "https://www.linkedin.com/in/anh05/"
+    bio: "PhD 2024"
     role: alum
 
 nobel:
@@ -208,6 +223,7 @@ liu:
 
 thomaser:
     display_name: "Andre Thomaser"
+    bio: "PhD, 2024. Now at BMW."
     role: alum
     image: /img/people/thomaser.jpg
 
