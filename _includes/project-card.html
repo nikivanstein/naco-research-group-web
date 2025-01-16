@@ -4,7 +4,7 @@
 {% if project.link %}
     {% assign proj-url = project.link %}
 {% else %}
-    {% capture proj-url %}{{site.base}}{{project.url}}.html{% endcapture %}
+    {% capture proj-url %}{{site.base}}{{project.url}}{% endcapture %}
 {% endif %}
 
 <div class="card">

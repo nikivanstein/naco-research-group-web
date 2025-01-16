@@ -8,7 +8,7 @@ exclude: [bibble, README.md, Makefile, screenshot.png]
 highlighter: pygments
 
 # The path structure for blog posts.
-permalink: /blog/:year/:month/:day/:title
+permalink: pretty
 
 # Sections on the "people" page.
 roles:
