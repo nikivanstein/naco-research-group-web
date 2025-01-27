@@ -60,13 +60,13 @@ navigation:
   - title: People
     link: /#people
   - title: Research
-    link: /research.html
+    link: /research/
   - title: Events
-    link: /events.html
+    link: /events/
   # - title: Education
   #   link: /education.html
   - title: Contact
-    link: /contact.html
+    link: /contact/
 
 
 # Social Sharing
