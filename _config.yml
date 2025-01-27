@@ -48,6 +48,8 @@ navigation:
     link: /registration.html
   # - title: Program
   #   link: /program.html
+  - title: ROAR-NET
+    link: /roarnet.html
   - title: Local Info
     link: /local.html
   - title: Organizers
@@ -69,4 +71,4 @@ og_image                 :  'og-image.png'
 social:
   type                   : 'Organization' # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links: ['https://bsky.app/profile/foga-conf.bsky.social', 'https://www.linkedin.com/company/foga2025/'] # An array of links to social media profiles
