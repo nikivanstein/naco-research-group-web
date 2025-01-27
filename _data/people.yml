@@ -80,6 +80,12 @@ rizzato:
     role: grad
     webpage: https://www.universiteitleiden.nl/en/staffmembers/agnese-rizzato#tab-1
 
+tamponi:
+    display_name: "Roberta Tamponi"
+    image: /img/people/tamponi.jpg
+    role: grad
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/roberta-tamponi#tab-1
+
 
 rodriguez:
     display_name: "Ivan Olarte Rodriguez"
