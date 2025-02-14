@@ -75,7 +75,11 @@ The intersection of LLMs and Evolutionary Computing brings forth various topics 
 
 ### Key Dates
 
-TBA
+- Submission opening: February 10, 2025
+- Submission deadline: March 26, 2025
+- Notification: April 28, 2025
+- Camera-ready: May 5, 2025
+- Author's mandatory registration: May 8, 2025
 
 <a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
 
