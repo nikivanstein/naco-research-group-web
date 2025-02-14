@@ -26,7 +26,7 @@ last-updated: 2024-12-25
 
 We are excited to announce the **AABOH Workshop at GECCO 2025**. This workshop explores the analysis of **algorithm behaviour** of **optimisation heuristics**.
 
-Official website: (https://aaboh.nl/)[https://aaboh.nl/]
+Official website: [https://aaboh.nl/](https://aaboh.nl/)
 
 <a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
 
@@ -67,5 +67,5 @@ All accepted papers of this workshop will be included in the ACM Proceedings of 
 
 ### Previous Editions
 
-- (GECCO 2024)[https://aaboh.nl/2024/]
+- [https://aaboh.nl/gecco-24-workshop/](GECCO 2024)
 
