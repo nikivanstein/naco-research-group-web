@@ -4,7 +4,7 @@
 {% if group.link %}
     {% assign group-url = group.link %}
 {% else %}
-    {% capture group-url %}{{site.base}}{{group.url}}.html{% endcapture %}
+    {% capture group-url %}{{site.base}}{{group.url}}{% endcapture %}
 {% endif %}
 
 <div class="card group-card">
