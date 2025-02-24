@@ -61,6 +61,17 @@ role-tables:
 </section>
 
 <section>
+    <div id="keynotespeakers">
+        <section class="people row justify-content-between">
+            <div class="col-md-12">
+                {% include role-people.html role="keynote" image=true %}
+            </div>
+        </section>
+    </div>
+</section>
+
+
+<section>
     <h2>News</h2>
     <ul class="news list-unstyled">
         {% for post in site.posts limit: site.front_page_news %}

@@ -18,13 +18,33 @@ back:
 
 
 chicano:
-
     display_name: "Francisco Chicano"
     webpage: "https://scholar.google.com/citations?user=BzjDlpUAAAAJ&hl=en"
     role: organizer
     image: /img/people/chicano.jpg
     bio: Program Chair
 
+
+knowles:
+    display_name: "Joshua D. Knowles"
+    webpage: "https://www.birmingham.ac.uk/staff/profiles/computer-science/honorary-staff/knowles-joshua"
+    role: keynote
+    image: /img/people/knowles.jpg
+    bio: Schlumberger Cambridge Research
+
+wehner:
+    display_name: "Stephanie Wehner"
+    webpage: "https://qutech.nl/person/stephanie-wehner/"
+    role: keynote
+    image: /img/people/wehner.jpg
+    bio: Delft University of Technology, The Netherlands
+
+glasmachers:
+    display_name: "Tobias Glasmachers"
+    webpage: "https://www.ini.rub.de/the_institute/people/tobias-glasmachers/"
+    role: keynote
+    image: /img/people/glasmachers.jpg
+    bio: Ruhr-Universität Bochum, Germany
 
 fieldsend:
     display_name: "Jonathan Fieldsend"
