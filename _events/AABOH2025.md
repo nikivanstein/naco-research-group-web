@@ -21,7 +21,7 @@ image: /img/events/aaboh.png
 largeimage: "/img/events/aaboh-header.png"
 header:
     og_image: events/aaboh.png
-last-updated: 2024-12-25
+last-updated: 2025-03-25
 ---
 
 We are excited to announce the **AABOH Workshop at GECCO 2025**. This workshop explores the analysis of **algorithm behaviour** of **optimisation heuristics**.
@@ -57,7 +57,7 @@ All accepted papers of this workshop will be included in the ACM Proceedings of 
 ### Key Dates
 
 - Submission opening: February 10, 2025
-- Submission deadline: March 26, 2025
+- Submission deadline: April 2 (Extended!), 2025
 - Notification: April 28, 2025
 - Camera-ready: May 5, 2025
 - Author's mandatory registration: May 8, 2025

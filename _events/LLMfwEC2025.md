@@ -76,7 +76,7 @@ The intersection of LLMs and Evolutionary Computing brings forth various topics 
 ### Key Dates
 
 - Submission opening: February 10, 2025
-- Submission deadline: March 26, 2025
+- Submission deadline: April 2 (Extended!), 2025
 - Notification: April 28, 2025
 - Camera-ready: May 5, 2025
 - Author's mandatory registration: May 8, 2025
