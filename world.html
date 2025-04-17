@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-author Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for the map container */
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+        .marker-icon {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .marker-cluster {
+            background-color: #1e40af;
+            color: #fff;
+            border-radius: 50%;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            border: 2px solid #3b82f6;
+        }
+        .marker-cluster-medium {
+            background-color: #f59e0b;
+            color: #fff;
+            border-radius: 50%;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            border: 2px solid #fbbf24;
+        }
+        .marker-cluster-large {
+            background-color: #ef4444;
+            color: #fff;
+            border-radius: 50%;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            border: 2px solid #f87171;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-inter">
+    <div class="container mx-auto p-6">
+        <h1 class="text-2xl font-semibold text-blue-700 mb-6 text-center">Co-author Locations</h1>
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <div id="map"></div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Co-author Details</h2>
+            <ul id="coauthor-list" class="space-y-3">
+            </ul>
+        </div>
+    </div>
+    <script>
+        function getColor(affiliation) {
+            if (affiliation.toLowerCase().includes('university')) return '#3b82f6';
+            if (affiliation.toLowerCase().includes('college')) return '#8b5cf6';
+            if (affiliation.toLowerCase().includes('institute')) return '#22c55e';
+            if (affiliation.toLowerCase().includes('research')) return '#ef4444';
+            return '#f97316';
+        }
+
+        function getInitials(name) {
+            const names = name.split(' ');
+            let initials = '';
+            for (let i = 0; i < Math.min(names.length, 3); i++) {
+                initials += names[i][0].toUpperCase();
+            }
+            return initials;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = L.map('map').setView([52, 10], 5);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Fetch the co-author data from the JSON file
+            fetch('coauthors_enriched.json') // Make sure the path to your JSON file is correct
+                .then(response => response.json())
+                .then(coauthorData => {
+                    const markers = L.markerClusterGroup({
+                        maxClusterRadius: 40,
+                        spiderfyOnMaxZoom: false,
+                        showCoverageOnHover: false,
+                        iconCreateFunction: function (cluster) {
+                            const childCount = cluster.getChildCount();
+                            let c = 'marker-cluster-small';
+                            if (childCount > 20) {
+                                c = 'marker-cluster-medium';
+                            } else if (childCount > 100) {
+                                c = 'marker-cluster-large';
+                            }
+                            return new L.DivIcon({
+                                html: '<div><span>' + childCount + '</span></div>',
+                                className: 'marker-cluster ' + c,
+                                iconSize: new L.Point(40, 40)
+                            });
+                        }
+                    });
+
+                    coauthorData.forEach(coauthor => {
+                        if (coauthor.latitude && coauthor.longitude) {
+                            const color = getColor(coauthor.affiliations);
+                            const initials = getInitials(coauthor.name);
+                            const icon = L.divIcon({
+                                className: 'marker-icon',
+                                html: `<div style="background-color: ${color};">${initials}</div>`,
+                                iconSize: [30, 30],
+                                popupAnchor: [0, -15]
+                            });
+                            const marker = L.marker([coauthor.latitude, coauthor.longitude], { icon: icon })
+                                .bindPopup(`<b>${coauthor.name}</b><br>${coauthor.affiliations}`);
+                            markers.addLayer(marker);
+                        }
+                    });
+                    map.addLayer(markers);
+
+                    const coauthorList = document.getElementById('coauthor-list');
+                    coauthorData.forEach(coauthor => {
+                        const li = document.createElement('li');
+                        li.className = "bg-white rounded-md shadow-sm p-4 flex justify-between items-center";
+                        li.innerHTML = `
+                            <div>
+                                <h3 class="font-semibold text-gray-800">${coauthor.name}</h3>
+                                <p class="text-gray-600 text-sm">${coauthor.affiliations}</p>
+                            </div>
+                            <div>
+                                <a href="${coauthor.link}" target="_blank" class="inline-flex items-center justify-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150">
+                                    View Profile
+                                </a>
+                            </div>
+                        `;
+                        coauthorList.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Error fetching co-author data:', error));
+        });
+    </script>
+</body>
+</html>
