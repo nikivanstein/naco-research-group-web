@@ -406,3 +406,273 @@ cor-veenman:
     image: /img/people/veenman.jpg
     role: collab
 
+akimoto:
+  display_name: Youhei Akimoto
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+antipov:
+  display_name: Denis Antipov
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+baioletti:
+  display_name: Marco Baioletti
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+beyer:
+  display_name: Hans-Georg Beyer
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+bossek:
+  display_name: Jakob Bossek
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+brockhoff:
+  display_name: Dimo Brockhoff
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+buzdalov:
+  display_name: Maxim Buzdalov
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+ceberio:
+  display_name: Josu Ceberio
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+dejong:
+  display_name: Kenneth A. De Jong
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+derbel:
+  display_name: Bilel Derbel
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+doerr:
+  display_name: Benjamin Doerr
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+cdoerr11:
+  display_name: Carola Doerr
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+eremeev:
+  display_name: Anton V. Eremeev
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+fonseca:
+  display_name: Carlos M. Fonseca
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+gallagher:
+  display_name: Marcus R. Gallagher
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+glasmachers:
+  display_name: Tobias Glasmachers
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+goeffon:
+  display_name: Adrien Goeffon
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+hernando:
+  display_name: Leticia Hernando
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+holena:
+  display_name: Martin Holena
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+jacimovic:
+  display_name: Vladimir Jacimovic
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+krejca:
+  display_name: Martin S. Krejca
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+kronberger:
+  display_name: Gabriel Kronberger
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+kotzing:
+  display_name: Timo Kötzing
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+lehre:
+  display_name: Per Kristian Lehre
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+lengler:
+  display_name: Johannes Lengler
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+liefooghe:
+  display_name: Arnaud Liefooghe
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+lozano:
+  display_name: Jose A. Lozano
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+lopezibanez:
+  display_name: Manuel López-Ibáñez
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+malan:
+  display_name: Katherine Malan
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+neumann:
+  display_name: Frank Neumann
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+oliveto:
+  display_name: Pietro Oliveto
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+qian:
+  display_name: Chao Qian
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+rowe:
+  display_name: Jonathan Rowe
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+santucci:
+  display_name: Valentino Santucci
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+shir:
+  display_name: Ofer Shir
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+sudholt:
+  display_name: Dirk Sudholt
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+sutton:
+  display_name: Andrew M. Sutton
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+tinos:
+  display_name: Renato Tinós
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+trautmann:
+  display_name: Heike Trautmann
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+verel:
+  display_name: Sebastien Verel
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+wagner:
+  display_name: Markus Wagner
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+weise:
+  display_name: Thomas Weise
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+whitley:
+  display_name: Darrell Whitley
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+witt:
+  display_name: Carsten Witt
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+zarges:
+  display_name: Christine Zarges
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''

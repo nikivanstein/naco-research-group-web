@@ -90,11 +90,15 @@ ul.news {
 @media (min-width: 576px) {
     .project-people { column-count: 2 }
     .card-columns   { column-count: 2 }
+    .role.pc     { column-count: 2 }
+    .role.organizer     { column-count: 2 }
 }
 
 @media (min-width: 768px) {
     .role.grad      { column-count: 3 }
     .role.aprof     { column-count: 3 }
+    .role.pc     { column-count: 3 }
+    .role.organizer     { column-count: 3 }
     .role.alum      { column-count: 3 }
     .project-people { column-count: 3 }
     .card-columns   { column-count: 3 }
