@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ site.name }}: {{ page.title }}</title>
+
+        {% include seo.html %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+              integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+              crossorigin="anonymous">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ site.base }}/css/group.css">
+
+        <link rel="icon" 
+            type="image/png" 
+            href="/img/icon.png" />
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            /* Custom CSS for the map container */
+            #map {
+                height: 600px; /* Adjust as needed */
+                width: 100%;
+                border-radius: 0.5rem;
+            }
+            /* .marker-icon {
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            } */
+            .marker-icon {
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
+            <div class="header d-flex
+                        flex-column
+                        flex-md-row justify-content-md-between">
+                <a href="{{ site.base }}/" class="">
+                    <img src="{{ site.base }}/img/logo.png"
+                         srcset="{{ site.base }}/img/logo@2x.png 2x"
+                         alt="Naco" id="logo">
+                </a>
+                <ul class="nav nav-pills justify-content-center">
+
+                    {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
+                    {% for item in site.navigation %}
+
+                        {% assign itemshorturl = item.link | replace:'.html','' %}
+
+                        {% assign maybe-active = '' %}
+                        {% if item.title == 'Research' and page.layout == 'project' %}
+                            {% assign maybe-active = 'active' %}
+                        {% endif %}
+                        {% if itemshorturl == shorturl or is-research %}
+                            {% assign maybe-active = 'active' %}
+                        {% endif %}
+
+                        <li class="nav-item">
+                            <a class="nav-link {{ maybe-active }}"
+                               href="{{ site.base }}{{ item.link }}">
+                                {{ item.title }}
+                            </a>
+                        </li>
+
+                    {% endfor %}
+
+                </ul>
+            </div>
+
+            {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+        </div>
+                {% include page__hero.html %}
+        <div class="container">
+            {% endif %}
+
+            {% if page.largeimage %}
+                <img loading="lazy" src="{{ page.largeimage }}"
+                     alt="{{ page.title }}"
+                     style="width: 100%; object-fit: cover;"
+                     class="img-fluid mx-auto d-block mb-4"/>
+            {% else %}
+                {% if page.image %}
+                    <img loading="lazy" src="{{ page.image }}"
+                        alt="{{ page.title }}"
+                        style="max-width: 400px"
+                        class="img-fluid mx-auto d-block mb-4"/>
+                {% endif %}
+            {% endif %}
+
+            {% if page.notitle != true %}
+                <h1>{{ page.title }}</h1>
+            {% endif %}
+
+            {{ content }}
+
+            <div class="footer">
+                <p>
+                    <a href="https://liacs.leidenuniv.nl/" target="_blank">Leiden Institute of Advanced Computer Science</a>
+                    at the
+                    <a href="https://leidenuniv.nl/" target="_blank">University of Leiden</a>
+                </p>
+            </div>
+
+        </div> <!-- /container -->
+
+        <!-- Support retina images. -->
+        <script type="text/javascript"
+                src="{{ site.base }}/js/srcset-polyfill.js"></script>
+
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    </body>
+</html>
