@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ROAR-NET Workshop
+title: ROAR-NET Meeting
 ---
 
 
@@ -12,6 +12,7 @@ Join us for a workshop-style networking event for everyone interested in the <a 
 - **Time:** 9:30 AM - 5:30 PM  
 - **Location:** Conference venue, room TBA
 
-The event will feature engaging discussions, interactive activities, and opportunities to network with like-minded individuals interested in the ROAR-NET COST action. Further details will be announced closer to the event date.
+The event will feature plenary and working group sessions, interactive activities, and opportunities to network with other members of the ROAR-NET COST action as well as researchers interested in its topics.
+Consider joining us a day in advance!
 
 For more information about ROAR-NET COST action, visit the <a href="https://roar-net.eu/" target="_blank">ROAR-NET COST action website</a>.
