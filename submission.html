@@ -41,8 +41,21 @@ header:
 <h4>Camera Ready Submission</h4>
 <ul>
     <li>Formatting must comply with the ACM format requirements using the sigconf template. See the latest <a href="http://www.acm.org/publications/proceedings-template">ACM Primary Article Template</a>.</li>
-    <li>Include the precise DOI and ISBN numbers received from ACM after completing the copyright process.</li>
-    <li>Use Type 1/TrueType fonts for your submission. Type 3 fonts are not acceptable.</li>
-    <li>Distill/Create an ACM compliant PDF and upload your PDF file at the linklings site.</li>
-    <li>CCS Concepts and Keywords are mandatory to be included on the first page of your submission.</li>
+
+    <li>Verify that your .tex document includes the following lines, using the precise DOI and ISBN numbers that you received back from ACM after completing the copyright process. Make sure that your PDF shows the correct conference information on the front page (you will receive the exact code after completing the ACM Copyright form):</li>
+
+    <pre><code>
+\acmDOI{10.1145/nnnnnnn.nnnnnnn} % To be updated after completing copyright process
+\acmISBN{978-x-xxxx-xxxx-x/YY/MM} % To be updated after completing copyright process
+\acmConference[FOGA '25]{Foundations of Genetic Algorithms XVIII}{August 27 -- 29 , 2025}{Leiden, The Netherlands}
+\acmYear{2025}
+\copyrightyear{2025}
+    </code></pre>
+    <li>You MUST use Type 1/TrueType fonts for your submission. All fonts must be embedded. Type 3 fonts are NOT acceptable. Python's matplotlib uses Type 3 fonts by default. You need to configure matplotlib to use TrueType fonts with: </li>
+<pre> import matplotlib
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42 
+</pre>
+    <li>Distill/Create an ACM compliant PDF and upload your PDF file at the <a href="https://ssl.linklings.net/conferences/FOGA">Linklings</a> site.</li>
+    <li><a href="http://www.acm.org/publications/class-2012" target="_blank">CCS Concepts and Keywords</a> are mandatory to be included on the first page of your submission.</li>
 </ul>
