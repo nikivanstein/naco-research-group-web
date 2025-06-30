@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ROAR-NET Meeting
+title: Informal ROAR-NET Meeting
 ---
 
 
