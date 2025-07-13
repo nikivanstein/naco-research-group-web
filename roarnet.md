@@ -5,15 +5,15 @@ title: Informal ROAR-NET Meeting
 
 Join us for a workshop-style networking event for everyone interested in the <a href="https://roar-net.eu/" target="_blank">ROAR-NET COST action</a>, taking place just before the FOGA 2025 conference!
 
+Non-FOGA attendees who wish to join us for the COST action meeting can register here (registration is free of charge, but mandatory): <https://forms.gle/FA2giYJ8H27c5BTp6>
+
 ## Event Details
 
 - **Date:** Tuesday, August 26, 2025
-- **Time:** 9:30 AM - 5:30 PM
+- **Time:** 9:30 AM - 5:00 PM
 - **Location:** Conference venue, room TBA
 
 The event will feature plenary and working group sessions, interactive activities, and opportunities to network with other members of the ROAR-NET COST action as well as researchers interested in its topics. Consider joining us a day in advance!
-
-On Tuesday, August 26 (the day preceding the FOGA conference), we will host an informal meeting of the <a target="_blank" href="https://roar-net.eu/">COST action ROAR-net</a>, with the following program:
 
 - 9:30-12:00 meeting and discussion with all participants
 - 12:00-13:30 lunch break and networking
