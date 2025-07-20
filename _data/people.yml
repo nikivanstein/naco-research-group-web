@@ -466,12 +466,7 @@ derbel:
   role: pc
   image: ''
   bio: ''
-doerrb:
-  display_name: Benjamin Doerr
-  webpage: ''
-  role: pc
-  image: ''
-  bio: ''
+
 cdoerr11:
   display_name: Carola Doerr
   webpage: ''
@@ -484,12 +479,7 @@ eremeev:
   role: pc
   image: ''
   bio: ''
-fonseca:
-  display_name: Carlos M. Fonseca
-  webpage: ''
-  role: pc
-  image: ''
-  bio: ''
+
 gallagher:
   display_name: Marcus R. Gallagher
   webpage: ''
@@ -528,12 +518,6 @@ jacimovic:
   bio: ''
 krejca:
   display_name: Martin S. Krejca
-  webpage: ''
-  role: pc
-  image: ''
-  bio: ''
-kronberger:
-  display_name: Gabriel Kronberger
   webpage: ''
   role: pc
   image: ''
@@ -672,6 +656,123 @@ witt:
   bio: ''
 zarges:
   display_name: Christine Zarges
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+
+aboutaib:
+  display_name: Brahim Aboutaib
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+augera:
+  display_name: Anne Auger
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+benford:
+  display_name: Alistair Benford
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+chugh:
+  display_name: Tinkle Chugh
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+keedwell:
+  display_name: Edward Keedwell
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+kerschke:
+  display_name: Pascal Kerschke
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+komarnicki:
+  display_name: Marcin Michal Komarnicki
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+krawiec:
+  display_name: Krzysztof Krawiec
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+luque:
+  display_name: Gabriel Luque
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+moraglio:
+  display_name: Alberto Moraglio
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+nebro:
+  display_name: Antonio Nebro
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+opris:
+  display_name: Andre Opris
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+przewozniczek:
+  display_name: Michal Witold Przewozniczek 
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+
+saborido:
+  display_name: Rubén Saborido
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+volz:
+  display_name: Vanessa Volz
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+walker:
+  display_name: David Walker
+  webpage: ''
+  role: pc
+  image: ''
+  bio: ''
+wangx:
+  display_name: Xilu Wang
   webpage: ''
   role: pc
   image: ''

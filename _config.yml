@@ -29,7 +29,7 @@ roles:
 front_page_news: 3
 
 # Base pathname for links.
-base: 'https://naco.liacs.nl/foga2025/'
+base: 'https://naco.liacs.nl/foga2025'
 
 # make pages for the _projects folder
 collections:
@@ -55,7 +55,7 @@ navigation:
   - title: Local Info
     link: /local.html
   - title: Organizers
-    link: organizers.html
+    link: /organizers.html
   # - title: About
   #   link: /about.html
 
