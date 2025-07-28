@@ -1,0 +1,92 @@
+---
+layout: map
+title: Partners
+---
+
+The Natural Computing research cluster at LIACS collaborates with a diverse group of partners, including leading academic institutions and industry innovators. 
+These collaborations enable us to bridge the gap between fundamental research and real-world applications, fostering advancements in natural computing and AI and its impact on society.
+
+<div class="bg-white shadow-md rounded-lg p-6 mb-6">
+    <div id="map"></div>
+</div>
+
+<!-- <div class=" text-center py-8">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Some of our partners</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+        <img src="https://via.placeholder.com/150x50/000000/FFFFFF?text=Partner+1" alt="Partner 1" class="h-12 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <img src="https://via.placeholder.com/150x50/000000/FFFFFF?text=Partner+2" alt="Partner 2" class="h-12 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <img src="https://via.placeholder.com/150x50/000000/FFFFFF?text=Partner+3" alt="Partner 3" class="h-12 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <img src="https://via.placeholder.com/150x50/000000/FFFFFF?text=Partner+4" alt="Partner 4" class="h-12 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <img src="https://via.placeholder.com/150x50/000000/FFFFFF?text=Partner+5" alt="Partner 5" class="h-12 opacity-60 hover:opacity-100 transition-opacity duration-300">
+    </div>
+</div> -->
+<script>
+    function getColor(affiliation) {
+        if (affiliation.toLowerCase().includes('university')) return '#3b82f6';
+        if (affiliation.toLowerCase().includes('college')) return '#8b5cf6';
+        if (affiliation.toLowerCase().includes('institute')) return '#22c55e';
+        if (affiliation.toLowerCase().includes('research')) return '#ef4444';
+        return '#f97316';
+    }
+    
+    function getInitials(name) {
+        const names = name.split(' ');
+        let initials = '';
+        for (let i = 0; i < Math.min(names.length, 3); i++) {
+            initials += names[i][0].toUpperCase();
+        }
+        return initials;
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const map = L.map('map').setView([52, 10], 2);
+        // L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {  // Less detailed tile layer
+        //     attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        // }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        fetch('coauthors_enriched.json')
+            .then(response => response.json())
+            .then(coauthorData => {
+                const markers = L.markerClusterGroup({
+                    maxClusterRadius: 40,
+                    spiderfyOnMaxZoom: false,
+                    showCoverageOnHover: false,
+                    iconCreateFunction: function (cluster) {
+                        const childCount = cluster.getChildCount();
+                        let c = 'marker-cluster-small';
+                        if (childCount > 20) {
+                            c = 'marker-cluster-medium';
+                        } else if (childCount > 100) {
+                            c = 'marker-cluster-large';
+                        }
+                        return new L.DivIcon({
+                            html: '<div><span>' + childCount + '</span></div>',
+                            className: 'marker-cluster ' + c,
+                            iconSize: new L.Point(40, 40)
+                        });
+                    }
+                });
+    
+                coauthorData.forEach(coauthor => {
+                    if (coauthor.latitude && coauthor.longitude) {
+                        const color = getColor(coauthor.affiliations);
+                        const initials = getInitials(coauthor.name);
+                        const icon = L.divIcon({
+                            className: 'marker-icon',
+                            html: `<div style="background-color:${color}; border-radius: 50%; padding:5px;"\></span>${initials}</div>`,
+                            iconSize: [30, 30],
+                            popupAnchor: [0, -15]
+                        });
+                        const marker = L.marker([coauthor.latitude, coauthor.longitude], { icon: icon })
+                            .bindPopup(`<b><span class="math-inline">${coauthor.name}</b\><br\></span>${coauthor.affiliations}`);
+                        markers.addLayer(marker);
+                    }
+                });
+                map.addLayer(markers);
+            })
+            .catch(error => console.error('Error fetching co-author data:', error));
+    });
+</script>

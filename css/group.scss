@@ -74,6 +74,18 @@ a > .fa {
     overflow: hidden;
 }
 
+.event-columns .card {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.group-columns .card {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
 /* Front page news. */
 ul.news {
 
@@ -99,6 +111,7 @@ ul.news {
     .project-people { column-count: 3 }
     .card-columns   { column-count: 3 }
     .group-columns   { column-count: 4 }
+    .event-columns   { column-count: 3 }
 }
 
 .title img {
@@ -201,4 +214,8 @@ svg {
 
 .card-text {
     min-height:60px;
+}
+
+.event-card {
+    margin-bottom: 1rem;
 }

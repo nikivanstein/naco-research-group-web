@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>{{ site.name }}: {{ page.title }}</title>
 
@@ -63,13 +63,13 @@
             {% endif %}
 
             {% if page.largeimage %}
-                <img src="{{ page.largeimage }}"
+                <img loading="lazy" src="{{ page.largeimage }}"
                      alt="{{ page.title }}"
                      style="width: 100%; object-fit: cover;"
                      class="img-fluid mx-auto d-block mb-4"/>
             {% else %}
                 {% if page.image %}
-                    <img src="{{ page.image }}"
+                    <img loading="lazy" src="{{ page.image }}"
                         alt="{{ page.title }}"
                         style="max-width: 400px"
                         class="img-fluid mx-auto d-block mb-4"/>

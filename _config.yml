@@ -1,5 +1,5 @@
 name: Natural Computing Group
-url: https://naco.liacs.nl/
+url: https://naco.liacs.nl
 author: "Niki van Stein"
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
@@ -8,7 +8,7 @@ exclude: [bibble, README.md, Makefile, screenshot.png]
 highlighter: pygments
 
 # The path structure for blog posts.
-permalink: /blog/:year/:month/:day/:title.html
+permalink: pretty
 
 # Sections on the "people" page.
 roles:
@@ -29,6 +29,15 @@ roles:
   - key: alum
     name: Alumni
 
+
+event_types:
+  - key: conference
+    name: Conferences
+  - key: workshop
+    name: Workshops
+  - key: tutorial
+    name: Tutorials
+
 # Number of news stories on the front page.
 front_page_news: 3
 
@@ -41,6 +50,8 @@ collections:
     output: true
   groups:
     output: true
+  events:
+    output: true
 
 # Navigation bar links.
 navigation:
@@ -49,11 +60,13 @@ navigation:
   - title: People
     link: /#people
   - title: Research
-    link: /research.html
-  - title: Education
-    link: /education.html
+    link: /research/
+  - title: Events
+    link: /events/
+  # - title: Education
+  #   link: /education.html
   - title: Contact
-    link: /contact.html
+    link: /contact/
 
 
 # Social Sharing
@@ -70,3 +83,9 @@ social:
   type                   : 'Organization' # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+
+plugins:
+  - jekyll-sitemap
+
+compress_images:
+  images_path: "/img/**/*.{gif,png,jpg,jpeg,svg}"

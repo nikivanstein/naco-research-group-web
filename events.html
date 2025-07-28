@@ -1,0 +1,62 @@
+---
+layout: default
+title: Events
+---
+
+Welcome to the Events page of the Natural Computing Cluster. 
+Here, we showcase a diverse array of academic and professional gatherings that our group organizes or co-organizes. 
+These events include conferences, workshops, seminars, and tutorials, all aimed at fostering collaboration and advancing research in natural computing and related fields. 
+We invite you to explore our upcoming and past events to engage with the latest developments and connect with experts in the community.
+
+{% for type in site.event_types %}
+<h3 class="pt-3"> {{ type.name }} - Upcoming Events</h3>
+<div class="type {{ type.key }}">
+
+    <div class="event-columns" id="upcoming-{{ type.key }}">
+        {% assign upcoming_events = site.events | where: "type", type.key | sort: 'eventdate' %}
+        {% for event in upcoming_events %}
+            <div class="event-card" data-eventdate="{{ event.eventdate }}">
+                {% include event-card.html group=event %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+
+<img src="/img/banne.duplor_IJCCI_2025.png" style="width:100%;"/>
+
+<h3 class="pt-3">Past Events</h3>
+<div class="type past-events">
+    <div class="event-columns" id="past-events">
+        {% assign past_events = site.events | sort: 'eventdate' %}
+        {% for event in past_events %}
+            <div class="event-card" data-eventdate="{{ event.eventdate }}">
+                {% include event-card.html group=event %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const today = new Date();
+
+        function filterEvents(containerId, isUpcoming) {
+            const container = document.getElementById(containerId);
+            const events = container.querySelectorAll('.event-card');
+            events.forEach(event => {
+                const eventDate = new Date(event.getAttribute('data-eventdate'));
+                if (isUpcoming && eventDate < today) {
+                    event.style.display = 'none';
+                } else if (!isUpcoming && eventDate >= today) {
+                    event.style.display = 'none';
+                }
+            });
+        }
+
+        {% for type in site.event_types %}
+        filterEvents('upcoming-{{ type.key }}', true);
+        {% endfor %}
+        filterEvents('past-events', false);
+    });
+</script>

@@ -15,8 +15,9 @@ people:
   - lamers
   - long
   - antonov
-  - winter
+  - preintner
   - zeiser
+  - ye
 
 projects:
   - 2022-xaipre
