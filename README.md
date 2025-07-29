@@ -123,3 +123,10 @@ To upload a new version of the site via rsync over ssh, type `make deploy`. A we
 
 [Jekyll]: http://jekyllrb.com/
 [bibble]: https://github.com/sampsyo/bibble/
+
+
+
+### Run Python agents:
+
+python -m client_server.game_agent_server --agent-module agents.random_agents --agent-class CarefulRandomAgent --port 9003
+python -m client_server.game_agent_server --agent-module agents.greedy_heuristic_agent  --agent-class GreedyHeuristicAgent  --port 9004
