@@ -50,7 +50,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
 ### Methodology
 <div class="card-columns">
   <div class="card">
-    <a href="#">
+    <a href="https://dl.acm.org/doi/abs/10.1109/TEVC.2024.3497793" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea1.png" alt="LLaMEA: A Large Language Model Evolutionary Algorithm for Automatically Generating Metaheuristics"/>
     </a>
     <div class="card-body">
@@ -58,7 +58,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
   <div class="card">
-    <a href="#">
+    <a href="https://dl.acm.org/doi/10.1145/3731567" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea2-hpo.png" alt="In-the-loop hyper-parameter optimization for LLM-based automated design of heuristics"/>
     </a>
     <div class="card-body">
@@ -66,7 +66,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
   <div class="card">
-    <a href="#">
+    <a href="https://link.springer.com/chapter/10.1007/978-3-031-90065-5_25" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea3-mutation.png" alt="Controlling the mutation in large language models for the efficient evolution of algorithms"/>
     </a>
     <div class="card-body">
@@ -74,7 +74,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
   <div class="card">
-    <a href="#">
+    <a href="https://arxiv.org/abs/2505.21034" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea4-bo.png" alt="LLaMEA-BO: A Large Language Model Evolutionary Algorithm for Automatically Generating Bayesian Optimization Algorithms"/>
     </a>
     <div class="card-body">
@@ -82,7 +82,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
   <div class="card">
-    <a href="#">
+    <a href="https://arxiv.org/abs/2505.15741" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea5-survey.png" alt="Evolutionary Computation and Large Language Models: A Survey of Methods, Synergies, and Applications"/>
     </a>
     <div class="card-body">
@@ -91,10 +91,10 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
   </div>
 </div>
 
-### Benchmarking
+### Benchmarking and Analysis
 <div class="card-columns">
   <div class="card">
-    <a href="#">
+    <a href="https://dl.acm.org/doi/10.1145/3712256.3726328" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea6-ceg.png" alt="Code evolution graphs: Understanding large language model driven design of algorithms"/>
     </a>
     <div class="card-body">
@@ -102,7 +102,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
   <div class="card">
-    <a href="#">
+    <a href="https://arxiv.org/html/2504.20183v1" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea9-blade.png" alt="BLADE: Benchmark suite for LLM-driven Automated Design and Evolution of iterative optimisation heuristics"/>
     </a>
     <div class="card-body">
@@ -110,7 +110,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
   <div class="card">
-    <a href="#">
+    <a href="https://arxiv.org/abs/2507.03605" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea7-behaviour.png" alt="Behaviour Space Analysis of LLM-driven Meta-heuristic Discovery"/>
     </a>
     <div class="card-body">
@@ -119,10 +119,10 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
   </div>
 </div>
 
-### Applications
+### Real World Applications
 <div class="card-columns">
   <div class="card">
-    <a href="#">
+    <a href="https://arxiv.org/abs/2503.19742">
       <img class="img-fluid mb-2" src="/img/llamea/llamea8-optics.png" alt="Optimizing Photonic Structures with Large Language Model Driven Algorithm Discovery"/>
     </a>
     <div class="card-body">
