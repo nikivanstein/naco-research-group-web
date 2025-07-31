@@ -9,8 +9,10 @@ description: |
 
 people:
   - yin
-  - stein
+  - raponi
+  - kononova
   - back
+  - stein
 
 layout: project
 image: "/img/projects/llamea.png"
