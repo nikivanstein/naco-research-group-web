@@ -21,8 +21,7 @@ last-updated: 2025-01-10
 
 LLaMEA, or Large Language Model Evolutionary Algorithm, is an innovative framework developed by the XAI research group at NACO with the lead of Niki van Stein. It leverages large language models (LLMs), such as GPT-4, to automate the generation and refinement of algorithms such as metaheuristic optimizers. By iteratively evolving algorithms based on performance metrics and runtime evaluations, LLaMEA streamlines the optimization process without requiring extensive prior algorithmic knowledge. 
 
-<iframe width="730" height="415" src="https://www.youtube.com/embed/LtFc8K5Uc4w" title="LLaMEA video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+See also the introductory [Youtube video](https://www.youtube.com/embed/LtFc8K5Uc4w).
 
 Key features of LLaMEA include:
 
@@ -41,8 +40,8 @@ In addition, a accompanying benchmarking framework with additional real-world pr
 
 The research on LLaMEA and generated algorithms from LLaMEA have won the following prestiguous awards:
 
-🥈 Silver Award at the [GECCO 2025 Humies competition](https://gecco-2025.sigevo.org/Humies-Awards)
-🏅 Winner of the [GECCO 2025 Any-Time Performance for Affine BBOB competition](https://gecco-2025.sigevo.org/Competition-Awards#AA4AffineBBOB_Competition)
+🥈 Silver Award at the [GECCO 2025 Humies competition](https://gecco-2025.sigevo.org/Humies-Awards)  
+🏅 Winner of the [GECCO 2025 Any-Time Performance for Affine BBOB competition](https://gecco-2025.sigevo.org/Competition-Awards#AA4AffineBBOB_Competition)  
 🏅 Winner of the [GECCO 2024 Any-Time Performance for Affine BBOB competition](https://gecco-2024.sigevo.org/Competition-Awards.html#Anytime_Algorithms_for_Many-affine_BBOB_Functions)
 
 ## Related papers
@@ -78,7 +77,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
       <img class="img-fluid mb-2" src="/img/llamea/llamea4-bo.png" alt="LLaMEA-BO: A Large Language Model Evolutionary Algorithm for Automatically Generating Bayesian Optimization Algorithms"/>
     </a>
     <div class="card-body">
-      <p class="card-title">LLaMEA-BO: A Large Language Model Evolutionary Algorithm for Automatically Generating Bayesian Optimization Algorithms</p>
+      <p class="card-title">LLaMEA-BO: Automatically Generating Bayesian Optimization Algorithms</p>
     </div>
   </div>
   <div class="card">
@@ -106,7 +105,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
       <img class="img-fluid mb-2" src="/img/llamea/llamea9-blade.png" alt="BLADE: Benchmark suite for LLM-driven Automated Design and Evolution of iterative optimisation heuristics"/>
     </a>
     <div class="card-body">
-      <p class="card-title">BLADE: Benchmark suite for LLM-driven Automated Design and Evolution of iterative optimisation heuristics</p>
+      <p class="card-title">BLADE: Benchmark suite for LLM-driven Automated Design and Evolution</p>
     </div>
   </div>
   <div class="card">
