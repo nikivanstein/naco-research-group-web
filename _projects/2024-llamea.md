@@ -103,7 +103,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
   <div class="card">
-    <a href="https://arxiv.org/html/2504.20183v1" target="_blank">
+    <a href="https://dl.acm.org/doi/10.1145/3712255.3734347" target="_blank">
       <img class="img-fluid mb-2" src="/img/llamea/llamea9-blade.png" alt="BLADE: Benchmark suite for LLM-driven Automated Design and Evolution of iterative optimisation heuristics"/>
     </a>
     <div class="card-body">
@@ -123,7 +123,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
 ### Real World Applications
 <div class="card-columns">
   <div class="card">
-    <a href="https://arxiv.org/abs/2503.19742">
+    <a href="https://dl.acm.org/doi/10.1145/3712255.3734288">
       <img class="img-fluid mb-2" src="/img/llamea/llamea8-optics.png" alt="Optimizing Photonic Structures with Large Language Model Driven Algorithm Discovery"/>
     </a>
     <div class="card-body">
