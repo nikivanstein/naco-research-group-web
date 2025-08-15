@@ -32,12 +32,12 @@ knowles:
     image: /img/people/knowles.jpg
     bio: "<b>Title</b>: Answering Hamming <br/> <b>Abstract</b>: The story goes that while working at Bell Labs in the 1950s, the mathematician and computer scientist Richard Hamming would ask colleagues, \"what's the most important problem in your field?\" … and then follow up with, \"so, why aren't you working on it?\"  Both questions have many possible answers, even for just one person at one time, but they are certainly provocative, tough and uncomfortable. In the talk, I will reflect on my personal answers at various times, some answers for evolutionary computation (EC) and evolutionary multiobjective optimization (EMO) more broadly, and for adjacent fields to EC/EMO as well as for industrial research & innovation. My particular answers (or anyone's) are almost certainly not as important as the effort behind them to grapple with the questions. <br/><br/> <b>Bio</b>: Based in the UK, Joshua Knowles is a scientific advisor for the multinational energy technology company SLB, an honorary professor in the decision sciences group of Alliance Manchester Business School at The University of Manchester, and a former professor of natural computation at the University of Birmingham. Publishing in evolutionary multiobjective optimization (EMO) since the late 90s, his work includes fundamental research on archiving with diversity, local search, performance assessment, hypervolume-as-selection, machine decision makers, heterogeneous objectives, and “multiobjectivization”. In 2004-5, he developed the influential multiobjective Bayesian optimization method, ParEGO, for expensive problems. More broadly, Josh is interested in and has published (joint work) on the evolution of evolvability, the evolution of cooperation, neutral evolution, and symbiogenesis (including Deep Optimization). He has also described evolutionary and ML applications work in premier journals in astrophysics, analytical chemistry, theoretical biology, bioinformatics, and operations research."
 
-wehner:
-    display_name: "Stephanie Wehner"
-    webpage: "https://qutech.nl/person/stephanie-wehner/"
+dunjko:
+    display_name: "Vedran Dunjko"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/vedran-dunjko#tab-1"
     role: keynote
-    image: /img/people/wehner.jpg
-    bio: Delft University of Technology, The Netherlands
+    image: /img/people/dunjko.png
+    bio: Professor in Quantum Computing, Leiden University, The Netherlands
 
 glasmachers:
     display_name: "Tobias Glasmachers"
