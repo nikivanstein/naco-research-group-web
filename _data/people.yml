@@ -192,6 +192,12 @@ nguyen:
     bio: "PhD 2024"
     role: alum
 
+shahane:
+    display_name: "Ananta Shahane"
+    image: /img/people/shahane.jpg
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/ananta-shahane#tab-1"
+    role: grad
+
 nobel:
     display_name: "Jacob de Nobel"
     image: /img/people/nobel.png
