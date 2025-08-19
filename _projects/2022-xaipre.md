@@ -9,6 +9,7 @@ description: |
 
 people:
   - huang
+  - shahane
   - ye
   - back
   - stein
