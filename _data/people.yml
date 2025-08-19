@@ -37,7 +37,8 @@ dunjko:
     webpage: "https://www.universiteitleiden.nl/en/staffmembers/vedran-dunjko#tab-1"
     role: keynote
     image: /img/people/dunjko.png
-    bio: Professor in Quantum Computing, Leiden University, The Netherlands
+    bio: "<b>Title</b>: Quantum Computing for Machine Learning and Optimization: new prospects and new limitations. <br/><br/> <b>Bio</b>: Vedran received his MSc degree in Mathematics and Computer Science from the University of Zagreb, Croatia, and has completed his PhD in 2012 in Theoretical Physics at Heriot-Watt University, Edinburgh, UK, working on new quantum cryptographic protocols.  After his PhD, he has held post-doctoral positions at the School of Informatics of the University of Edinburgh, Institute of Theoretical Physics of Innsbruck University, and the Theory Group of Max Planck Institute of Quantum Optics in Germany.  Since 2013, his research has focused on various aspects of quantum machine learning including the development of novel quantum algorithms for machine learning and AI problems, and the application of AI methods in quantum contexts."
+
 
 glasmachers:
     display_name: "Tobias Glasmachers"
