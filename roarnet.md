@@ -11,15 +11,15 @@ Non-FOGA attendees who wish to join us for the COST action meeting can register 
 
 - **Date:** Tuesday, August 26, 2025
 - **Time:** 9:30 AM - 5:00 PM
-- **Location:** Conference venue, room TBA
+- **Location:** Conference venue, room BE.0.17 (turn right and walk straight ahead until you reach the room, which is located at the end of the foyer on the right.)
 
-The event will feature plenary and working group sessions, interactive activities, and opportunities to network with other members of the ROAR-NET COST action as well as researchers interested in its topics. Consider joining us a day in advance!
+The event will feature plenary and working group sessions, interactive activities, and opportunities to network with other members of the ROAR-NET COST action as well as researchers interested in its topics. 
 
 - 9:30-12:00 meeting and discussion with all participants
 - 12:00-13:30 lunch break and networking
 - 13:30-17:00 WG meetings (participants can freely choose which working group meeting they want to join, and they can switch between different WGs at their convenience)
 
-List of participating working groups (list to be confirmed, details about the working groups are available <a href="https://roar-net.eu/wg/">here</a>.):
+List of participating working groups (details about the working groups are available <a href="https://roar-net.eu/wg/">here</a>.):
 
 | WG number | WG title                                   | Contact person      |
 |-----------|--------------------------------------------|---------------------|
