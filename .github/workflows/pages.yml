@@ -29,17 +29,14 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
+          bundler-cache: true
 
-      - name: Install & build root site
-        run: |
-          bundle install
-          bundle exec jekyll build --destination _site
+      - name: Build root site
+        run: bundle exec jekyll build --destination _site
 
       - name: Build foga2025 site
         working-directory: foga2025
-        run: |
-          bundle install
-          bundle exec jekyll build --destination _site
+        run: bundle exec jekyll build --destination _site
 
       - name: Stage combined site
         run: |
