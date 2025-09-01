@@ -1,0 +1,64 @@
+name: Deploy Pages (root + foga2025 subfolder)
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout foga2025 branch
+        uses: actions/checkout@v4
+        with:
+          ref: foga2025
+          path: foga2025
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install & build root site
+        run: |
+          bundle install
+          bundle exec jekyll build --destination _site
+
+      - name: Build foga2025 site
+        working-directory: foga2025
+        run: |
+          bundle install
+          bundle exec jekyll build --destination _site
+
+      - name: Stage combined site
+        run: |
+          mkdir -p dist
+          rsync -a _site/ dist/
+          mkdir -p dist/foga2025
+          rsync -a foga2025/_site/ dist/foga2025/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
