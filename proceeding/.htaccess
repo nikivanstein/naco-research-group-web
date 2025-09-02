@@ -1,6 +1,0 @@
-AuthType Basic
-AuthName "Restricted Access"
-AuthUserFile /home/.htpasswd
-Require valid-user
-
-DirectoryIndex foga25_mainpage.html
