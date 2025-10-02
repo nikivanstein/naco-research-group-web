@@ -280,6 +280,15 @@ rizzato:
     display_name: "Agnese Rizzato"
     role: collab
 
+baratov:
+    display_name: "Farrukh Baratov"
+    image: /img/people/farrukh.jpg
+    role: grad
+
+verberne:
+    display_name: "Suzan Verberne"
+    image: /img/people/verberne.jpg
+    role: collab
 
 alum-rios:
     display_name: "Thiago Rios"
