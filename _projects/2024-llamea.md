@@ -8,6 +8,7 @@ description: |
   Large Language Evolutionary Algorithm for the automatic design of algorithms.
 
 people:
+  - shahane
   - yin
   - raponi
   - kononova

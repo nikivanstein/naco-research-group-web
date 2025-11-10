@@ -17,7 +17,7 @@ roles:
   - key: prof
     name: Group leader
   - key: aprof
-    name: Assistant Professors
+    name: Assistant and Associate Professors
   - key: staff
     name: Staff
   - key: postdoc
