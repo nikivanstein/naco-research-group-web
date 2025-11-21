@@ -9,8 +9,10 @@ description: |
 
 people:
   - kitharidis
+  - baratov
   - cor-veenman
   - stein
+  - verberne
   - back
 
 projects:

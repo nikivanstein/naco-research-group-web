@@ -10,7 +10,7 @@ stein:
     webpage: "https://nikivanstein.nl/"
     github: nikivanstein
     image: /img/people/stein.png
-    bio: Assistant Professor of Explainable AI
+    bio: Associate Professor of Explainable AI
     role: aprof
 
 wang:
@@ -19,6 +19,7 @@ wang:
     role: aprof
     image: /img/people/wang.jpg
     bio: Assistant Professor of Optimization and Learning
+
 
 kononova:
     display_name: "Anna V. Kononova"
@@ -67,6 +68,12 @@ huang:
     display_name: "Qi Huang"
     image: /img/people/huang.jpg
     role: grad
+
+shahane:
+    display_name: "Ananta Shahane"
+    image: /img/people/shahane.jpg
+    role: grad
+    bio: "Scientific programmer"
 
 preintner:
     display_name: "Tobias Preintner"
@@ -280,6 +287,15 @@ rizzato:
     display_name: "Agnese Rizzato"
     role: collab
 
+baratov:
+    display_name: "Farrukh Baratov"
+    image: /img/people/farrukh.jpg
+    role: grad
+
+verberne:
+    display_name: "Suzan Verberne"
+    image: /img/people/verberne.jpg
+    role: collab
 
 alum-rios:
     display_name: "Thiago Rios"

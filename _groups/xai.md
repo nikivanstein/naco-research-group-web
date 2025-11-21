@@ -18,6 +18,7 @@ people:
   - preintner
   - zeiser
   - ye
+  - baratov
 
 projects:
   - 2022-xaipre
