@@ -2,7 +2,7 @@ name: Deploy Pages (root + foga2025 + accept42 subfolder)
 
 on:
   push:
-    branches: [ master, accept ]
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
@@ -55,7 +55,7 @@ jobs:
       - name: Install gems for accept
         working-directory: accept
         run: bundle install
-        
+
       - name: Build accept site
         working-directory: accept
         run: bundle exec jekyll build --destination _site --baseurl "${{ steps.pages.outputs.base_path }}/accept42"
