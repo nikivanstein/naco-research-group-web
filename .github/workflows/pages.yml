@@ -1,8 +1,8 @@
-name: Deploy Pages (root + foga2025 subfolder)
+name: Deploy Pages (root + foga2025 + accept42 subfolder)
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, accept ]
   workflow_dispatch:
 
 permissions:
@@ -18,13 +18,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout master branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
 
       - name: Checkout foga2025 branch
         uses: actions/checkout@v4
         with:
           ref: foga2025
           path: foga2025
+
+      - name: Checkout accept branch
+        uses: actions/checkout@v4
+        with:
+          ref: accept
+          path: accept
 
       - uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
@@ -43,12 +52,18 @@ jobs:
         working-directory: foga2025
         run: bundle exec jekyll build --destination _site --baseurl "${{ steps.pages.outputs.base_path }}/foga2025"
 
+      - name: Build accept site
+        working-directory: accept
+        run: bundle exec jekyll build --destination _site --baseurl "${{ steps.pages.outputs.base_path }}/accept42"
+
       - name: Stage combined site
         run: |
           mkdir -p dist
           rsync -a _site/ dist/
           mkdir -p dist/foga2025
           rsync -a foga2025/_site/ dist/foga2025/
+          mkdir -p dist/accept42
+          rsync -a accept/_site/ dist/accept42/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
