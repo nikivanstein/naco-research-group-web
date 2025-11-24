@@ -2,7 +2,7 @@ name: Deploy Pages (root + foga2025 + accept42 subfolder)
 
 on:
   push:
-    branches: [ master, accept ]
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
@@ -39,7 +39,7 @@ jobs:
         with:
           ruby-version: '3.3'
           bundler-cache: true
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          cache-version: 1 # Increment this number if you need to re-download cached gems
 
       - name: Setup Pages
         id: pages
@@ -51,6 +51,10 @@ jobs:
       - name: Build foga2025 site
         working-directory: foga2025
         run: bundle exec jekyll build --destination _site --baseurl "${{ steps.pages.outputs.base_path }}/foga2025"
+
+      - name: Install gems for accept
+        working-directory: accept
+        run: bundle install
 
       - name: Build accept site
         working-directory: accept
