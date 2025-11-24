@@ -10,8 +10,6 @@ description: |
 people:
   - shahane
   - yin
-  - huang
-  - kitharidis
   - raponi
   - kononova
   - back
