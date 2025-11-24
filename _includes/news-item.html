@@ -7,6 +7,8 @@
 {% assign icon = "newspaper-o" %}
 {% endif %}
 
+{% if item.category = "naco" %}
+
 {% capture news %}
     <div>
         {% if post.shortnews %}
@@ -52,3 +54,5 @@
         {{ news }}
     {% endif %}
 </li>
+
+{% endif %}
