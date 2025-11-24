@@ -2,6 +2,7 @@
 layout: post
 shortnews: true
 icon: newspaper-o
+category: foga
 ---
 
 ## Young Researcher and Innovator Conference Grant

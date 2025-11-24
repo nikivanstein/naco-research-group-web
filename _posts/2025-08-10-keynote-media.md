@@ -2,6 +2,7 @@
 layout: post
 shortnews: true
 icon: newspaper-o
+category: foga
 ---
 
 Slides from two FOGA 2025 keynotes are now available:
