@@ -18,9 +18,12 @@ people:
   - preintner
   - zeiser
   - ye
+  - yin
   - baratov
 
 projects:
+  - 2026-genaide
+  - 2024-llamea
   - 2022-xaipre
   - 2023-ai4oversight
   - 2022-lens-design
