@@ -4,7 +4,6 @@ shortnews: false
 icon: podcast
 title:  "Beyond the Prompt: Ep. 4"
 image: /img/posts/beyond-the-prompt.png
-category: naco
 header:
     og_image: posts/beyond-the-prompt.png
 ---
