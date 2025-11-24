@@ -52,6 +52,10 @@ jobs:
         working-directory: foga2025
         run: bundle exec jekyll build --destination _site --baseurl "${{ steps.pages.outputs.base_path }}/foga2025"
 
+      - name: Install gems for accept
+        working-directory: accept
+        run: bundle install
+        
       - name: Build accept site
         working-directory: accept
         run: bundle exec jekyll build --destination _site --baseurl "${{ steps.pages.outputs.base_path }}/accept42"
