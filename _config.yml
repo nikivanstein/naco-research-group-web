@@ -34,7 +34,7 @@ event_types:
   - key: conference
     name: Conferences
   - key: workshop
-    name: Workshops
+    name: Workshops and Special Sessions
   - key: tutorial
     name: Tutorials
 
