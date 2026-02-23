@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 people:
-  - huang
+  - wang
 
 layout: group
 image: "/img/groups/xai logo-512px.png"

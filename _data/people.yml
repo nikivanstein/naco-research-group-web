@@ -179,7 +179,23 @@ antonov:
 long:
     display_name: "Fu-Xing Long"
     image: /img/people/long.jpg
+    bio: "PhD, 2025. Now at BMW."
+    role: alum
+
+luo:
+    display_name: "Jiahuizi Luo"
+    image: /img/people/luo.jpg
     role: grad
+
+kovalchyk:
+    display_name: "Iryna Kovalchyk"
+    image: /img/people/kovalchyk.jpg
+    role: grad
+
+bodas:
+    display_name: "Aditya Bodas"
+    image: /img/people/bodas.jpg
+    role: unemployed
 
 winter:
     display_name: "Roy de Winter"

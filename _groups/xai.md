@@ -13,13 +13,15 @@ people:
   - kitharidis
   - wagner
   - lamers
-  - long
   - antonov
   - preintner
   - zeiser
   - ye
   - yin
   - baratov
+  - kovalchyk
+  - bodas
+  - wong
 
 projects:
   - 2026-genaide
