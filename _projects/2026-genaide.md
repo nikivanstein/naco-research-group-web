@@ -8,6 +8,8 @@ description: |
   Exploring disruptive AI technologies and evolving computer-aided engineering.
 
 people:
+  - bodas
+  - kovalchyk
   - raponi
   - wang
   - stein

@@ -13,9 +13,9 @@ people:
 
 eventdate: 2026-07-21
 layout: event
-image: /img/events/CEC2026.png
+image: /img/events/wcci2026-llmaad.png
 header:
-    og_image: events/CEC2026.png
+    og_image: events/wcci2026-llmaad.png
 last-updated: 2025-11-25
 ---
 

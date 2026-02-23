@@ -15,9 +15,9 @@ people:
 
 eventdate: 2026-04-08
 layout: event
-image: /img/events/evollms-header.png
+image: /img/events/evollms2026-header.png
 header:
-    og_image: events/evollms.png
+    og_image: events/evollms2026.png
 last-updated: 2025-11-20
 ---
 
