@@ -184,10 +184,12 @@ long:
 
 luo:
     display_name: "Jiahuizi Luo"
+    image: /img/people/luo.jpg
     role: grad
 
 kovalchyk:
     display_name: "Iryna Kovalchyk"
+    image: /img/people/kovalchyk.jpg
     role: grad
 
 bodas:
