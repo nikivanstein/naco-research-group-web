@@ -91,6 +91,22 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
       <p class="card-title">Evolutionary Computation and Large Language Models: A Survey of Methods, Synergies, and Applications</p>
     </div>
   </div>
+  <div class="card">
+    <a href="https://arxiv.org/abs/2603.02792" target="_blank">
+      <img class="img-fluid mb-2" src="/img/llamea/llamea10-strong-priors.svg" alt="From Heuristic Selection to Automated Algorithm Design: LLMs Benefit from Strong Priors"/>
+    </a>
+    <div class="card-body">
+      <p class="card-title">From Heuristic Selection to Automated Algorithm Design: LLMs Benefit from Strong Priors</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="https://arxiv.org/abs/2601.21511" target="_blank">
+      <img class="img-fluid mb-2" src="/img/llamea/llamea11-sage.svg" alt="LLaMEA-SAGE: Guiding Automated Algorithm Design with Structural Feedback from Explainable AI"/>
+    </a>
+    <div class="card-body">
+      <p class="card-title">LLaMEA-SAGE: Guiding Automated Algorithm Design with Structural Feedback from Explainable AI</p>
+    </div>
+  </div>
 </div>
 
 ### Benchmarking and Analysis
@@ -119,6 +135,22 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
       <p class="card-title">Behaviour Space Analysis of LLM-driven Meta-heuristic Discovery</p>
     </div>
   </div>
+  <div class="card">
+    <a href="https://arxiv.org/abs/2602.04529" target="_blank">
+      <img class="img-fluid mb-2" src="/img/llamea/llamea12-landscape-aware.svg" alt="Landscape-aware Automated Algorithm Design: An Efficient Framework for Real-world Optimization"/>
+    </a>
+    <div class="card-body">
+      <p class="card-title">Landscape-aware Automated Algorithm Design: An Efficient Framework for Real-world Optimization</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="https://arxiv.org/abs/2601.18846" target="_blank">
+      <img class="img-fluid mb-2" src="/img/llamea/llamea13-problem-design.svg" alt="LLM Driven Design of Continuous Optimization Problems with Controllable High-level Properties"/>
+    </a>
+    <div class="card-body">
+      <p class="card-title">LLM Driven Design of Continuous Optimization Problems with Controllable High-level Properties</p>
+    </div>
+  </div>
 </div>
 
 ### Real World Applications
@@ -132,5 +164,4 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
 </div>
-
 
