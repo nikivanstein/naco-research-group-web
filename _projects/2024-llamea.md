@@ -10,6 +10,8 @@ description: |
 people:
   - shahane
   - yin
+  - huang
+  - ye
   - raponi
   - kononova
   - back
@@ -43,6 +45,7 @@ In addition, a accompanying benchmarking framework with additional real-world pr
 
 The research on LLaMEA and generated algorithms from LLaMEA have won the following prestiguous awards:
 
+🥉 Bronze Award at the [IEEE COG 2025 Planet Wars competition](https://simonlucas.github.io/planet-wars-rts/competitions/IEEE_CoG_2025_Results.html)  
 🥈 Silver Award at the [GECCO 2025 Humies competition](https://gecco-2025.sigevo.org/Humies-Awards)  
 🏅 Winner of the [GECCO 2025 Any-Time Performance for Affine BBOB competition](https://gecco-2025.sigevo.org/Competition-Awards#AA4AffineBBOB_Competition)  
 🏅 Winner of the [GECCO 2024 Any-Time Performance for Affine BBOB competition](https://gecco-2024.sigevo.org/Competition-Awards.html#Anytime_Algorithms_for_Many-affine_BBOB_Functions)
