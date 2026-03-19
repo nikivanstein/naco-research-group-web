@@ -162,6 +162,12 @@ ye:
     image: /img/people/ye.jpg
     role: postdoc
 
+kang:
+    display_name: "Zhuang Kang"
+    image: /img/people/kang.jpg
+    webpage: https://www.universiteitleiden.nl/en/staffmembers/zhuang-kang
+    role: grad
+
 chen:
     display_name: "Chen Chen"
     role: grad
