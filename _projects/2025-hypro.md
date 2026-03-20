@@ -14,8 +14,8 @@ people:
   - back
 
 layout: project
-image: "/img/projects/HyPro.png"
-largeimage: "/img/projects/HyPro-wide.jpg"
+image: "/img/projects/hypro.jpg"
+largeimage: "/img/projects/hypro-wide.png"
 last-updated: 2025-11-10
 ---
 
