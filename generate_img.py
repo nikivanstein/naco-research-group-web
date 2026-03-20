@@ -30,7 +30,7 @@ def make_naco_banner_svg(
     )
 
     # Central basin
-    Z -= 2.3 * np.exp(-(((X - 0.1) / 1.35) ** 2 + ((Y + 0.15) / 0.55) ** 2))
+    Z -= 2.8 * np.exp(-(((X - 0.1) / 1.35) ** 2 + ((Y + 0.15) / 0.55) ** 2))
 
     # Side shape to avoid perfect symmetry
     Z += 0.35 * np.exp(-(((X - 3.4) / 1.6) ** 2 + ((Y - 0.35) / 0.8) ** 2))
@@ -49,7 +49,7 @@ def make_naco_banner_svg(
     ax.contourf(
         X, Y, Z,
         levels=fill_levels,
-        cmap="Greys",
+        cmap="Greens",
         alpha=0.20,
         antialiased=True
     )
@@ -297,4 +297,4 @@ def make_naco_banner_svg(
 
 
 if __name__ == "__main__":
-    make_naco_banner_svg("naco_banner.svg")
+    make_naco_banner_svg("img/naco_banner.svg")
