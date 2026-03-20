@@ -11,7 +11,6 @@ people:
   - shahane
   - yin
   - huang
-  - ye
   - raponi
   - kononova
   - back
