@@ -200,7 +200,19 @@ kovalchyk:
 
 bodas:
     display_name: "Aditya Bodas"
-    role: unemployed
+    image: /img/people/bodas.jpg
+    role: grad
+
+
+strizak:
+    display_name: "Jana Strizak"
+    image: /img/people/strizak.jpg
+    role: grad
+
+gaval:
+    display_name: "Angélie Gaval"
+    image: /img/people/gaval.jpg
+    role: grad
 
 winter:
     display_name: "Roy de Winter"
@@ -252,6 +264,7 @@ kocaman:
 
 liu:
     display_name: "Wei Liu"
+    image: /img/people/liu.jpg
     role: grad
 
 

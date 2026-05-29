@@ -21,6 +21,7 @@ people:
   - baratov
   - kovalchyk
   - bodas
+  - strizak
   - wong
 
 projects:
