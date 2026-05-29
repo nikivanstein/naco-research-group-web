@@ -10,8 +10,9 @@ description: |
 people:
   - bodas
   - kovalchyk
+  - gaval
+  - strizak
   - raponi
-  - wang
   - stein
   - kononova
   - back
