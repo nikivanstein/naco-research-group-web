@@ -516,6 +516,7 @@ ghosh:
 sahrani:
     display_name: "Amir Sahrani"
     webpage: "https://universiteitleiden.nl/en/staffmembers/amir-sahrani"
+    mage: /img/people/sahrani.jpg
     role: grad
 
 zaharie:

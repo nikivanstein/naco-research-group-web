@@ -13,9 +13,9 @@ people:
 
 eventdate: 2026-09-01
 layout: event
-image: /img/events/wcci2026-llmaad.png
+image: /img/events/ppsn2026-llmaad.png
 header:
-    og_image: events/wcci2026-llmaad.png
+    og_image: events/ppsn2026-llmaad.png
 last-updated: 2026-06-25
 ---
 

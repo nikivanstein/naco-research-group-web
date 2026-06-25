@@ -14,9 +14,9 @@ people:
 
 eventdate: 2026-09-01
 layout: event
-image: /img/events/sb-gecco.png
+image: /img/events/sb-ppsn2026.png
 header:
-    og_image: events/sb-gecco.png
+    og_image: events/sb-ppsn2026.png
 last-updated: 2026-06-25
 ---
 
