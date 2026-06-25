@@ -38,12 +38,15 @@
     </div>
     {% if project.people %}
         <div class="card-footer d-flex flex-row flex-wrap justify-content-center">
-            {% for uname in project.people %}
-                <div>
-                    {% assign person = site.data.people[uname]  %}
-                    {% include person-image.html person=person %}
-                </div>
+            {% for uname in project.people limit:5 %}
+            <div>
+                {% assign person = site.data.people[uname] %}
+                {% include person-image.html person=person %}
+            </div>
             {% endfor %}
+            {% if project.people.size > 5 %}
+                <div class="align-self-center px-2">&hellip;</div>
+            {% endif %}
         </div>
     {% endif %}
 </div>
