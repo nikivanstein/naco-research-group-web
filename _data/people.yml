@@ -162,6 +162,12 @@ ye:
     image: /img/people/ye.jpg
     role: postdoc
 
+godin-dubois:
+    display_name: "Kevin Godin-Dubois"
+    webpage: "https://vu.nl/en/research/scientists/kevin-godin-dubois"
+    role: postdoc
+    bio: "External PostDoc (VU Amsterdam)"
+
 kang:
     display_name: "Zhuang Kang"
     image: /img/people/kang.jpg
@@ -240,7 +246,8 @@ nobel:
 vermetten:
     display_name: "Diederick Vermetten"
     image: /img/people/vermetten.jpg
-    role: grad
+    role: alum
+    bio: "PhD, 2026."
 
 wong:
     display_name: "Annie Wong"
@@ -276,8 +283,9 @@ thomaser:
 
 vonk:
     display_name: "Maarten Vonk"
-    role: grad
+    role: alum
     image: /img/people/vonk.jpg
+    bio: "PhD, 2026."
 
 correia:
     display_name: "Lucas Correia"
@@ -497,7 +505,15 @@ caraffini:
     role: collab
     bio: Associate Professor at Swansea University.
 
-zaharie: 
+mertens:
+    display_name: "Savine Mertens"
+    role: grad
+
+ghosh:
+    display_name: "Debargha Ghosh"
+    role: grad
+
+zaharie:
     display_name: "Daniela Zaharie"
     webpage: https://scholar.google.com/citations?user=SkQ526sAAAAJ&hl=en
     image: /img/people/zaharie.png
