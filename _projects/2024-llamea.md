@@ -86,11 +86,11 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </div>
   </div>
   <div class="card">
-    <a href="https://arxiv.org/abs/2505.15741" target="_blank">
-      <img class="img-fluid mb-2" src="/img/llamea/llamea5-survey.png" alt="Evolutionary Computation and Large Language Models: A Survey of Methods, Synergies, and Applications"/>
+    <a href="https://www.sciencedirect.com/science/article/pii/S1574013726001589" target="_blank">
+      <img class="img-fluid mb-2" src="/img/llamea/llamea5-survey.png" alt="Large Language Models and Evolutionary Computation: A Critical Review of Bidirectional Interaction, Automated Algorithm Design, and Co-adaptive Systems"/>
     </a>
     <div class="card-body">
-      <p class="card-title">Evolutionary Computation and Large Language Models: A Survey of Methods, Synergies, and Applications</p>
+      <p class="card-title">Large Language Models and Evolutionary Computation: A Critical Review of Bidirectional Interaction, Automated Algorithm Design, and Co-adaptive Systems</p>
     </div>
   </div>
   <div class="card">
@@ -107,14 +107,6 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </a>
     <div class="card-body">
       <p class="card-title">LLM-Driven Evolutionary Generation of Multi-Objective Bayesian Optimization Algorithms</p>
-    </div>
-  </div>
-  <div class="card">
-    <a href="https://www.sciencedirect.com/science/article/pii/S1574013726001589" target="_blank">
-      <img class="img-fluid mb-2" src="/img/llamea/llamea12-ecreview.svg" alt="Large Language Models and Evolutionary Computation: A Critical Review of Bidirectional Interaction, Automated Algorithm Design, and Co-adaptive Systems"/>
-    </a>
-    <div class="card-body">
-      <p class="card-title">Large Language Models and Evolutionary Computation: A Critical Review of Bidirectional Interaction, Automated Algorithm Design, and Co-adaptive Systems</p>
     </div>
   </div>
 </div>
