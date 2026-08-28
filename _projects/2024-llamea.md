@@ -101,6 +101,20 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
       <p class="card-title">LLaMEA-SAGE: Guiding Automated Algorithm Design with Structural Feedback from Explainable AI</p>
     </div>
   </div>
+  <div class="card">
+    <a href="https://arxiv.org/abs/2607.08791" target="_blank">
+      <div class="card-body">
+        <p class="card-title">Using LLaMEA to Discover Multi-Objective Bayesian Optimization Algorithms</p>
+      </div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://www.sciencedirect.com/science/article/pii/S1574013726001589" target="_blank">
+      <div class="card-body">
+        <p class="card-title">A Survey on Large Language Models for Evolutionary Computation (LLM-EC)</p>
+      </div>
+    </a>
+  </div>
 </div>
 
 ### Benchmarking and Analysis
@@ -164,6 +178,13 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     <div class="card-body">
       <p class="card-title">LLM Driven Design of Continuous Optimization Problems with Controllable High-level Properties</p>
     </div>
+  </div>
+  <div class="card">
+    <a href="https://arxiv.org/abs/2608.16416" target="_blank">
+      <div class="card-body">
+        <p class="card-title">Evolving Machine Learning Pipelines with LLM-driven Algorithm Design</p>
+      </div>
+    </a>
   </div>
 </div>
 
