@@ -104,14 +104,14 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
   <div class="card">
     <a href="https://arxiv.org/abs/2607.08791" target="_blank">
       <div class="card-body">
-        <p class="card-title">Using LLaMEA to Discover Multi-Objective Bayesian Optimization Algorithms</p>
+        <p class="card-title">LLM-Driven Evolutionary Generation of Multi-Objective Bayesian Optimization Algorithms</p>
       </div>
     </a>
   </div>
   <div class="card">
     <a href="https://www.sciencedirect.com/science/article/pii/S1574013726001589" target="_blank">
       <div class="card-body">
-        <p class="card-title">A Survey on Large Language Models for Evolutionary Computation (LLM-EC)</p>
+        <p class="card-title">Large Language Models and Evolutionary Computation: A Critical Review of Bidirectional Interaction, Automated Algorithm Design, and Co-adaptive Systems</p>
       </div>
     </a>
   </div>
@@ -182,7 +182,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
   <div class="card">
     <a href="https://arxiv.org/abs/2608.16416" target="_blank">
       <div class="card-body">
-        <p class="card-title">Evolving Machine Learning Pipelines with LLM-driven Algorithm Design</p>
+        <p class="card-title">Evolving Executable Pipeline Programs for AutoML with Language Models</p>
       </div>
     </a>
   </div>
