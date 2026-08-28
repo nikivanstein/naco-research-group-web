@@ -101,6 +101,22 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
       <p class="card-title">LLaMEA-SAGE: Guiding Automated Algorithm Design with Structural Feedback from Explainable AI</p>
     </div>
   </div>
+  <div class="card">
+    <a href="https://arxiv.org/abs/2607.08791" target="_blank">
+      <img class="img-fluid mb-2" src="/img/llamea/llamea10-mobo.svg" alt="LLM-Driven Evolutionary Generation of Multi-Objective Bayesian Optimization Algorithms"/>
+    </a>
+    <div class="card-body">
+      <p class="card-title">LLM-Driven Evolutionary Generation of Multi-Objective Bayesian Optimization Algorithms</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="https://www.sciencedirect.com/science/article/pii/S1574013726001589" target="_blank">
+      <img class="img-fluid mb-2" src="/img/llamea/llamea12-ecreview.svg" alt="Large Language Models and Evolutionary Computation: A Critical Review of Bidirectional Interaction, Automated Algorithm Design, and Co-adaptive Systems"/>
+    </a>
+    <div class="card-body">
+      <p class="card-title">Large Language Models and Evolutionary Computation: A Critical Review of Bidirectional Interaction, Automated Algorithm Design, and Co-adaptive Systems</p>
+    </div>
+  </div>
 </div>
 
 ### Benchmarking and Analysis
@@ -163,6 +179,14 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
     </a>
     <div class="card-body">
       <p class="card-title">LLM Driven Design of Continuous Optimization Problems with Controllable High-level Properties</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="https://arxiv.org/abs/2608.16416" target="_blank">
+      <img class="img-fluid mb-2" src="/img/llamea/llamea11-lace.svg" alt="Evolving Executable Pipeline Programs for AutoML with Language Models"/>
+    </a>
+    <div class="card-body">
+      <p class="card-title">Evolving Executable Pipeline Programs for AutoML with Language Models</p>
     </div>
   </div>
 </div>
