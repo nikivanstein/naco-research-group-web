@@ -103,7 +103,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
   </div>
   <div class="card">
     <a href="https://arxiv.org/abs/2607.08791" target="_blank">
-      <img class="img-fluid mb-2" src="/img/llamea/llamea10-mobo.svg" alt="LLM-Driven Evolutionary Generation of Multi-Objective Bayesian Optimization Algorithms"/>
+      <img class="img-fluid mb-2" src="/img/llamea/llamea-mobo-final.png" alt="LLM-Driven Evolutionary Generation of Multi-Objective Bayesian Optimization Algorithms"/>
     </a>
     <div class="card-body">
       <p class="card-title">LLM-Driven Evolutionary Generation of Multi-Objective Bayesian Optimization Algorithms</p>
@@ -175,7 +175,7 @@ The research on LLaMEA and generated algorithms from LLaMEA have won the followi
   </div>
   <div class="card">
     <a href="https://arxiv.org/abs/2608.16416" target="_blank">
-      <img class="img-fluid mb-2" src="/img/llamea/llamea11-lace.svg" alt="Evolving Executable Pipeline Programs for AutoML with Language Models"/>
+      <img class="img-fluid mb-2" src="/img/llamea/llamea-lace-final.png" alt="Evolving Executable Pipeline Programs for AutoML with Language Models"/>
     </a>
     <div class="card-body">
       <p class="card-title">Evolving Executable Pipeline Programs for AutoML with Language Models</p>
