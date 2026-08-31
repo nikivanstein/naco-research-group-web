@@ -209,6 +209,10 @@ bodas:
     image: /img/people/bodas.jpg
     role: grad
 
+li:
+    display_name: "Suju Li"
+    image: /img/people/li.jpg
+    role: grad
 
 strizak:
     display_name: "Jana Strizak"
