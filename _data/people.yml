@@ -160,7 +160,7 @@ gulmez:
 ye:
     display_name: "Furong Ye"
     image: /img/people/ye.jpg
-    role: postdoc
+    role: alum
 
 godin-dubois:
     display_name: "Kevin Godin-Dubois"
@@ -209,6 +209,14 @@ bodas:
     image: /img/people/bodas.jpg
     role: grad
 
+li:
+    display_name: "Suju Li"
+    image: /img/people/li.jpg
+    role: grad
+
+mayayo:
+    display_name: "Santiago Garcia Mayayo"
+    role: grad
 
 strizak:
     display_name: "Jana Strizak"
