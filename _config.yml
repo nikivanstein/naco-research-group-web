@@ -2,7 +2,7 @@ name: Natural Computing Group
 url: https://naco.liacs.nl
 author: "Niki van Stein"
 
-exclude: [bibble, README.md, Makefile, screenshot.png, vendor/, node_modules/, 'accept/', 'foga2025/']
+exclude: [bibble, README.md, Makefile, screenshot.png, vendor/, node_modules/, 'accept/', 'foga2025/', 'img/events/src/']
 
 # colorize code snippets with the pygments module
 highlighter: pygments

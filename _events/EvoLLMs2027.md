@@ -15,9 +15,9 @@ people:
 
 eventdate: 2027-03-31
 layout: event
-image: /img/events/evollms-header.png
+image: /img/events/evollms2027.png
 header:
-    og_image: events/evollms.png
+    og_image: events/evollms2027.png
 last-updated: 2026-10-26
 ---
 
@@ -56,3 +56,7 @@ Join us in Mainz and help define the next generation of AI systems!
 
 - [EvoStar 2026](https://www.evostar.org/2026/evoapps/evollms/)
 - [EvoStar 2025](https://www.evostar.org/2025/evoapps/evollms/)
+
+### Acknowledgements
+
+This event is made possible by the [IEEE CIS Task Force on Generative AI for Evolutionary Computation (GenAI4EC)](https://cis.taskforce.ieee.org/genai4ec/).

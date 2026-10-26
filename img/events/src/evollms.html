@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>.title{top:250px;font-size:118px;letter-spacing:-2px}.sub{top:395px;font-size:28px;line-height:1.35}</style></head><body>
+<svg class="bg" width="1200" height="628" id="s"></svg>
+<div class="conf"><div class="n">Evo<span>Star</span> 2027</div><div class="d">31 March – 2 April · Mainz, Germany</div></div>
+<div class="title">EvoLLMs</div>
+<div class="sub">Integrating Evolutionary Computing<br>with Large Language Models</div>
+<div class="tf">Supported by the IEEE CIS Task Force <b>GenAI4EC</b></div>
+<script>
+let seed=7;const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const s=document.getElementById('s'),NS='http://www.w3.org/2000/svg';
+const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e};
+// flowing wave bundle
+for(let i=0;i<60;i++){const o=i*2.2;el('path',{d:`M 380 ${520+o} C 600 ${380+o}, 760 ${120+o*1.6}, 1200 ${200+o*0.8}`,fill:'none',stroke:'#7d9cc7','stroke-opacity':0.10+0.004*i,'stroke-width':1})}
+// neural network graph (LLM) on the right
+const nodes=[];for(let i=0;i<26;i++)nodes.push([720+r()*430,70+r()*420,4+r()*10]);
+nodes.forEach((a,i)=>nodes.forEach((b,j)=>{if(j>i&&Math.hypot(a[0]-b[0],a[1]-b[1])<120)el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#3d5a87','stroke-opacity':.35,'stroke-width':1.2})}));
+nodes.forEach(n=>{el('circle',{cx:n[0],cy:n[1],r:n[2],fill:r()<.3?'#e8632b':'#5b7bab','fill-opacity':.75});if(r()<.25)el('circle',{cx:n[0],cy:n[1],r:n[2]+7,fill:'none',stroke:'#5b7bab','stroke-opacity':.4})});
+// dot grid (population)
+for(let x=0;x<14;x++)for(let y=0;y<6;y++)el('circle',{cx:620+x*14,cy:540+y*12,r:1.6,fill:'#8aa0c2','fill-opacity':.5});
+</script></body></html>

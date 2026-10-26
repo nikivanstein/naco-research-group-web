@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>.title{top:205px;font-size:72px;line-height:1.02;letter-spacing:-1px}.sub{top:385px;font-size:27px;line-height:1.35}</style></head><body>
+<svg class="bg" width="1200" height="628" id="s"></svg>
+<div class="conf"><div class="n">Evo<span>Star</span> 2027</div><div class="d">31 March – 2 April · Mainz, Germany</div></div>
+<div class="title">Beyond a<br>Performance Scalar</div>
+<div class="sub">Evaluation Science for<br>Evolutionary Computation</div>
+<div class="tf">Supported by the IEEE CIS Task Force <b>GenAI4EC</b></div>
+<script>
+let seed=11;const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const s=document.getElementById('s'),NS='http://www.w3.org/2000/svg';
+const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e};
+// axes for anytime convergence profiles
+const X0=800,Y0=470,W=330,H=360;
+el('line',{x1:X0,y1:Y0,x2:X0+W,y2:Y0,stroke:'#3d5a87','stroke-opacity':.5});
+el('line',{x1:X0,y1:Y0,x2:X0,y2:Y0-H,stroke:'#3d5a87','stroke-opacity':.5});
+const cols=['#5b7bab','#e8632b','#2f9e8f'];
+cols.forEach((c,k)=>{const rate=[3.2,5.5,2.2][k],plat=[.18,.32,.05][k];
+  // many runs, faint
+  for(let run=0;run<14;run++){let d='',y=1;for(let t=0;t<=60;t++){const f=t/60;y=Math.min(y,plat+(1-plat)*Math.exp(-rate*f*(0.7+0.6*r()))+0.04*r());d+=(t?'L':'M')+(X0+f*W)+' '+(Y0-H*(1-y)*.95)+' '}
+    el('path',{d,fill:'none',stroke:c,'stroke-opacity':.13,'stroke-width':1.2})}
+  // median
+  let d='';for(let t=0;t<=60;t++){const f=t/60,y=plat+(1-plat)*Math.exp(-rate*f);d+=(t?'L':'M')+(X0+f*W)+' '+(Y0-H*(1-y)*.95)+' '}
+  el('path',{d,fill:'none',stroke:c,'stroke-width':3,'stroke-opacity':.85});
+});
+// a single collapsed "scalar" dot with dashed line, contrast
+el('line',{x1:X0+W,y1:Y0-H*.95*.82,x2:X0+W+22,y2:Y0-H*.95*.82,stroke:'#1f1466','stroke-dasharray':'4 4'});
+el('circle',{cx:X0+W+30,cy:Y0-H*.95*.82,r:7,fill:'#1f1466'});
+// distributions (violin-ish) under the axis
+cols.forEach((c,k)=>{const cx=X0+60+k*105,cy=530;let d=`M ${cx} ${cy-34}`;for(let i=0;i<=20;i++){const t=i/20,y=cy-34+68*t,w=26*Math.exp(-((t-[.4,.6,.3][k])**2)/.05)+3;d+=` L ${cx+w} ${y}`}for(let i=20;i>=0;i--){const t=i/20,y=cy-34+68*t,w=26*Math.exp(-((t-[.4,.6,.3][k])**2)/.05)+3;d+=` L ${cx-w} ${y}`}
+  el('path',{d:d+'Z',fill:c,'fill-opacity':.22,stroke:c,'stroke-opacity':.6})});
+</script></body></html>

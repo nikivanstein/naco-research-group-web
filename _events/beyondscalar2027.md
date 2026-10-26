@@ -13,9 +13,9 @@ people:
 
 eventdate: 2027-03-31
 layout: event
-image: /img/events/benchmarking-gecco.png
+image: /img/events/beyondscalar2027.png
 header:
-    og_image: events/benchmarking-gecco.png
+    og_image: events/beyondscalar2027.png
 last-updated: 2026-10-26
 ---
 
@@ -61,3 +61,7 @@ Papers whose main contribution is a new optimizer judged only by final-fitness t
 - Niki van Stein, Leiden University, the Netherlands
 - Anja Jankovic, RWTH Aachen University, Germany
 - Eva Tuba, Trinity University, San Antonio, TX, USA, and Jožef Stefan Institute, Ljubljana, Slovenia
+
+### Acknowledgements
+
+This event is made possible by the [IEEE CIS Task Force on Generative AI for Evolutionary Computation (GenAI4EC)](https://cis.taskforce.ieee.org/genai4ec/).
