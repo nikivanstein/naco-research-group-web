@@ -1,10 +1,13 @@
 {% comment %}
 Usage: {% include project-chips.html project=project %}
-One line of labels: active or finished, then the project's research areas.
+One line of labels: active, finished or research line (`kind: line`), then
+the project's research areas.
 {% endcomment %}
 <span class="project-chips">
     {% if include.project.status == "inactive" %}
         <span class="project-chip">Finished</span>
+    {% elsif include.project.kind == "line" %}
+        <span class="project-chip project-chip--active">Research line</span>
     {% else %}
         <span class="project-chip project-chip--active">Active</span>
     {% endif %}

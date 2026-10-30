@@ -111,6 +111,9 @@ To create a project, just create a markdown file in the `_projects` folder. Here
 - `partners:` Optional. A list of names (markdown links allowed) or one line of text.
 - `links:` Optional map of buttons, e.g. `website:`, `github:`, `video:`, `news:`, `paper:`, `nwo:`.
 - `projects:` Optional list of related projects. Without it, up to three current projects that share a topic are shown.
+- `kind: line` Optional. Labels a long-running research line (like LLaMEA) as "Research line" instead of "Active".
+- `awards:` Optional list of `{medal: gold|silver|bronze|winner, title, event, url}`, shown under the text.
+- `publications:` Optional list of `{title, url, image, group}`, shown as a grid of cards below the text with filter tabs per `group`. Put the images in `img/llamea/` (or add another folder to `make_thumbs.py` and `_includes/thumb-src.html`).
 - `link:` Set this to an external URL if this project has a page somewhere else on the web. If you don't have a `link:`, then the content of this markdown file (below the YAML frontmatter) will be this project's page.
 - `no-link: true` Set this if you just don't want a project page for your project.
 
