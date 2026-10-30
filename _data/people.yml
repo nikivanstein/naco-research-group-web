@@ -217,6 +217,7 @@ li:
 mayayo:
     display_name: "Santiago Garcia Mayayo"
     role: grad
+    image: /img/people/mayayo.jpg
 
 strizak:
     display_name: "Jana Strizak"
