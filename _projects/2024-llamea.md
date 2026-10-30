@@ -13,6 +13,10 @@ people:
   - shahane
   - yin
   - huang
+  - mayayo
+  - bodas
+  - kovalchyk
+  - luo
   - raponi
   - kononova
   - back
