@@ -3,8 +3,101 @@ layout: default
 title: News
 ---
 
-<ul class="news list-unstyled">
+{% comment %}
+News overview: filter tabs per `type:`, then a timeline grouped by year
+with one row per post (date, image or type icon, type, title, summary,
+reading time and paper badges).
+{% endcomment %}
+
+{% assign types = "" %}
 {% for post in site.posts %}
-    {% include news-item.html item=post %}
+    {% if post.type %}
+        {% assign t_key = "|" | append: post.type | append: "|" %}
+        {% unless types contains t_key %}{% assign types = types | append: t_key %}{% endunless %}
+    {% endif %}
 {% endfor %}
-</ul>
+{% assign types = types | replace: "||", "|" | split: "|" | sort %}
+
+<div class="news-page" data-news-filter>
+    <div class="news-page__head">
+        <p>Papers, awards and announcements from the Natural Computing Cluster.</p>
+        <div class="people-tabs__bar" role="group" aria-label="Filter news by type" hidden>
+            <button type="button" class="people-tabs__tab is-on" aria-pressed="true" data-type="">All <span>{{ site.posts.size }}</span></button>
+            {% for t in types %}
+                {% if t != "" %}
+                    {% assign n = site.posts | where: "type", t | size %}
+                    <button type="button" class="people-tabs__tab" aria-pressed="false" data-type="{{ t | slugify }}">{% if t == "Announcement" %}Announcements{% else %}{{ t }}{% endif %} <span>{{ n }}</span></button>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in years %}
+        <section class="news-year" aria-label="{{ year.name }}">
+            <h2 class="news-year__label">{{ year.name }}</h2>
+            <ul class="news-timeline">
+                {% for post in year.items %}
+                    {% assign words = post.content | strip_html | number_of_words %}
+                    {% assign minutes = words | divided_by: 200 | plus: 1 %}
+                    {% assign n_papers = post.papers | where_exp: "p", "p.track == nil" | size %}
+                    {% assign n_awards = post.papers | where_exp: "p", "p.award" | size %}
+                    <li data-type="{{ post.type | slugify }}">
+                        <a class="news-row" href="{{ site.base }}{{ post.url }}">
+                            <span class="news-row__date">
+                                <strong>{{ post.date | date: '%-d' }}</strong>
+                                {{ post.date | date: '%b' }}
+                            </span>
+                            <span class="news-row__thumb">
+                                {% if post.image %}
+                                    {% assign orig = post.image %}
+                                    <img src="{% include thumb-src.html src=post.image %}" alt="" loading="lazy" decoding="async"
+                                         onerror="this.onerror=null;this.src='{{ orig }}'">
+                                {% else %}
+                                    {% include news-icon.html type=post.type %}
+                                {% endif %}
+                            </span>
+                            <span class="news-row__body">
+                                {% if post.type %}<span class="news-row__type">{{ post.type }}</span>{% endif %}
+                                <span class="news-row__title">{{ post.title }}</span>
+                                <span class="news-row__summary">{% include post-summary.html post=post %}</span>
+                                <span class="news-row__meta">
+                                    <span>{{ minutes }} min read</span>
+                                    {% if n_awards > 0 %}<span class="news-badge news-badge--award">{{ n_awards }} best paper nominee{% if n_awards > 1 %}s{% endif %}</span>{% endif %}
+                                    {% if n_papers > 2 %}<span class="news-badge">{{ n_papers }} papers</span>{% endif %}
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endfor %}
+</div>
+
+<script>
+(function () {
+    var root = document.querySelector('[data-news-filter]');
+    if (!root) return;
+    var bar = root.querySelector('[role="group"]');
+    bar.hidden = false;
+    bar.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-type]');
+        if (!b) return;
+        var type = b.getAttribute('data-type');
+        root.querySelectorAll('.news-year').forEach(function (year) {
+            var shown = 0;
+            year.querySelectorAll('.news-timeline > li').forEach(function (li) {
+                li.hidden = type !== '' && li.getAttribute('data-type') !== type;
+                if (!li.hidden) shown++;
+            });
+            year.hidden = shown === 0;
+        });
+        bar.querySelectorAll('[data-type]').forEach(function (x) {
+            var on = x === b;
+            x.classList.toggle('is-on', on);
+            x.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+    });
+})();
+</script>

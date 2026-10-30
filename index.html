@@ -74,7 +74,7 @@ header:
             <div class="news-latest__text">{{ post.content | markdownify | remove: '<p>' | remove: '</p>' }}</div>
         {% else %}
             <h3><a href="{{ site.base }}{{ post.url }}">{{ post.title }}</a></h3>
-            <p class="news-latest__text">{{ post.excerpt | markdownify | strip_html | strip | truncatewords: 45 }}</p>
+            <p class="news-latest__text">{% capture summary %}{% include post-summary.html post=post %}{% endcapture %}{{ summary | truncatewords: 45 }}</p>
         {% endif %}
         <p class="news-latest__links">
             {% unless post.shortnews %}<a href="{{ site.base }}{{ post.url }}">Read more &raquo;</a>{% endunless %}

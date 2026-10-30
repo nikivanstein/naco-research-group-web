@@ -1,0 +1,11 @@
+{%- comment -%}
+Usage: {% include post-summary.html post=post %}
+Prints a post's summary as plain text: its `summary:` front matter, or the
+first paragraph without the "Leiden, The Netherlands –" dateline.
+{%- endcomment -%}
+{%- if include.post.summary -%}
+    {{- include.post.summary | strip -}}
+{%- else -%}
+    {%- capture ex -%}{{ include.post.excerpt }}{%- endcapture -%}
+    {{- ex | remove_first: "<strong>Leiden, The Netherlands</strong> – " | remove_first: "<strong>Leiden, The Netherlands</strong> - " | strip_html | strip -}}
+{%- endif -%}
