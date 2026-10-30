@@ -596,57 +596,62 @@ a.person-tile:hover, a.person-tile:focus {
 
 .person-tile.is-lead .person-tile__role { color: $naco-green-dark; }
 
-/* Homepage teaser: headcount and a mosaic of every current face */
-.people-teaser {
-    display: grid;
-    gap: 1.5rem;
-    align-items: center;
+/* Homepage team section: filter tabs over the tile grid */
+.people-tabs__bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
-    .people-teaser { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 2rem; }
-}
-
-.people-teaser__count {
-    font-family: $font-heading;
+.people-tabs__tab {
+    font-size: 0.8rem;
     font-weight: 600;
-    font-size: 3.4rem;
-    line-height: 1;
-    color: $naco-navy;
-}
-
-.people-teaser__copy p {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid #c9d3c6;
+    border-radius: 4px;
+    background: #fff;
     color: $muted;
-    margin: 0.5rem 0 0;
+    cursor: pointer;
+
+    span { font-weight: 400; margin-left: 0.2rem; opacity: 0.75; }
+
+    &:hover { border-color: $naco-green; color: $naco-green-dark; }
+
+    &.is-on, &.is-on:hover {
+        background: $naco-navy;
+        border-color: $naco-navy;
+        color: #fff;
+    }
+
+    &:focus-visible { outline: 3px solid $naco-green; outline-offset: 2px; }
 }
 
-.people-mosaic {
+.people-tabs.is-js .people-tabs__nojs { display: none; }
+
+.people-names {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
-    gap: 4px;
+    columns: 3 220px;
+    column-gap: 2rem;
 
-    a, img, .person-tile__initials {
-        display: flex;
-        width: 100%;
-        aspect-ratio: 1;
-        border-radius: 4px;
+    li {
+        break-inside: avoid;
+        padding: 0.25rem 0;
+        border-bottom: 1px dashed #e3e8e1;
     }
 
-    img {
-        object-fit: cover;
-        filter: $person-photo-filter;
-        transition: filter 0.3s ease;
+    span {
+        display: block;
+        font-size: 0.85rem;
+        color: $muted;
     }
-
-    a:hover img, a:focus img { filter: none; }
-
-    .person-tile__initials { font-size: 0.7rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .person-tile, .person-tile__photo, .people-mosaic img { transition: none; }
+    .person-tile, .person-tile__photo { transition: none; }
     a.person-tile:hover { transform: none; }
 }

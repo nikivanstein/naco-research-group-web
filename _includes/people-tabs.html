@@ -1,0 +1,78 @@
+{% comment %}
+
+Usage: {% include people-tabs.html %}
+
+Homepage team section: one group at a time behind filter tabs. Faculty and
+researchers get photo tiles, collaborators and alumni a list of names.
+Without JavaScript every group is shown, one after the other.
+
+{% endcomment %}
+
+{% assign tabs = "Faculty|prof,aprof;PhD & researchers|postdoc,grad;Collaborators|collab;Alumni|alum" | split: ";" %}
+
+<div class="people-tabs" data-people-tabs>
+    <div class="people-tabs__bar" role="group" aria-label="Show group" hidden>
+        {% for tab in tabs %}
+            {% assign parts = tab | split: "|" %}
+            {% assign roles = parts[1] | split: "," %}
+            {% assign count = 0 %}
+            {% for item in site.data.people %}
+                {% if roles contains item[1].role %}{% assign count = count | plus: 1 %}{% endif %}
+            {% endfor %}
+            <button type="button" class="people-tabs__tab{% if forloop.first %} is-on{% endif %}"
+                    aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"
+                    data-tab="{{ forloop.index }}">{{ parts[0] }} <span>{{ count }}</span></button>
+        {% endfor %}
+    </div>
+
+    {% for tab in tabs %}
+        {% assign parts = tab | split: "|" %}
+        {% assign panel_roles = parts[1] %}
+        <div class="people-tabs__panel" data-panel="{{ forloop.index }}">
+            <h3 class="people-head people-tabs__nojs">{{ parts[0] }}</h3>
+            {% if forloop.index <= 2 %}
+                {% include people-tiles.html roles=panel_roles %}
+            {% else %}
+                <ul class="people-names">
+                    {% for item in site.data.people %}
+                        {% assign person = item[1] %}
+                        {% if person.role == panel_roles %}
+                            <li>
+                                {% if person.webpage %}
+                                    <a href="{{ person.webpage | escape }}" target="_blank" rel="noopener">{{ person.display_name }}</a>
+                                {% else %}
+                                    {{ person.display_name }}
+                                {% endif %}
+                                {% if person.bio %}<span>{{ person.bio }}</span>{% endif %}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+<script>
+(function () {
+    var root = document.querySelector('[data-people-tabs]');
+    if (!root) return;
+    var bar = root.querySelector('.people-tabs__bar');
+    var panels = root.querySelectorAll('[data-panel]');
+    function show(n) {
+        panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== n; });
+        bar.querySelectorAll('[data-tab]').forEach(function (b) {
+            var on = b.getAttribute('data-tab') === n;
+            b.classList.toggle('is-on', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+    }
+    bar.hidden = false;
+    root.classList.add('is-js');
+    bar.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-tab]');
+        if (b) show(b.getAttribute('data-tab'));
+    });
+    show('1');
+})();
+</script>

@@ -2,7 +2,7 @@
 
 Usage: {% include people-tiles.html roles="prof,aprof" title="Faculty" %}
 
-A labelled grid of person tiles for every person whose role is in `roles`,
+A grid (with a heading and count when `title` is given) of person tiles for every person whose role is in `roles`,
 in the order of the roles list, then the order of _data/people.yml.
 
 {% endcomment %}
@@ -13,7 +13,9 @@ in the order of the roles list, then the order of _data/people.yml.
     {% if roles contains item[1].role %}{% assign count = count | plus: 1 %}{% endif %}
 {% endfor %}
 
+{% if include.title %}
 <h3 class="people-head">{{ include.title }} <span>{{ count }}</span></h3>
+{% endif %}
 <ul class="people-tiles">
     {% for role in roles %}
         {% for item in site.data.people %}
