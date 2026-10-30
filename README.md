@@ -75,7 +75,8 @@ You can also customize the icon that is displayed on the news feed. By default i
 
 The first paragraph of a post becomes its lead under the title (a leading "**Leiden, The Netherlands** –" is dropped there). Optional front matter for the post page:
 
-- `type:` Shown next to the date, e.g. `Announcement`, `Papers`, `Podcast`.
+- `type:` Shown next to the date, e.g. `Announcement`, `Papers`, `Podcast`. The News page has a filter tab per type.
+- `summary:` Optional one-line summary for the News page and the homepage; by default the first paragraph is used.
 - `image:` Shown in the side panel; `image_link:` makes it a link.
 - `links:` Buttons in the side panel, e.g. `website:`, `video:`, `paper:`.
 - `people:` Group members to show in the side panel, as keys from `_data/people.yml`, or `{key: stein, role: Chair}` to set the label.
