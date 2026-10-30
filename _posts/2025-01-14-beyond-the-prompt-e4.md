@@ -2,6 +2,7 @@
 layout: post
 shortnews: false
 icon: podcast
+type: Podcast
 title:  "Beyond the Prompt: Ep. 4"
 image: /img/posts/beyond-the-prompt.png
 header:

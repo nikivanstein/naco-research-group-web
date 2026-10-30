@@ -2,6 +2,13 @@
 layout: post
 shortnews: false
 icon: newspaper-o
+type: Announcement
+people:
+  - key: stein
+    role: Chair
+projects: [2024-llamea]
+links:
+  website: https://cis.taskforce.ieee.org/genai4ec/
 title: "New IEEE CIS Task Force on Generative AI for Evolutionary Computation"
 image: /img/posts/genai4ec.png
 image_style: "max-height: 120px; width: auto;"

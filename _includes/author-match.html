@@ -1,0 +1,19 @@
+{%- comment -%}
+Usage: {% include author-match.html name=author %}
+Sets `match_key` to the _data/people.yml key of the (current or former)
+group member with the same first and last name, or to "" if none.
+{%- endcomment -%}
+{%- assign match_key = "" -%}
+{%- assign a_parts = include.name | strip | split: " " -%}
+{%- assign a_first = a_parts.first -%}
+{%- assign a_last = a_parts.last | remove: "." -%}
+{%- for item in site.data.people -%}
+    {%- assign am_person = item[1] -%}
+    {%- if am_person.role == "prof" or am_person.role == "aprof" or am_person.role == "postdoc" or am_person.role == "grad" or am_person.role == "alum" -%}
+        {%- assign p_parts = am_person.display_name | remove_first: "Prof. " | split: " " -%}
+        {%- if p_parts.first == a_first and p_parts.last == a_last -%}
+            {%- assign match_key = item[0] -%}
+            {%- break -%}
+        {%- endif -%}
+    {%- endif -%}
+{%- endfor -%}

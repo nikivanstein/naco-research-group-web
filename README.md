@@ -73,6 +73,15 @@ And concoct a page title for your post. The body of the post goes after the `---
 
 You can also customize the icon that is displayed on the news feed. By default it's `newspaper-o`. We use icons from the [FontAwesome][fa] icon set.
 
+The first paragraph of a post becomes its lead under the title (a leading "**Leiden, The Netherlands** –" is dropped there). Optional front matter for the post page:
+
+- `type:` Shown next to the date, e.g. `Announcement`, `Papers`, `Podcast`.
+- `image:` Shown in the side panel; `image_link:` makes it a link.
+- `links:` Buttons in the side panel, e.g. `website:`, `video:`, `paper:`.
+- `people:` Group members to show in the side panel, as keys from `_data/people.yml`, or `{key: stein, role: Chair}` to set the label.
+- `projects:` Related projects, as `_projects` file names without `.md`.
+- `papers:` A list of papers, rendered where the post body contains `{% include paper-list.html %}`. Each paper has `title`, and optionally `authors` (comma-separated; group members are shown in bold and listed in the side panel), `track` (e.g. `Hot Off the Press`; papers are grouped by track), `label`, `award`, `summary` (always shown), `abstract` (folded away) and `links` (`arxiv`, `doi`, `pdf`, `code`, `video`, `paper`).
+
 [yfm]: http://jekyllrb.com/docs/frontmatter/
 [fa]: http://fontawesome.io/icons/
 
