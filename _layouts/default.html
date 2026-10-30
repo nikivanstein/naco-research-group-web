@@ -71,7 +71,7 @@
                 {% if page.image %}
                     <img loading="lazy" src="{{ page.image }}"
                         alt="{{ page.title }}"
-                        style="max-width: 400px"
+                        style="max-width: 400px; {{ page.image_style }}"
                         class="img-fluid mx-auto d-block mb-4"/>
                 {% endif %}
             {% endif %}

@@ -4,6 +4,7 @@ shortnews: false
 icon: newspaper-o
 title: "New IEEE CIS Task Force on Generative AI for Evolutionary Computation"
 image: /img/posts/genai4ec.png
+image_style: "max-height: 120px; width: auto;"
 image_link: https://cis.taskforce.ieee.org/genai4ec/
 header:
     og_image: posts/genai4ec.png
