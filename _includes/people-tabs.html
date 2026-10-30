@@ -3,12 +3,13 @@
 Usage: {% include people-tabs.html %}
 
 Homepage team section: one group at a time behind filter tabs. Faculty and
-researchers get photo tiles, collaborators and alumni a list of names.
+researchers get photo tiles, alumni a list of names. Collaborators are not
+listed here; they appear on the People page and on project pages.
 Without JavaScript every group is shown, one after the other.
 
 {% endcomment %}
 
-{% assign tabs = "Faculty|prof,aprof;PhD & researchers|postdoc,grad;Collaborators|collab;Alumni|alum" | split: ";" %}
+{% assign tabs = "Faculty|prof,aprof;PhD & researchers|postdoc,grad;Alumni|alum" | split: ";" %}
 
 <div class="people-tabs" data-people-tabs>
     <div class="people-tabs__bar" role="group" aria-label="Show group" hidden>
