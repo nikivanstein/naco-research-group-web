@@ -30,23 +30,19 @@
     {% if post.image %}
 
         {% capture img %}
-            <img class="img-fluid d-block mx-auto"
-                 style="{{ post.image_style }}"
-                 src="{{ post.image }}">
+            <img src="{{ post.image }}" alt="" loading="lazy">
         {% endcapture %}
 
-        <div class="row">
-            <div class="col-sm-10">
+        <div class="news-with-thumb">
+            <div class="news-body">
                 {{ header }}
                 {{ news }}
             </div>
-            <div class="col-sm-2">
-                {% if post.image_link %}
-                    <a href="{{ post.image_link }}">{{ img }}</a>
-                {% else %}
-                    {{ img }}
-                {% endif %}
-            </div>
+            {% if post.image_link %}
+                <a class="news-thumb" href="{{ post.image_link }}">{{ img }}</a>
+            {% else %}
+                <a class="news-thumb" href="{{ site.base }}{{ post.url }}">{{ img }}</a>
+            {% endif %}
         </div>
      {% else %}
         {{ header }}
