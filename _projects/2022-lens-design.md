@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 description: |
-  Optimization of Complex Lens Designs
+  Machine learning and optimisation for lens design in computational imaging and metrology, with ASML.
 
 people:
   - antonov

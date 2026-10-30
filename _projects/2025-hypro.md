@@ -6,7 +6,7 @@ featured: true
 notitle: false
 
 description: |
-  Optimising electrolysis technologies.
+  Improving the efficiency, flexibility and lifetime of electrolysers for green hydrogen production.
 
 people:
   - kang

@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 description: |
-  Hydrogen Transport, Offshore and Storage
+  Predicting wear and planning maintenance for hydrogen transport and storage equipment.
 
 people:
   - laag

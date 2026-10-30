@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 description: |
-  Multi-objective logistics
+  Multi-objective optimisation models and algorithms for efficient, sustainable last-mile logistics.
 
 people:
   - liu

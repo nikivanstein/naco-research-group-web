@@ -5,7 +5,7 @@ status: inactive
 notitle: false
 
 description: |
-  Cross-Industry Predictive Maintenance Optimization Platform
+  Predictive maintenance scheduling for aircraft engines and cars, optimising cost, time and safety.
 
 people:
   - alum-kefalas

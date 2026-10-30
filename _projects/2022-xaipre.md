@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 description: |
-  eXplainable AI for Predictive Maintenance
+  Maintenance predictions that show engineers the risk of delaying maintenance and the indicators behind it.
 
 people:
   - huang

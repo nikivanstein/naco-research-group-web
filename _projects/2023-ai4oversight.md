@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 description: |
-  AI for Oversight ICAI lab
+  Helping Dutch inspectorates decide where to inspect, with fair and data-efficient AI.
 
 people:
   - kitharidis

@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 description: |
-  Optimising causal interventions.
+  Finding interventions that reduce violent conflict and stay effective when adversaries push back.
 
 people:
   - vonk

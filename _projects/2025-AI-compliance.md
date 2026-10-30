@@ -6,7 +6,7 @@ featured: true
 notitle: false
 
 description: |
-  Technical challenges of the EU AI Act
+  Turning the EU AI Act's requirements into algorithms and practices for compliant, ethical AI.
 
 people:
   - tamponi

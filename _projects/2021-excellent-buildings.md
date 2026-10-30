@@ -5,7 +5,7 @@ status: active
 notitle: false
 
 description: |
-  Realistic Geometries for optimal performance
+  Multi-objective optimisation of building designs for structural, thermal and lighting performance.
 
 people:
   - pereverdieva
