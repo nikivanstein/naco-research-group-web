@@ -77,14 +77,18 @@
         <div class="container">
 
             {% if page.largeimage %}
-                <img loading="lazy" src="{{ page.largeimage }}"
-                     alt="{{ page.title }}"
+                {% assign orig = page.largeimage %}
+                <img src="{% include thumb-src.html src=page.largeimage %}"
+                     alt="{{ page.title }}" fetchpriority="high"
+                     onerror="this.onerror=null;this.src='{{ orig }}'"
                      style="width: 100%; object-fit: cover;"
                      class="img-fluid mx-auto d-block mb-4"/>
             {% else %}
                 {% if page.image %}
-                    <img loading="lazy" src="{{ page.image }}"
-                        alt="{{ page.title }}"
+                    {% assign orig = page.image %}
+                    <img src="{% include thumb-src.html src=page.image %}"
+                        alt="{{ page.title }}" fetchpriority="high"
+                        onerror="this.onerror=null;this.src='{{ orig }}'"
                         style="max-width: 400px; {{ page.image_style }}"
                         class="img-fluid mx-auto d-block mb-4"/>
                 {% endif %}

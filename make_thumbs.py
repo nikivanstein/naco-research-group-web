@@ -23,7 +23,8 @@ SOURCE_TYPES = {".jpg", ".jpeg", ".png", ".webp"}
 # "fit" scales down to fit within the box, keeping the aspect ratio.
 TARGETS = {
     "people": ("square", 160),    # shown at 40-70px
-    "projects": ("fit", (720, 720)),  # project cards are ~350px wide
+    "projects": ("fit", (720, 720)),  # project cards are ~350px wide;
+                                      # *-wide banners keep their size
     "posts": ("fit", (240, 180)),  # news thumbnails are 120x90
 }
 SINGLE_FILES = {
@@ -51,7 +52,8 @@ def main():
     for folder, (mode, size) in TARGETS.items():
         for src in sorted((ROOT / folder).iterdir()):
             if src.is_file() and src.suffix.lower() in SOURCE_TYPES:
-                jobs.append((src, OUT / folder / (src.name + ".webp"), mode, size))
+                box = (2400, 2400) if src.stem.endswith("-wide") else size
+                jobs.append((src, OUT / folder / (src.name + ".webp"), mode, box))
     for name, (mode, size) in SINGLE_FILES.items():
         jobs.append((ROOT / name, OUT / (name + ".webp"), mode, size))
 

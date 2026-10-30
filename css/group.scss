@@ -329,11 +329,11 @@ section > h2::before {
 
 .noprofile {
     circle {
-        fill: $light-gray;
+        fill: #e8ece6;
     }
     text {
-        font-weight: 700;
-        fill: white;
+        font-weight: 600;
+        fill: $muted;
     }
 }
 

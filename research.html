@@ -3,13 +3,28 @@ layout: default
 title: Research Projects
 ---
 
+{% comment %}
+Current projects first, then finished ones (status: inactive), each sorted
+by date with the most recently updated first.
+{% endcomment %}
+{% assign projects_by_date = site.projects | sort: 'last-updated', 'first' | reverse %}
+{% assign finished = projects_by_date | where: "status", "inactive" %}
+
 <div class="card-columns">
-    {% comment %}
-    Sort the projects by date, putting those without dates last
-    {% endcomment %}
-    {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-    {% assign projects_by_date = projects_by_date | reverse %}
     {% for p in projects_by_date %}
-        {% include project-card.html project=p %}
+        {% if p.status != "inactive" %}
+            {% include project-card.html project=p %}
+        {% endif %}
     {% endfor %}
 </div>
+
+{% if finished.size > 0 %}
+<section>
+    <h2>Finished projects</h2>
+    <div class="card-columns">
+        {% for p in finished %}
+            {% include project-card.html project=p %}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}

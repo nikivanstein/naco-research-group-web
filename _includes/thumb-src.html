@@ -1,17 +1,22 @@
 {%- comment -%}
 Usage: {% include thumb-src.html src=path %}
-Prints the URL of the small WebP made by make_thumbs.py for a local image
-under /img/, or the path itself for external, SVG and GIF images.
+Prints the URL of the small WebP made by make_thumbs.py for an image in
+/img/people/, /img/projects/ or /img/posts/, or the path itself otherwise
+(other folders, external URLs, SVG and GIF images).
 {%- endcomment -%}
 {%- assign src = include.src -%}
-{%- assign start = src | slice: 0, 5 -%}
-{%- if start == "/img/" and src contains "." -%}
-    {%- unless src contains ".svg" or src contains ".gif" -%}
-        {{ site.base }}/img/thumbs{{ src | remove_first: "/img" }}.webp
-    {%- else -%}
-        {{ site.base }}{{ src }}
-    {%- endunless -%}
-{%- elsif start == "/img/" -%}
+{%- assign dir = src | split: "/" -%}
+{%- assign thumbed = false -%}
+{%- if dir[1] == "img" and dir.size == 4 -%}
+    {%- if dir[2] == "people" or dir[2] == "projects" or dir[2] == "posts" -%}
+        {%- unless src contains ".svg" or src contains ".gif" -%}
+            {%- assign thumbed = true -%}
+        {%- endunless -%}
+    {%- endif -%}
+{%- endif -%}
+{%- if thumbed -%}
+    {{ site.base }}/img/thumbs{{ src | remove_first: "/img" }}.webp
+{%- elsif dir[1] == "img" -%}
     {{ site.base }}{{ src }}
 {%- else -%}
     {{ src }}
