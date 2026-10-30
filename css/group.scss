@@ -499,3 +499,154 @@ svg {
     margin-top: 0.75rem;
     font-weight: 600;
 }
+
+/* People: tiles in the style of the XAI group page. Photos are greyscale
+   until hovered; the group leader's tile has a green border. */
+$person-photo-filter: grayscale(1) contrast(1.02);
+
+.people-head {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+
+    span {
+        font-family: $font-body;
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: $muted;
+        margin-left: 0.25rem;
+    }
+}
+
+.people-tiles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 10px;
+}
+
+.person-tile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #e3e8e1;
+    border-radius: 6px;
+    background: #fff;
+    color: $text;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &.is-lead { border-color: $naco-green; }
+}
+
+a.person-tile:hover, a.person-tile:focus {
+    color: $text;
+    text-decoration: none;
+    transform: translateY(-2px);
+    border-color: #c9d3c6;
+    box-shadow: 0 6px 18px rgba(0, 17, 88, 0.08);
+}
+
+.person-tile__photo {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+    object-fit: cover;
+    filter: $person-photo-filter;
+    transition: filter 0.3s ease;
+}
+
+.person-tile:hover .person-tile__photo { filter: none; }
+
+.person-tile__initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8ece6;
+    color: $muted;
+    font-weight: 600;
+    filter: none;
+}
+
+.person-tile__text {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.person-tile__name {
+    font-weight: 600;
+    color: $naco-navy;
+    line-height: 1.25;
+}
+
+.person-tile__role {
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $muted;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.person-tile.is-lead .person-tile__role { color: $naco-green-dark; }
+
+/* Homepage teaser: headcount and a mosaic of every current face */
+.people-teaser {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .people-teaser { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 2rem; }
+}
+
+.people-teaser__count {
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: 3.4rem;
+    line-height: 1;
+    color: $naco-navy;
+}
+
+.people-teaser__copy p {
+    color: $muted;
+    margin: 0.5rem 0 0;
+}
+
+.people-mosaic {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+    gap: 4px;
+
+    a, img, .person-tile__initials {
+        display: flex;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 4px;
+    }
+
+    img {
+        object-fit: cover;
+        filter: $person-photo-filter;
+        transition: filter 0.3s ease;
+    }
+
+    a:hover img, a:focus img { filter: none; }
+
+    .person-tile__initials { font-size: 0.7rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .person-tile, .person-tile__photo, .people-mosaic img { transition: none; }
+    a.person-tile:hover { transform: none; }
+}

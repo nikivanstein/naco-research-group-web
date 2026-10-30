@@ -1,0 +1,41 @@
+{% comment %}
+
+Usage: {% include people-teaser.html %}
+
+Homepage summary of the team: a headcount, a link to the People page and a
+mosaic of every current member's photo (name on hover).
+
+{% endcomment %}
+
+{% assign current = "prof,aprof,postdoc,grad" | split: "," %}
+{% assign count = 0 %}
+{% for item in site.data.people %}
+    {% if current contains item[1].role %}{% assign count = count | plus: 1 %}{% endif %}
+{% endfor %}
+
+<div class="people-teaser">
+    <div class="people-teaser__copy">
+        <div class="people-teaser__count">{{ count }}</div>
+        <p>faculty, postdocs and PhD candidates working on nature-inspired optimisation, explainable AI and their applications.</p>
+        <a class="section-more" href="{{ site.base }}/people/">Meet the whole team &raquo;</a>
+    </div>
+    <ul class="people-mosaic">
+        {% for role in current %}
+            {% for item in site.data.people %}
+                {% assign person = item[1] %}
+                {% if person.role == role %}
+                    {% assign name = person.display_name | remove_first: "Prof. " %}
+                    <li title="{{ name | escape }}">
+                        <a href="{{ site.base }}/people/" aria-label="{{ name | escape }}">
+                            {% if person.image %}
+                                <img src="{{ site.base }}{{ person.image }}" alt="" loading="lazy">
+                            {% else %}
+                                <span class="person-tile__initials" aria-hidden="true">{{ person.display_name | split: " " | first | slice: 0 }}{{ person.display_name | split: " " | last | slice: 0 }}</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>

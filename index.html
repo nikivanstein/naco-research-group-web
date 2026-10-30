@@ -12,25 +12,7 @@ header:
     cta_label: "Our research"
     cta_url: "/research/"
     cta2_label: "Meet the team"
-    cta2_url: "/#people"
-
-# groups of columns of {roles: list, width: num, image: bool}
-role-tables:
-- - roles: [prof]
-    width: 4
-    image: true
-  - roles: [aprof]
-    width: 12
-    image: true
-  - roles: [postdoc]
-    width: 8
-    image: true
-  - roles: [grad]
-    width: 12
-    image: true
-  - roles: [alum]
-    width: 12
-    image: false
+    cta2_url: "/people/"
 
 ---
 
@@ -148,16 +130,7 @@ role-tables:
 The conference also aims to foster hybrid approaches within evolutionary computation and also involving fuzzy computation and neural computation.
 </section> -->
 
-<div id="people">
-    {% for role-table in page.role-tables %}
-        <section class="people row justify-content-between">
-            {% for role-column in role-table %}
-                <div class="col-md-{{ role-column.width }}">
-                    {% for role in role-column.roles %}
-                        {% include role-people.html role=role image=role-column.image %}
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </section>
-    {% endfor %}
-</div>
+<section id="people">
+    <h2>People</h2>
+    {% include people-teaser.html %}
+</section>
