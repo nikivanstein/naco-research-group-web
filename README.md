@@ -76,6 +76,12 @@ You can also customize the icon that is displayed on the news feed. By default i
 [yfm]: http://jekyllrb.com/docs/frontmatter/
 [fa]: http://fontawesome.io/icons/
 
+Image thumbnails
+----------------
+
+Pages show small WebP copies of people photos, project images and news images from `img/thumbs/`. After adding or replacing an image in `img/people`, `img/projects` or `img/posts`, run `python make_thumbs.py` (needs Pillow) and commit the new files in `img/thumbs/`. If a thumbnail is missing, the page falls back to the original image, so nothing breaks, but the page gets heavier.
+
+
 Projects
 --------
 
@@ -89,6 +95,13 @@ To create a project, just create a markdown file in the `_projects` folder. Here
 - `image:` The URL of an image for the project. This is shown on both the project page and the project card. Optional.
 - `last-updated:` Date in the format of `YYYY-MM-DD`. The project cards are sorted by this, most recent first.
 - `status: inactive` Set this to `inactive` if don't want the project to appear on the front page. Just ignore it otherwise.
+- `featured: true` Show the project on the front page. At most six featured projects are shown (two rows), newest file name first; all projects are always listed on the Research page.
+- `topics:` Research areas, as a list of keys from `research_areas` in `_config.yml` (`meta`, `xai`, `bench`, `genai`, `quantum`, `sustain`, `moo`). They label the card, drive the filter tabs on the Research page and pick related projects.
+- `period:` Optional, e.g. `2024–2028`. Shown in the facts panel on the project page.
+- `funder:` and `grant:` Optional. A funder containing "Horizon" or "European" shows the EU flag; one containing "NWO" shows the NWO logo.
+- `partners:` Optional. A list of names (markdown links allowed) or one line of text.
+- `links:` Optional map of buttons, e.g. `website:`, `github:`, `video:`, `news:`, `paper:`, `nwo:`.
+- `projects:` Optional list of related projects. Without it, up to three current projects that share a topic are shown.
 - `link:` Set this to an external URL if this project has a page somewhere else on the web. If you don't have a `link:`, then the content of this markdown file (below the YAML frontmatter) will be this project's page.
 - `no-link: true` Set this if you just don't want a project page for your project.
 

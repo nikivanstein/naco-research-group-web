@@ -30,7 +30,9 @@
     {% if post.image %}
 
         {% capture img %}
-            <img src="{{ post.image }}" alt="" loading="lazy">
+            {% assign orig = post.image %}
+            <img src="{% include thumb-src.html src=post.image %}" alt="" loading="lazy" decoding="async"
+                 onerror="this.onerror=null;this.src='{{ orig }}'">
         {% endcapture %}
 
         <div class="news-with-thumb">

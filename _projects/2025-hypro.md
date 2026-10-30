@@ -1,17 +1,21 @@
 ---
 title: HyPro
 status: active
+featured: true
 
 notitle: false
 
 description: |
-  Optimising electrolysis technologies.
+  Improving the efficiency, flexibility and lifetime of electrolysers for green hydrogen production.
 
 people:
   - kang
   - nobel
   - fan
   - back
+
+topics: [sustain]
+partners: "57 knowledge organisations, companies and start-ups (listed below)"
 
 layout: project
 image: "/img/projects/hypro.jpg"

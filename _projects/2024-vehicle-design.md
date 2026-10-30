@@ -1,6 +1,7 @@
 ---
 title: Conceptual Vehicle Design
 status: active
+featured: true
 
 notitle: false
 
@@ -11,6 +12,8 @@ people:
   - ellmaier
   - back
   - kononova
+
+topics: [genai, moo]
 
 layout: project
 image: "/img/projects/vehicle-design.png"

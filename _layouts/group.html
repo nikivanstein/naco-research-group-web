@@ -13,12 +13,12 @@ layout: default
 </section>
 
 <h2> Projects </h2>
-<section class="projects project-people">
+<ul class="project-cards">
     {% for project in site.projects %}
         {% for pname in page.projects %}
             {% if project.id contains pname %}
-                {% include project-card.html project=project image=true%}
+                {% include project-card.html project=project %}
             {% endif %}
         {% endfor %}
     {% endfor %}
-</section>
+</ul>

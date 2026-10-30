@@ -5,7 +5,7 @@ status: inactive
 notitle: false
 
 description: |
-  Cross-Industry Predictive Maintenance Optimization Platform
+  Predictive maintenance scheduling for aircraft engines and cars, optimising cost, time and safety.
 
 people:
   - alum-kefalas
@@ -16,20 +16,21 @@ people:
 projects:
   - 2022-xaipre
 
+topics: [xai]
+funder: "Commit2Data (NWO)"
+partners:
+  - "CWI"
+  - "Air France KLM"
+  - "Honda Research Institute Europe"
+links:
+  website: https://commit2data.nl/projecten/cimplo
+
 layout: project
 image: "/img/projects/cimplo.png"
 largeimage: "/img/projects/cimplo-wide.png"
 last-updated: 2024-03-01
 ---
 
-
-**Partners:** CWI, Air France KLM, Honda Research Institute Europe  
-**Status:** <span style="color:#0F0">Finished</span>  
-**Follow-up project:** [XAIPre](/projects/2022-xaipre.html)
-
-
-<h2>Cross-Industry Predictive Maintenance Optimization Platform</h2>
----
 
 Traditional maintenance concepts rely on a “fixed interval approach”, which takes into account a significant safety margin. As a consequence, maintenance is almost always taking place too early or too late, which makes it probably one of the most inefficient industrial activities and most critical at the same time
 
@@ -44,4 +45,3 @@ Three main components (data infrastructure, modeling engine, optimization engine
 
 <iframe width="730" height="415" src="https://www.youtube.com/embed/BgFj50Pyq2I" title="Cimplo - Cross-Industry Predictive Maintenance Optimization Platform" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-[Visit the Commit2Data website](https://commit2data.nl/projecten/cimplo)

@@ -30,6 +30,23 @@ roles:
     name: Alumni
 
 
+# Research areas, used as `topics:` keys in _projects to label and filter projects.
+research_areas:
+  - key: meta
+    name: Metaheuristic Optimization
+  - key: xai
+    name: Explainable AI
+  - key: bench
+    name: Benchmarking
+  - key: genai
+    name: GenAI & LLMs
+  - key: quantum
+    name: Quantum
+  - key: sustain
+    name: Logistics & sustainability
+  - key: moo
+    name: Multi-objective
+
 event_types:
   - key: conference
     name: Conferences

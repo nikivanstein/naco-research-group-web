@@ -1,5 +1,10 @@
-
 {% assign project = include.project %}
+
+{% comment %}
+Usage (inside <ul class="project-cards">):
+    {% include project-card.html project=project %}
+The whole card is one link. Pass compact=true to leave out the description.
+{% endcomment %}
 
 {% if project.link %}
     {% assign proj-url = project.link %}
@@ -7,46 +12,24 @@
     {% capture proj-url %}{{site.base}}{{project.url}}{% endcapture %}
 {% endif %}
 
-<div class="card">
-    <div class="card-body">
+<li data-topics="{{ project.topics | join: ' ' }}">
+    <a class="project-card" href="{{ proj-url }}">
         {% if project.image %}
-            {% assign imgurl = project.image %}
-            {% capture init %}{{ project.image | slice: 0,1 }}{% endcapture %}
-            {% if init == "/" %}
-                {% capture imgurl %}{{site.base}}{{project.image}}{% endcapture %}
-            {% endif %}
-            <a href="{{ proj-url }}">
-                <img class="card-img-fixed mb-3" src="{{imgurl}}" alt="{{project.title}}" loading="lazy"/>
-            </a>
+            {% capture orig %}{% if project.image contains "://" %}{{ project.image }}{% else %}{{ site.base }}{{ project.image }}{% endif %}{% endcapture %}
+            <img class="project-card__img" src="{% include thumb-src.html src=project.image %}" alt=""
+                 width="720" height="405" loading="lazy" decoding="async"
+                 onerror="this.onerror=null;this.src='{{ orig }}'">
         {% endif %}
-        {% if project.notitle != true %}
-            <h4 class="card-title">
-                {{  project.title }}
-            </h4>
-        {% endif %}
-        {% if project.subtitle != null and project.subtitle != "" %}
-            <h6 class="card-subtitle mb-2 text-muted">
-                {{  project.subtitle }}
-            </h6>
-        {% endif %}
-        <div class="card-text">
-            {{ project.description | markdownify }}
-        </div>
-        {% if project.no-link != true or project.link %}
-            <a class="card-more" href="{{ proj-url }}"> Read more &raquo;</a>
-        {% endif %}
-    </div>
-    {% if project.people %}
-        <div class="card-footer d-flex flex-row flex-wrap justify-content-center">
-            {% for uname in project.people limit:5 %}
-            <div>
-                {% assign person = site.data.people[uname] %}
-                {% include person-image.html person=person %}
-            </div>
-            {% endfor %}
-            {% if project.people.size > 5 %}
-                <div class="align-self-center px-2">&hellip;</div>
-            {% endif %}
-        </div>
-    {% endif %}
-</div>
+        <span class="project-card__body">
+            {% include project-chips.html project=project %}
+            <span class="project-card__title">{{ project.title }}</span>
+            {% unless include.compact %}
+                <span class="project-card__desc">{{ project.description | markdownify | strip_html | strip }}</span>
+            {% endunless %}
+            <span class="project-card__foot">
+                {% include face-pile.html people=project.people %}
+                <span class="project-card__arrow" aria-hidden="true">&rarr;</span>
+            </span>
+        </span>
+    </a>
+</li>

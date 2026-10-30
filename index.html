@@ -14,24 +14,6 @@ header:
     cta2_label: "Meet the team"
     cta2_url: "/#people"
 
-# groups of columns of {roles: list, width: num, image: bool}
-role-tables:
-- - roles: [prof]
-    width: 4
-    image: true
-  - roles: [aprof]
-    width: 12
-    image: true
-  - roles: [postdoc]
-    width: 8
-    image: true
-  - roles: [grad]
-    width: 12
-    image: true
-  - roles: [alum]
-    width: 12
-    image: false
-
 ---
 
 
@@ -64,7 +46,7 @@ role-tables:
         </li>
         <li>
             <span class="fa fa-magic" aria-hidden="true"></span>
-            <div><strong>Generative AI and LLM-Aided Design</strong>Exploring creative and automated approaches for designing algorithms, in close connection with the <a href="https://cis.taskforce.ieee.org/genai4ec/" target="_blank" rel="noopener">IEEE CIS Task Force on Generative AI for Evolutionary Computation</a>.</div>
+            <div><strong>Generative AI and LLM-Aided Design</strong>Exploring creative and automated approaches for designing algorithms.</div>
         </li>
         <li>
             <span class="fa fa-cube" aria-hidden="true"></span>
@@ -125,18 +107,20 @@ role-tables:
         Our research cluster collaborates with international researchers and industry partners, creating a vibrant community that shares a passion for exploring the untapped potential of natural computing.
         We are proud to be at the forefront of this dynamic field, contributing to groundbreaking discoveries and technologies.
     </p>
-    <div class="card-columns">
+    <ul class="project-cards">
         {% comment %}
-        Sort the projects by date, putting those without dates last
+        Show at most two rows: projects with `featured: true` in their
+        front matter, newest first (by file name, which starts with the year).
         {% endcomment %}
-        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-        {% assign projects_by_date = projects_by_date | reverse %}
-        {% for p in projects_by_date %}
-            {% if p.status != "inactive" %}
-                {% include project-card.html project=p %}
-            {% endif %}
+        {% assign featured = site.projects | where: "featured", true | where_exp: "p", "p.status != 'inactive'" %}
+        {% assign featured = featured | sort: 'relative_path' | reverse %}
+        {% for p in featured limit: 6 %}
+            {% include project-card.html project=p %}
         {% endfor %}
-    </div>
+    </ul>
+    <p class="section-more">
+        <a href="{{ site.base }}/research/">All research projects &raquo;</a>
+    </p>
 </section>
 
 <!-- <section>
@@ -146,16 +130,7 @@ role-tables:
 The conference also aims to foster hybrid approaches within evolutionary computation and also involving fuzzy computation and neural computation.
 </section> -->
 
-<div id="people">
-    {% for role-table in page.role-tables %}
-        <section class="people row justify-content-between">
-            {% for role-column in role-table %}
-                <div class="col-md-{{ role-column.width }}">
-                    {% for role in role-column.roles %}
-                        {% include role-people.html role=role image=role-column.image %}
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </section>
-    {% endfor %}
-</div>
+<section id="people">
+    <h2>People</h2>
+    {% include people-tabs.html %}
+</section>

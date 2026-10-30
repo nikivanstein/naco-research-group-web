@@ -1,6 +1,7 @@
 ---
 title: LLaMEA
 status: active
+featured: true
 
 notitle: false
 
@@ -15,6 +16,11 @@ people:
   - kononova
   - back
   - stein
+
+topics: [genai, meta, bench]
+links:
+  github: https://github.com/XAI-liacs/LLaMEA
+  video: https://www.youtube.com/watch?v=LtFc8K5Uc4w
 
 layout: project
 image: "/img/projects/llamea.png"

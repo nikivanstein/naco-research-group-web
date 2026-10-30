@@ -1,0 +1,20 @@
+{% comment %}
+Usage: {% include face-pile.html people=list_of_people_keys %}
+A row of small overlapping photos (at most four) with "+n" for the rest.
+{% endcomment %}
+<span class="face-pile">
+    {% for uname in include.people limit: 4 %}
+        {% assign person = site.data.people[uname] %}
+        {% if person.image %}
+            {% capture orig %}{{ site.base }}{{ person.image }}{% endcapture %}
+            <img src="{% include thumb-src.html src=person.image %}" alt="" title="{{ person.display_name | escape }}"
+                 width="28" height="28" loading="lazy" decoding="async"
+                 onerror="this.onerror=null;this.src='{{ orig }}'">
+        {% elsif person %}
+            <span class="face-pile__initials" title="{{ person.display_name | escape }}">{{ person.display_name | remove_first: "Prof. " | split: " " | first | slice: 0 }}{{ person.display_name | split: " " | last | slice: 0 }}</span>
+        {% endif %}
+    {% endfor %}
+    {% if include.people.size > 4 %}
+        <span class="face-pile__more">+{{ include.people.size | minus: 4 }}</span>
+    {% endif %}
+</span>

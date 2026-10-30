@@ -12,6 +12,10 @@ people:
   - back
   - kononova
 
+topics: [xai]
+partners:
+  - "Mercedes-Benz AG"
+
 layout: project
 image: "/img/projects/time-series-anomaly.png"
 largeimage: "/img/projects/time-series-anomaly.png"

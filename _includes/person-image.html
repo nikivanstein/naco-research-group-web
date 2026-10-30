@@ -12,11 +12,14 @@ text-decoration hack is for Safari. We don't SVGs to be underlined.
 {% endcomment %}
 
 {% if person.image %}
+    {% capture orig %}{{ site.base }}{{ person.image }}{% endcapture %}
     {% capture image %}
         <img class="rounded-circle profile"
              alt="{{ person.display_name }}"
              title="{{ person.display_name }}"
-             src="{{ site.base }}{{ person.image }}" />
+             src="{% include thumb-src.html src=person.image %}"
+             width="70" height="70" loading="lazy" decoding="async"
+             onerror="this.onerror=null;this.src='{{ orig }}'" />
     {% endcapture %}
 {% else %}
     {% capture image %}

@@ -17,6 +17,14 @@
   {% capture overlay_img_path %}{{ page.header.overlay_image | prepend: "/img/" | prepend: base_path }}{% endcapture %}
 {% endif %}
 
+{% assign overlay_img_set = "" %}
+{% capture overlay_thumb_path %}/img/thumbs/{{ page.header.overlay_image }}.webp{% endcapture %}
+{% assign overlay_thumb_file = site.static_files | where: "path", overlay_thumb_path | first %}
+{% if overlay_img_path and overlay_thumb_file %}
+  {% capture overlay_thumb %}/img/{{ page.header.overlay_image }}{% endcapture %}
+  {% capture overlay_img_set %}image-set(url('{% include thumb-src.html src=overlay_thumb %}') type('image/webp'), url('{{ overlay_img_path }}') type('image/jpeg')){% endcapture %}
+{% endif %}
+
 {% if page.header.overlay_filter contains "rgba" %}
   {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
 {% elsif page.header.overlay_filter %}
@@ -24,7 +32,7 @@
 {% endif %}
 
 <div class="page__hero"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% if overlay_img_set != "" %} background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}{{ overlay_img_set }};{% endif %}{% endif %}"
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper container">
