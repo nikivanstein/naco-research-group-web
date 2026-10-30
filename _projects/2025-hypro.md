@@ -1,6 +1,7 @@
 ---
 title: HyPro
 status: active
+featured: true
 
 notitle: false
 

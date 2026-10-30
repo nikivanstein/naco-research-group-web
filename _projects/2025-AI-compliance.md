@@ -1,6 +1,7 @@
 ---
 title: AI Compliance by Design
 status: active
+featured: true
 
 notitle: false
 

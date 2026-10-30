@@ -127,16 +127,18 @@ role-tables:
     </p>
     <div class="card-columns">
         {% comment %}
-        Sort the projects by date, putting those without dates last
+        Show at most two rows: projects with `featured: true` in their
+        front matter, newest first (by file name, which starts with the year).
         {% endcomment %}
-        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-        {% assign projects_by_date = projects_by_date | reverse %}
-        {% for p in projects_by_date %}
-            {% if p.status != "inactive" %}
-                {% include project-card.html project=p %}
-            {% endif %}
+        {% assign featured = site.projects | where: "featured", true | where_exp: "p", "p.status != 'inactive'" %}
+        {% assign featured = featured | sort: 'relative_path' | reverse %}
+        {% for p in featured limit: 6 %}
+            {% include project-card.html project=p %}
         {% endfor %}
     </div>
+    <p class="section-more">
+        <a href="{{ site.base }}/research/">All research projects &raquo;</a>
+    </p>
 </section>
 
 <!-- <section>

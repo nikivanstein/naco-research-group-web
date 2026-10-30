@@ -89,6 +89,7 @@ To create a project, just create a markdown file in the `_projects` folder. Here
 - `image:` The URL of an image for the project. This is shown on both the project page and the project card. Optional.
 - `last-updated:` Date in the format of `YYYY-MM-DD`. The project cards are sorted by this, most recent first.
 - `status: inactive` Set this to `inactive` if don't want the project to appear on the front page. Just ignore it otherwise.
+- `featured: true` Show the project on the front page. At most six featured projects are shown (two rows), newest file name first; all projects are always listed on the Research page.
 - `link:` Set this to an external URL if this project has a page somewhere else on the web. If you don't have a `link:`, then the content of this markdown file (below the YAML frontmatter) will be this project's page.
 - `no-link: true` Set this if you just don't want a project page for your project.
 

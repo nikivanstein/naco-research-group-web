@@ -1,6 +1,7 @@
 ---
 title: GenAIDE
 status: active
+featured: true
 
 notitle: false
 

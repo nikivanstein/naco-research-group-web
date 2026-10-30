@@ -1,6 +1,7 @@
 ---
 title: LLaMEA
 status: active
+featured: true
 
 notitle: false
 

@@ -1,6 +1,7 @@
 ---
 title: Conceptual Vehicle Design
 status: active
+featured: true
 
 notitle: false
 
