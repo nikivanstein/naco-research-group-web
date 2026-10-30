@@ -5,7 +5,7 @@ layout: default
 {% comment %}
 Project page: banner, labels, title and lead, then the text with a facts
 panel (period, funder, partners, links, team) built from the front matter,
-and up to three related projects.
+optional awards and publications, and up to three related projects.
 {% endcomment %}
 
 <article class="project-page">
@@ -26,6 +26,21 @@ and up to three related projects.
     <div class="project-page__grid">
         <div class="project-page__body">
             {{ content }}
+
+            {% if page.awards %}
+                <h2>Awards</h2>
+                <ul class="project-awards">
+                    {% for award in page.awards %}
+                        <li class="project-awards__item project-awards__item--{{ award.medal | default: 'winner' }}">
+                            <span class="project-awards__medal" aria-hidden="true"></span>
+                            <span>
+                                <strong>{{ award.title }}</strong>
+                                {% if award.url %}<a href="{{ award.url }}" target="_blank" rel="noopener">{{ award.event }}</a>{% else %}{{ award.event }}{% endif %}
+                            </span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
 
         <aside class="project-facts" aria-label="Project facts">
@@ -86,6 +101,7 @@ and up to three related projects.
                             {% when "news" %}{% assign label = "News" %}
                             {% when "paper" %}{% assign label = "Paper" %}
                             {% when "nwo" %}{% assign label = "NWO project page" %}
+                            {% when "blade" %}{% assign label = "BLADE benchmark" %}
                             {% else %}{% assign label = link[0] | capitalize %}
                         {% endcase %}
                         <a class="btn btn-naco-outline btn-sm" href="{{ link[1] }}" target="_blank" rel="noopener">{{ label }} &nearr;</a>
@@ -135,6 +151,75 @@ and up to three related projects.
             {% endif %}
         </aside>
     </div>
+
+    {% if page.publications %}
+        {% assign pub_groups = "" %}
+        {% for pub in page.publications %}
+            {% assign g_key = "|" | append: pub.group | append: "|" %}
+            {% unless pub_groups contains g_key %}{% assign pub_groups = pub_groups | append: g_key %}{% endunless %}
+        {% endfor %}
+        {% assign pub_groups = pub_groups | replace: "||", "|" | split: "|" %}
+        <section class="project-pubs" data-pub-filter>
+            <div class="project-pubs__head">
+                <h2>Publications <span>{{ page.publications.size }}</span></h2>
+                <div class="people-tabs__bar" role="group" aria-label="Filter publications" hidden>
+                    <button type="button" class="people-tabs__tab is-on" aria-pressed="true" data-group="">All</button>
+                    {% for g in pub_groups %}
+                        {% if g != "" %}
+                            <button type="button" class="people-tabs__tab" aria-pressed="false" data-group="{{ g | slugify }}">{{ g }}</button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <ul class="pub-cards">
+                {% for pub in page.publications %}
+                    {% if pub.url contains "arxiv.org" %}{% assign source = "arXiv" %}
+                    {% elsif pub.url contains "dl.acm.org" %}{% assign source = "ACM DL" %}
+                    {% elsif pub.url contains "springer.com" %}{% assign source = "Springer" %}
+                    {% elsif pub.url contains "sciencedirect.com" %}{% assign source = "ScienceDirect" %}
+                    {% elsif pub.url contains "ieeexplore" %}{% assign source = "IEEE Xplore" %}
+                    {% elsif pub.url contains "doi.org" %}{% assign source = "DOI" %}
+                    {% else %}{% assign source = "Paper" %}{% endif %}
+                    <li data-group="{{ pub.group | slugify }}">
+                        <a class="pub-card" href="{{ pub.url }}" target="_blank" rel="noopener">
+                            {% if pub.image %}
+                                {% capture orig %}{{ site.base }}{{ pub.image }}{% endcapture %}
+                                <span class="pub-card__img">
+                                    <img src="{% include thumb-src.html src=pub.image %}" alt="" width="600" height="300"
+                                         loading="lazy" decoding="async" onerror="this.onerror=null;this.src='{{ orig }}'">
+                                </span>
+                            {% endif %}
+                            <span class="pub-card__body">
+                                {% if pub.group %}<span class="project-chip">{{ pub.group }}</span>{% endif %}
+                                <span class="pub-card__title">{{ pub.title }}</span>
+                                <span class="pub-card__source">{{ source }} &nearr;</span>
+                            </span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <script>
+        (function () {
+            var root = document.querySelector('[data-pub-filter]');
+            if (!root) return;
+            var bar = root.querySelector('[role="group"]');
+            var items = root.querySelectorAll('.pub-cards > li');
+            bar.hidden = false;
+            bar.addEventListener('click', function (e) {
+                var b = e.target.closest('[data-group]');
+                if (!b) return;
+                var g = b.getAttribute('data-group');
+                items.forEach(function (li) { li.hidden = g !== '' && li.getAttribute('data-group') !== g; });
+                bar.querySelectorAll('[data-group]').forEach(function (x) {
+                    var on = x === b;
+                    x.classList.toggle('is-on', on);
+                    x.setAttribute('aria-pressed', on ? 'true' : 'false');
+                });
+            });
+        })();
+        </script>
+    {% endif %}
 
     {% comment %}
     Related projects: the ones listed under `projects:`, otherwise up to

@@ -25,7 +25,8 @@ TARGETS = {
     "people": ("square", 160),    # shown at 40-70px
     "projects": ("fit", (720, 720)),  # project cards are ~350px wide;
                                       # *-wide banners keep their size
-    "posts": ("fit", (240, 180)),  # news thumbnails are 120x90
+    "posts": ("fit", (360, 270)),  # news thumbnails, up to 180x135
+    "llamea": ("fit", (600, 300)),  # publication cards on the LLaMEA page
 }
 SINGLE_FILES = {
     "naco_banner.jpg": ("fit", (2592, 720)),  # homepage hero, same size

@@ -1,14 +1,14 @@
 {%- comment -%}
 Usage: {% include thumb-src.html src=path %}
 Prints the URL of the small WebP made by make_thumbs.py for an image in
-/img/people/, /img/projects/ or /img/posts/, or the path itself otherwise
+/img/people/, /img/projects/, /img/posts/ or /img/llamea/, or the path itself otherwise
 (other folders, external URLs, SVG and GIF images).
 {%- endcomment -%}
 {%- assign src = include.src -%}
 {%- assign dir = src | split: "/" -%}
 {%- assign thumbed = false -%}
 {%- if dir[1] == "img" and dir.size == 4 -%}
-    {%- if dir[2] == "people" or dir[2] == "projects" or dir[2] == "posts" -%}
+    {%- if dir[2] == "people" or dir[2] == "projects" or dir[2] == "posts" or dir[2] == "llamea" -%}
         {%- unless src contains ".svg" or src contains ".gif" -%}
             {%- assign thumbed = true -%}
         {%- endunless -%}

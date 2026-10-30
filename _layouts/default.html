@@ -52,6 +52,9 @@
                             {% if item.title == 'Research' and page.layout == 'project' %}
                                 {% assign maybe-active = 'active' %}
                             {% endif %}
+                            {% if item.title == 'News' and page.layout == 'post' %}
+                                {% assign maybe-active = 'active' %}
+                            {% endif %}
                             {% if itemshorturl == shorturl or is-research %}
                                 {% assign maybe-active = 'active' %}
                             {% endif %}
@@ -76,7 +79,7 @@
 
         <div class="container">
 
-            {% unless page.layout == "project" %}
+            {% unless page.layout == "project" or page.layout == "post" %}
             {% if page.largeimage %}
                 {% assign orig = page.largeimage %}
                 <img src="{% include thumb-src.html src=page.largeimage %}"

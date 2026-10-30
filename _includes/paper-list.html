@@ -1,0 +1,91 @@
+{% comment %}
+Usage: {% include paper-list.html %} inside a post whose front matter has
+`papers:`, a list of {title, authors, track, label, award, summary,
+abstract, links}. Papers are grouped by `track` (default: main papers),
+group members are shown in bold and abstracts are folded away.
+{% endcomment %}
+
+{% assign papers = page.papers %}
+{% assign tracks = "" %}
+{% assign has_abstract = false %}
+{% for p in papers %}
+    {% assign t = p.track | default: "Accepted papers" %}
+    {% assign t_key = "|" | append: t | append: "|" %}
+    {% unless tracks contains t_key %}{% assign tracks = tracks | append: t_key %}{% endunless %}
+    {% if p.abstract %}{% assign has_abstract = true %}{% endif %}
+{% endfor %}
+{% assign tracks = tracks | replace: "||", "|" | split: "|" %}
+
+<div class="paper-list" data-paper-list>
+    {% if papers.size > 3 %}
+        <div class="paper-stats">
+            {% for track in tracks %}
+                {% if track != "" %}
+                    {% assign n = 0 %}
+                    {% for paper in papers %}
+                        {% assign pt = paper.track | default: "Accepted papers" %}
+                        {% if pt == track %}{% assign n = n | plus: 1 %}{% endif %}
+                    {% endfor %}
+                    <div class="paper-stat"><b>{{ n }}</b><span>{% if track == "Accepted papers" %}Full papers{% else %}{{ track }}{% endif %}</span></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% assign shown = 0 %}
+    {% for track in tracks %}
+        {% if track == "" %}{% continue %}{% endif %}
+        {% assign shown = shown | plus: 1 %}
+        <div class="paper-list__head">
+            <h3>{{ track }}</h3>
+            {% if shown == 1 and has_abstract %}
+                <button type="button" class="paper-list__toggle" data-expand hidden>Expand all abstracts</button>
+            {% endif %}
+        </div>
+        <ul class="papers">
+            {% for p in papers %}
+                {% assign pt = p.track | default: "Accepted papers" %}
+                {% if pt == track %}
+                <li class="paper">
+                    {% if p.label %}<p class="paper__label">{{ p.label }}</p>{% endif %}
+                    <h4>{{ p.title }}</h4>
+                    {% if p.authors %}
+                        <p class="paper__authors">
+                            {%- assign names = p.authors | split: ", " -%}
+                            {%- for name in names -%}
+                                {%- include author-match.html name=name -%}
+                                {%- if match_key != "" -%}<strong>{{ name | strip }}</strong>{%- else -%}{{ name | strip }}{%- endif -%}
+                                {%- unless forloop.last %}, {% endunless -%}
+                            {%- endfor -%}
+                        </p>
+                    {% endif %}
+                    {% if p.summary %}<p class="paper__summary">{{ p.summary | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+                    {% if p.links or p.award or p.abstract %}
+                        <div class="paper__row">
+                            {% for link in p.links %}
+                                {% case link[0] %}
+                                    {% when "arxiv" %}{% assign label = "arXiv" %}
+                                    {% when "doi" %}{% assign label = "DOI" %}
+                                    {% when "pdf" %}{% assign label = "PDF" %}
+                                    {% when "code" %}{% assign label = "Code" %}
+                                    {% when "video" %}{% assign label = "Video" %}
+                                    {% when "paper" %}{% assign label = "Paper" %}
+                                    {% else %}{% assign label = link[0] | capitalize %}
+                                {% endcase %}
+                                <a class="paper__link" href="{{ link[1] }}" target="_blank" rel="noopener">{{ label }} &nearr;</a>
+                            {% endfor %}
+                            {% if p.award %}<span class="paper__award">{{ p.award }}</span>{% endif %}
+                            {% if p.abstract %}
+                                <details class="paper__abstract">
+                                    <summary>Abstract</summary>
+                                    <p>{{ p.abstract }}</p>
+                                </details>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</div>

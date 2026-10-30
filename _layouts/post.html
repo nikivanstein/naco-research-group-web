@@ -1,8 +1,210 @@
 ---
 layout: default
 ---
-<p class="date">{{ page.date | date: '%B %d, %Y' }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+{% comment %}
+News post: header (type, date, title, lead, share), the text with a side
+panel (image, date, links, people from the group, related projects), and
+links to the previous and next post.
+
+The first paragraph becomes the lead, without the "Leiden, The
+Netherlands –" dateline. People in the panel come from `people:` (keys,
+or {key, role}) or, for posts with `papers:`, from the group members
+among the authors.
+{% endcomment %}
+
+{% capture excerpt_html %}{{ page.excerpt }}{% endcapture %}
+{% assign lead = "" %}
+{% assign body = content %}
+{% unless page.shortnews %}
+    {% assign excerpt_trim = excerpt_html | strip %}
+    {% if excerpt_trim != "" and content contains excerpt_trim %}
+        {% assign body = content | remove_first: excerpt_trim %}
+        {% assign lead = excerpt_trim | remove: "<p>" | remove: "</p>"
+            | remove_first: "<strong>Leiden, The Netherlands</strong> – "
+            | remove_first: "<strong>Leiden, The Netherlands</strong> - " | strip %}
+    {% endif %}
+{% endunless %}
+
+{% assign words = content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 200 | plus: 1 %}
+
+{% comment %} Group members for the side panel {% endcomment %}
+{% assign member_keys = "" %}
+{% if page.people %}
+    {% for entry in page.people %}
+        {% assign k = entry.key | default: entry %}
+        {% assign member_keys = member_keys | append: k | append: "," %}
+    {% endfor %}
+{% elsif page.papers %}
+    {% for paper in page.papers %}
+        {% assign names = paper.authors | split: ", " %}
+        {% for name in names %}
+            {% include author-match.html name=name %}
+            {% if match_key != "" %}
+                {% assign k_marked = "," | append: match_key | append: "," %}
+                {% assign member_check = "," | append: member_keys %}
+                {% unless member_check contains k_marked %}
+                    {% assign member_keys = member_keys | append: match_key | append: "," %}
+                {% endunless %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+{% assign member_keys = member_keys | split: "," %}
+
+<div class="post-crumbs"><a href="{{ site.base }}/blog/">&larr; All news</a></div>
+
+<article class="post-page">
+    <header class="post-head">
+        <p class="post-head__eyebrow">
+            <span>News</span>
+            <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time></span>
+            {% if page.type %}<span>{{ page.type }}</span>{% endif %}
+        </p>
+        <h1>{{ page.title }}</h1>
+        {% if lead != "" %}<p class="post-head__lead">{{ lead }}</p>{% endif %}
+        <div class="post-head__meta">
+            <span>{{ minutes }} min read</span>
+            <span class="post-share">
+                {% capture abs_url %}{{ site.url }}{{ site.base }}{{ page.url }}{% endcapture %}
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ abs_url | cgi_escape }}" target="_blank" rel="noopener">LinkedIn</a>
+                <button type="button" data-copy-link="{{ abs_url }}">Copy link</button>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-page__grid">
+        <div class="post-body">
+            {{ body }}
+        </div>
+
+        <aside class="post-aside" aria-label="About this post">
+            {% if page.image %}
+                {% assign orig = page.image %}
+                {% if page.image_link %}<a class="post-aside__img" href="{{ page.image_link }}">{% else %}<div class="post-aside__img">{% endif %}
+                    <img src="{% include thumb-src.html src=page.image %}" alt="" decoding="async"
+                         onerror="this.onerror=null;this.src='{{ orig }}'">
+                {% if page.image_link %}</a>{% else %}</div>{% endif %}
+            {% endif %}
+
+            <dl>
+                <div><dt>Published</dt><dd>{{ page.date | date: '%-d %B %Y' }}</dd></div>
+                {% if page.type %}<div><dt>Type</dt><dd>{{ page.type }}</dd></div>{% endif %}
+            </dl>
+
+            {% if page.links %}
+                <div class="post-aside__links">
+                    {% for link in page.links %}
+                        {% case link[0] %}
+                            {% when "website" %}{% assign label = "Website" %}
+                            {% when "video" %}{% assign label = "Video" %}
+                            {% when "podcast" %}{% assign label = "Listen" %}
+                            {% when "paper" %}{% assign label = "Paper" %}
+                            {% else %}{% assign label = link[0] | capitalize %}
+                        {% endcase %}
+                        <a class="btn btn-naco-outline btn-sm" href="{{ link[1] }}" target="_blank" rel="noopener">{{ label }} &nearr;</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if member_keys.size > 0 %}
+                <div>
+                    <h2 class="project-facts__label">From our group</h2>
+                    <ul class="project-team">
+                        {% for k in member_keys %}
+                            {% assign person = site.data.people[k] %}
+                            {% if person %}
+                                {% assign label = "" %}
+                                {% for entry in page.people %}
+                                    {% if entry.key == k and entry.role %}{% assign label = entry.role %}{% endif %}
+                                {% endfor %}
+                                {% if label == "" %}
+                                    {% if person.role == "prof" %}{% assign label = "Group leader" %}
+                                    {% elsif person.role == "grad" %}{% assign label = "PhD candidate" %}
+                                    {% elsif person.role == "postdoc" %}{% assign label = "Postdoc" %}
+                                    {% elsif person.role == "alum" %}{% assign label = "Former member" %}
+                                    {% else %}{% assign label = person.bio | default: "Faculty" %}{% endif %}
+                                {% endif %}
+                                <li>
+                                    {% if person.webpage %}<a href="{{ person.webpage | escape }}" target="_blank" rel="noopener">{% else %}<span>{% endif %}
+                                    {% if person.image %}
+                                        {% capture orig %}{{ site.base }}{{ person.image }}{% endcapture %}
+                                        <img src="{% include thumb-src.html src=person.image %}" alt="" width="36" height="36"
+                                             loading="lazy" decoding="async" onerror="this.onerror=null;this.src='{{ orig }}'">
+                                    {% else %}
+                                        <span class="project-team__initials" aria-hidden="true">{{ person.display_name | remove_first: "Prof. " | split: " " | first | slice: 0 }}{{ person.display_name | split: " " | last | slice: 0 }}</span>
+                                    {% endif %}
+                                    <span class="project-team__text">
+                                        <span class="project-team__name">{{ person.display_name | remove_first: "Prof. " }}</span>
+                                        <span class="project-team__role">{{ label }}</span>
+                                    </span>
+                                    {% if person.webpage %}</a>{% else %}</span>{% endif %}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            {% if page.projects %}
+                <div>
+                    <h2 class="project-facts__label">Related {% if page.projects.size == 1 %}project{% else %}projects{% endif %}</h2>
+                    <ul class="post-aside__projects">
+                        {% for project in site.projects %}
+                            {% if page.projects contains project.slug %}
+                                <li>
+                                    <a href="{{ site.base }}{{ project.url }}">
+                                        {% if project.image %}<img src="{% include thumb-src.html src=project.image %}" alt="" loading="lazy" decoding="async">{% endif %}
+                                        <span><strong>{{ project.title }}</strong> {{ project.description | markdownify | strip_html | strip | truncatewords: 8 }}</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </aside>
+    </div>
+
+    <nav class="post-endnav" aria-label="More news">
+        {% if page.previous %}
+            <a class="post-endnav__prev" href="{{ site.base }}{{ page.previous.url }}">
+                <small>&larr; Older</small>
+                <strong>{{ page.previous.title }}</strong>
+            </a>
+        {% else %}<span></span>{% endif %}
+        {% if page.next %}
+            <a class="post-endnav__next" href="{{ site.base }}{{ page.next.url }}">
+                <small>Newer &rarr;</small>
+                <strong>{{ page.next.title }}</strong>
+            </a>
+        {% else %}<span></span>{% endif %}
+    </nav>
+    <p class="post-endnav__all"><a class="btn btn-naco-outline" href="{{ site.base }}/blog/">All news</a></p>
+</article>
+
+<script>
+(function () {
+    document.querySelectorAll('[data-copy-link]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var url = btn.getAttribute('data-copy-link');
+            var done = function () { btn.textContent = 'Link copied'; };
+            if (navigator.clipboard) { navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link:', url); }); }
+            else { window.prompt('Copy this link:', url); }
+        });
+    });
+    document.querySelectorAll('[data-paper-list]').forEach(function (list) {
+        var btn = list.querySelector('[data-expand]');
+        if (!btn) return;
+        var all = list.querySelectorAll('details');
+        btn.hidden = false;
+        btn.addEventListener('click', function () {
+            var open = btn.getAttribute('aria-pressed') !== 'true';
+            all.forEach(function (d) { d.open = open; });
+            btn.setAttribute('aria-pressed', open ? 'true' : 'false');
+            btn.textContent = open ? 'Collapse all abstracts' : 'Expand all abstracts';
+        });
+    });
+})();
+</script>

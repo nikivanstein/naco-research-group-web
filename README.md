@@ -73,6 +73,15 @@ And concoct a page title for your post. The body of the post goes after the `---
 
 You can also customize the icon that is displayed on the news feed. By default it's `newspaper-o`. We use icons from the [FontAwesome][fa] icon set.
 
+The first paragraph of a post becomes its lead under the title (a leading "**Leiden, The Netherlands** –" is dropped there). Optional front matter for the post page:
+
+- `type:` Shown next to the date, e.g. `Announcement`, `Papers`, `Podcast`.
+- `image:` Shown in the side panel; `image_link:` makes it a link.
+- `links:` Buttons in the side panel, e.g. `website:`, `video:`, `paper:`.
+- `people:` Group members to show in the side panel, as keys from `_data/people.yml`, or `{key: stein, role: Chair}` to set the label.
+- `projects:` Related projects, as `_projects` file names without `.md`.
+- `papers:` A list of papers, rendered where the post body contains `{% include paper-list.html %}`. Each paper has `title`, and optionally `authors` (comma-separated; group members are shown in bold and listed in the side panel), `track` (e.g. `Hot Off the Press`; papers are grouped by track), `label`, `award`, `summary` (always shown), `abstract` (folded away) and `links` (`arxiv`, `doi`, `pdf`, `code`, `video`, `paper`).
+
 [yfm]: http://jekyllrb.com/docs/frontmatter/
 [fa]: http://fontawesome.io/icons/
 
@@ -102,6 +111,9 @@ To create a project, just create a markdown file in the `_projects` folder. Here
 - `partners:` Optional. A list of names (markdown links allowed) or one line of text.
 - `links:` Optional map of buttons, e.g. `website:`, `github:`, `video:`, `news:`, `paper:`, `nwo:`.
 - `projects:` Optional list of related projects. Without it, up to three current projects that share a topic are shown.
+- `kind: line` Optional. Labels a long-running research line (like LLaMEA) as "Research line" instead of "Active".
+- `awards:` Optional list of `{medal: gold|silver|bronze|winner, title, event, url}`, shown under the text.
+- `publications:` Optional list of `{title, url, image, group}`, shown as a grid of cards below the text with filter tabs per `group`. Put the images in `img/llamea/` (or add another folder to `make_thumbs.py` and `_includes/thumb-src.html`).
 - `link:` Set this to an external URL if this project has a page somewhere else on the web. If you don't have a `link:`, then the content of this markdown file (below the YAML frontmatter) will be this project's page.
 - `no-link: true` Set this if you just don't want a project page for your project.
 
