@@ -76,6 +76,12 @@ You can also customize the icon that is displayed on the news feed. By default i
 [yfm]: http://jekyllrb.com/docs/frontmatter/
 [fa]: http://fontawesome.io/icons/
 
+Image thumbnails
+----------------
+
+Pages show small WebP copies of people photos, project images and news images from `img/thumbs/`. After adding or replacing an image in `img/people`, `img/projects` or `img/posts`, run `python make_thumbs.py` (needs Pillow) and commit the new files in `img/thumbs/`. If a thumbnail is missing, the page falls back to the original image, so nothing breaks, but the page gets heavier.
+
+
 Projects
 --------
 

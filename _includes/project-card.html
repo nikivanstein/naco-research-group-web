@@ -15,8 +15,11 @@
             {% if init == "/" %}
                 {% capture imgurl %}{{site.base}}{{project.image}}{% endcapture %}
             {% endif %}
+            {% assign orig = imgurl %}
             <a href="{{ proj-url }}">
-                <img class="card-img-fixed mb-3" src="{{imgurl}}" alt="{{project.title}}" loading="lazy"/>
+                <img class="card-img-fixed mb-3" src="{% include thumb-src.html src=project.image %}" alt="{{project.title}}"
+                     width="720" height="405" loading="lazy" decoding="async"
+                     onerror="this.onerror=null;this.src='{{ orig }}'"/>
             </a>
         {% endif %}
         {% if project.notitle != true %}

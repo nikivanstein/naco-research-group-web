@@ -42,7 +42,10 @@ projects for everyone else, falling back to the bio or the role name.
 <div class="person-tile{% if person.role == 'prof' %} is-lead{% endif %}">
 {% endif %}
     {% if person.image %}
-        <img class="person-tile__photo" src="{{ site.base }}{{ person.image }}" alt="" loading="lazy">
+        {% capture orig %}{{ site.base }}{{ person.image }}{% endcapture %}
+        <img class="person-tile__photo" src="{% include thumb-src.html src=person.image %}" alt=""
+             width="52" height="52" loading="lazy" decoding="async"
+             onerror="this.onerror=null;this.src='{{ orig }}'">
     {% else %}
         <span class="person-tile__photo person-tile__initials" aria-hidden="true">{{ person.display_name | split: " " | first | slice: 0 }}{{ person.display_name | split: " " | last | slice: 0 }}</span>
     {% endif %}

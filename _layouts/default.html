@@ -17,6 +17,13 @@
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ site.base }}/css/group.css">
+        {% capture hero_thumb %}/img/thumbs/{{ page.header.overlay_image }}.webp{% endcapture %}
+        {% assign hero_thumb_file = site.static_files | where: "path", hero_thumb | first %}
+        {% if page.header.overlay_image and hero_thumb_file %}
+            {% capture hero_src %}/img/{{ page.header.overlay_image }}{% endcapture %}
+            <link rel="preload" as="image" type="image/webp" fetchpriority="high"
+                  href="{% include thumb-src.html src=hero_src %}">
+        {% endif %}
 
         <link rel="icon" 
             type="image/png" 
