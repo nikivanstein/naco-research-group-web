@@ -107,7 +107,7 @@ header:
         Our research cluster collaborates with international researchers and industry partners, creating a vibrant community that shares a passion for exploring the untapped potential of natural computing.
         We are proud to be at the forefront of this dynamic field, contributing to groundbreaking discoveries and technologies.
     </p>
-    <div class="card-columns">
+    <ul class="project-cards">
         {% comment %}
         Show at most two rows: projects with `featured: true` in their
         front matter, newest first (by file name, which starts with the year).
@@ -117,7 +117,7 @@ header:
         {% for p in featured limit: 6 %}
             {% include project-card.html project=p %}
         {% endfor %}
-    </div>
+    </ul>
     <p class="section-more">
         <a href="{{ site.base }}/research/">All research projects &raquo;</a>
     </p>

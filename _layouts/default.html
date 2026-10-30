@@ -76,6 +76,7 @@
 
         <div class="container">
 
+            {% unless page.layout == "project" %}
             {% if page.largeimage %}
                 {% assign orig = page.largeimage %}
                 <img src="{% include thumb-src.html src=page.largeimage %}"
@@ -97,6 +98,8 @@
             {% if page.notitle != true %}
                 <h1>{{ page.title }}</h1>
             {% endif %}
+
+            {% endunless %}
 
             {{ content }}
 

@@ -14,6 +14,8 @@ people:
   - back
 
 
+topics: [xai]
+
 layout: project
 image: "/img/projects/aicompliance.png"
 largeimage: "/img/projects/aicompliance-wide.png"

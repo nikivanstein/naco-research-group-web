@@ -14,6 +14,8 @@ people:
   - back
 
 
+topics: [xai]
+
 layout: project
 image: "/img/projects/arisenmd.png"
 largeimage: "/img/projects/arisenmd-wide.png"

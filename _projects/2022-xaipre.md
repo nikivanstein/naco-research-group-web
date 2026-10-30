@@ -17,13 +17,19 @@ projects:
   - 2022-xaipre
   - 2023-ai4oversight
 
+topics: [xai]
+partners:
+  - "[Hanze Hogeschool](https://www.hanze.nl/nl)"
+  - "[Heerema Marine Contractors](https://www.heerema.com/heerema-marine-contractors)"
+links:
+  website: https://xaipre.leidenuniv.nl/
+
 layout: project
 image: "/img/projects/xaipre.png"
 largeimage: "/img/projects/xaipre-wide.png"
 last-updated: 2024-01-08
 ---
 
-**Partners:** <a href="https://www.hanze.nl/nl" target="_blank">Hanze Hogeschool</a>, <a href="https://www.heerema.com/heerema-marine-contractors" target="_blank">Heerema marine contractors</a>   
 
 The XAIPre project (pronounce “Xyper”) aims at developing Explainable Predictive Maintenance (XPdM) algorithms that do not only provide the engineers with a prediction but in addition, with 1) a risk analysis should the maintenance be delayed 2) the criteria or indicators used to make that analysis.  By providing more insight into the state of the machine, the engineers are empowered and given control over their maintenance process.
 
@@ -35,4 +41,3 @@ The research partners will work together with Heerema Marine Contractors. This c
 
 The project team is advised by a user committee, representing Heerema Marine Contractors and different industries with similar components and objectives in predictive maintenance, including ship design (C-Job Naval Architects), steel production (Tata Steel Europe), aircraft engines (Airfrance/KLM) and automotive (Volkswagen Group) and Honda Research Institute Europe), making sure that the technology developed in the project can be applied across multiple industries.  
 
-[Visit the XAIPre website](https://xaipre.leidenuniv.nl/)

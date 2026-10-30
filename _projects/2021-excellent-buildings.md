@@ -13,12 +13,17 @@ people:
   - back
   - emmerich
 
+topics: [moo]
+funder: "NWO"
+grant: "TOP Grant 18036"
+partners:
+  - "TU Eindhoven"
+
 layout: project
 image: "/img/projects/buildings.png"
 last-updated: 2024-01-08
 ---
 
-**Partners:** TU Eindhoven
 
 
 In the research project titled "Excellent Buildings: Realistic Geometries for optimal structural, thermal, and lighting performance", which is supported by NWO, The Netherlands, TOP Grant 18036, we are investigating the use of multi-objective optimization algorithms to improve the spatial design of buildings. Our approach in this project is innovative, as we are adopting a multi-disciplinary perspective. The multiobjective approach includes discipline such as thermal performance (energy efficiency, thermal comfort), lighting performance, and structural performance. 

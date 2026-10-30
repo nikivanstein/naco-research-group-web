@@ -4,27 +4,72 @@ title: Research Projects
 ---
 
 {% comment %}
-Current projects first, then finished ones (status: inactive), each sorted
-by date with the most recently updated first.
+Current projects as cards with research-area filter tabs, then finished
+projects (status: inactive) as a compact list. Both are sorted by date,
+most recently updated first.
 {% endcomment %}
 {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' | reverse %}
+{% assign current = projects_by_date | where_exp: "p", "p.status != 'inactive'" %}
 {% assign finished = projects_by_date | where: "status", "inactive" %}
 
-<div class="card-columns">
-    {% for p in projects_by_date %}
-        {% if p.status != "inactive" %}
+<div class="project-filter" data-project-filter>
+    <div class="people-tabs__bar" role="group" aria-label="Filter by research area" hidden>
+        <button type="button" class="people-tabs__tab is-on" aria-pressed="true" data-topic="">All <span>{{ current.size }}</span></button>
+        {% for area in site.research_areas %}
+            {% assign n = 0 %}
+            {% for p in current %}
+                {% if p.topics contains area.key %}{% assign n = n | plus: 1 %}{% endif %}
+            {% endfor %}
+            {% if n > 0 %}
+                <button type="button" class="people-tabs__tab" aria-pressed="false" data-topic="{{ area.key }}">{{ area.name }} <span>{{ n }}</span></button>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <ul class="project-cards">
+        {% for p in current %}
             {% include project-card.html project=p %}
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </ul>
 </div>
 
 {% if finished.size > 0 %}
-<section>
+<section class="pt-4">
     <h2>Finished projects</h2>
-    <div class="card-columns">
+    <ul class="project-list">
         {% for p in finished %}
-            {% include project-card.html project=p %}
+            <li>
+                <a href="{{ site.base }}{{ p.url }}">
+                    {% if p.image %}
+                        <img src="{% include thumb-src.html src=p.image %}" alt="" width="88" height="50" loading="lazy" decoding="async">
+                    {% endif %}
+                    <span><strong>{{ p.title }}</strong> {{ p.description | markdownify | strip_html | strip }}</span>
+                </a>
+            </li>
         {% endfor %}
-    </div>
+    </ul>
 </section>
 {% endif %}
+
+<script>
+(function () {
+    var root = document.querySelector('[data-project-filter]');
+    if (!root) return;
+    var bar = root.querySelector('[role="group"]');
+    var cards = root.querySelectorAll('.project-cards > li');
+    bar.hidden = false;
+    bar.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-topic]');
+        if (!b) return;
+        var topic = b.getAttribute('data-topic');
+        cards.forEach(function (li) {
+            li.hidden = topic !== '' && (' ' + li.getAttribute('data-topics') + ' ').indexOf(' ' + topic + ' ') < 0;
+        });
+        bar.querySelectorAll('[data-topic]').forEach(function (x) {
+            var on = x === b;
+            x.classList.toggle('is-on', on);
+            x.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+    });
+})();
+</script>

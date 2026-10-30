@@ -1,0 +1,16 @@
+{% comment %}
+Usage: {% include project-chips.html project=project %}
+One line of labels: active or finished, then the project's research areas.
+{% endcomment %}
+<span class="project-chips">
+    {% if include.project.status == "inactive" %}
+        <span class="project-chip">Finished</span>
+    {% else %}
+        <span class="project-chip project-chip--active">Active</span>
+    {% endif %}
+    {% for area in site.research_areas %}
+        {% if include.project.topics contains area.key %}
+            <span class="project-chip">{{ area.name }}</span>
+        {% endif %}
+    {% endfor %}
+</span>

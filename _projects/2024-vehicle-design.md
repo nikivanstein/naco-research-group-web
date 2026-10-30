@@ -13,6 +13,8 @@ people:
   - back
   - kononova
 
+topics: [genai, moo]
+
 layout: project
 image: "/img/projects/vehicle-design.png"
 largeimage: "/img/projects/vehicle-design-wide.png"

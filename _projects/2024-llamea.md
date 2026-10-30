@@ -17,6 +17,11 @@ people:
   - back
   - stein
 
+topics: [genai, nature, bench]
+links:
+  github: https://github.com/XAI-liacs/LLaMEA
+  video: https://www.youtube.com/watch?v=LtFc8K5Uc4w
+
 layout: project
 image: "/img/projects/llamea.png"
 largeimage: "/img/projects/llamea-wide.png"

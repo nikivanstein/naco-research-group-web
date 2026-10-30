@@ -14,6 +14,9 @@ people:
   - fan
   - back
 
+topics: [sustain]
+partners: "57 knowledge organisations, companies and start-ups (listed below)"
+
 layout: project
 image: "/img/projects/hypro.jpg"
 largeimage: "/img/projects/hypro-wide.png"
