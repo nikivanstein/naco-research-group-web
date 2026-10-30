@@ -13,7 +13,7 @@ people:
   - stein
   - back
 
-topics: [nature]
+topics: [meta]
 partners:
   - "ASML"
 

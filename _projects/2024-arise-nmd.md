@@ -15,6 +15,10 @@ people:
 
 
 topics: [xai]
+period: 2024–2028
+funder: "NWO Open Technology Programme"
+links:
+  nwo: https://www.nwo.nl/en/projects/20852
 
 layout: project
 image: "/img/projects/arisenmd.png"

@@ -12,7 +12,7 @@ people:
   - back
   - kononova
 
-topics: [nature]
+topics: [meta]
 
 layout: project
 image: "/img/projects/causal-model.png"

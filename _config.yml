@@ -32,8 +32,8 @@ roles:
 
 # Research areas, used as `topics:` keys in _projects to label and filter projects.
 research_areas:
-  - key: nature
-    name: Nature-inspired
+  - key: meta
+    name: Metaheuristic Optimization
   - key: xai
     name: Explainable AI
   - key: bench

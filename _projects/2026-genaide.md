@@ -20,7 +20,7 @@ people:
 
 topics: [genai]
 funder: "Horizon Europe MSCA"
-grant: "101226927"
+grant: "Grant 101226927"
 partners: "16 partners from 8 countries"
 links:
   website: https://www.genaide.eu/

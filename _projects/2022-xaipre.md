@@ -18,6 +18,8 @@ projects:
   - 2023-ai4oversight
 
 topics: [xai]
+funder: "NWO Smart Industry"
+grant: "Project 19455"
 partners:
   - "[Hanze Hogeschool](https://www.hanze.nl/nl)"
   - "[Heerema Marine Contractors](https://www.heerema.com/heerema-marine-contractors)"

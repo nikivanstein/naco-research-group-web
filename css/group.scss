@@ -894,7 +894,7 @@ a.person-tile:hover, a.person-tile:focus {
     gap: 10px;
     align-items: center;
 
-    img { flex: 0 0 40px; }
+    img { flex: 0 0 40px; width: 40px; height: 40px; object-fit: contain; }
     small { display: block; color: $muted; }
 }
 

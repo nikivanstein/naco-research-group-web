@@ -12,7 +12,7 @@ people:
   - kononova
   - back
 
-topics: [nature]
+topics: [meta]
 partners:
   - "[Advanced Bionics](https://www.advancedbionics.com/com/en/home)"
   - "[Leiden University Medical Centre](https://www.universiteitleiden.nl/en/medicine-lumc)"

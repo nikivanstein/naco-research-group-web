@@ -45,11 +45,13 @@ and up to three related projects.
                         <dt>Funded by</dt>
                         <dd class="project-facts__funder">
                             {% if page.funder contains "Horizon" or page.funder contains "European" %}
-                                <img src="{{ site.base }}/img/projects/EU.png" alt="European Union flag" width="40">
+                                <img src="{{ site.base }}/img/projects/EU.png" alt="European Union flag" width="40" height="27">
+                            {% elsif page.funder contains "NWO" %}
+                                <img src="{{ site.base }}/img/projects/NWO.svg" alt="NWO logo" width="24" height="41">
                             {% endif %}
                             <span>
                                 {{ page.funder }}
-                                {% if page.grant %}<small>Grant {{ page.grant | remove_first: "Grant " }}</small>{% endif %}
+                                {% if page.grant %}<small>{{ page.grant }}</small>{% endif %}
                             </span>
                         </dd>
                     </div>
@@ -83,6 +85,7 @@ and up to three related projects.
                             {% when "video" %}{% assign label = "Video" %}
                             {% when "news" %}{% assign label = "News" %}
                             {% when "paper" %}{% assign label = "Paper" %}
+                            {% when "nwo" %}{% assign label = "NWO project page" %}
                             {% else %}{% assign label = link[0] | capitalize %}
                         {% endcase %}
                         <a class="btn btn-naco-outline btn-sm" href="{{ link[1] }}" target="_blank" rel="noopener">{{ label }} &nearr;</a>

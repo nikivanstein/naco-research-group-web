@@ -17,7 +17,7 @@ people:
   - back
   - stein
 
-topics: [genai, nature, bench]
+topics: [genai, meta, bench]
 links:
   github: https://github.com/XAI-liacs/LLaMEA
   video: https://www.youtube.com/watch?v=LtFc8K5Uc4w
