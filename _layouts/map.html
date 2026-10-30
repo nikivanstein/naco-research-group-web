@@ -8,9 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
         <link rel="stylesheet"
-              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-              integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+              integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
               crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ site.base }}/css/group.css">
@@ -58,48 +62,51 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
     </head>
     <body>
-        <div class="container">
-            <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
-            <div class="header d-flex
-                        flex-column
-                        flex-md-row justify-content-md-between">
-                <a href="{{ site.base }}/" class="">
-                    <img src="{{ site.base }}/img/logo.png"
-                         srcset="{{ site.base }}/img/logo@2x.png 2x"
-                         alt="Naco" id="logo">
-                </a>
-                <ul class="nav nav-pills justify-content-center">
+        <header class="site-header">
+            <div class="container">
+                <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
+                <div class="header d-flex
+                            flex-column
+                            flex-md-row justify-content-md-between">
+                    <a href="{{ site.base }}/" class="">
+                        <img src="{{ site.base }}/img/logo.png"
+                             srcset="{{ site.base }}/img/logo@2x.png 2x"
+                             alt="Naco" id="logo">
+                    </a>
+                    <ul class="nav nav-pills justify-content-center">
 
-                    {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
-                    {% for item in site.navigation %}
+                        {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
+                        {% for item in site.navigation %}
 
-                        {% assign itemshorturl = item.link | replace:'.html','' %}
+                            {% assign itemshorturl = item.link | replace:'.html','' %}
 
-                        {% assign maybe-active = '' %}
-                        {% if item.title == 'Research' and page.layout == 'project' %}
-                            {% assign maybe-active = 'active' %}
-                        {% endif %}
-                        {% if itemshorturl == shorturl or is-research %}
-                            {% assign maybe-active = 'active' %}
-                        {% endif %}
+                            {% assign maybe-active = '' %}
+                            {% if item.title == 'Research' and page.layout == 'project' %}
+                                {% assign maybe-active = 'active' %}
+                            {% endif %}
+                            {% if itemshorturl == shorturl or is-research %}
+                                {% assign maybe-active = 'active' %}
+                            {% endif %}
 
-                        <li class="nav-item">
-                            <a class="nav-link {{ maybe-active }}"
-                               href="{{ site.base }}{{ item.link }}">
-                                {{ item.title }}
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ maybe-active }}"
+                                   href="{{ site.base }}{{ item.link }}">
+                                    {{ item.title }}
+                                </a>
+                            </li>
 
-                    {% endfor %}
+                        {% endfor %}
 
-                </ul>
+                    </ul>
+                </div>
             </div>
+        </header>
 
-            {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-        </div>
-                {% include page__hero.html %}
+        {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+            {% include page__hero.html %}
+        {% endif %}
+
         <div class="container">
-            {% endif %}
 
             {% if page.largeimage %}
                 <img loading="lazy" src="{{ page.largeimage }}"
@@ -121,19 +128,10 @@
 
             {{ content }}
 
-            <div class="footer">
-                <p>
-                    <a href="https://liacs.leidenuniv.nl/" target="_blank">Leiden Institute of Advanced Computer Science</a>
-                    at the
-                    <a href="https://leidenuniv.nl/" target="_blank">University of Leiden</a>
-                </p>
-            </div>
+            {% include footer.html %}
 
         </div> <!-- /container -->
 
-        <!-- Support retina images. -->
-        <script type="text/javascript"
-                src="{{ site.base }}/js/srcset-polyfill.js"></script>
 
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>

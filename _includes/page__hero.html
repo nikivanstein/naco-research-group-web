@@ -27,16 +27,30 @@
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
-    <div class="wrapper">
-      
-      {% if page.excerpt %}
+    <div class="wrapper container">
+      {% if page.header.eyebrow %}
+        <p class="page__hero-eyebrow">{{ page.header.eyebrow }}</p>
+      {% endif %}
+      {% if page.header.title %}
+        <h1 class="page__hero-title">{{ page.header.title }}</h1>
+      {% endif %}
+      {% if page.header.lead %}
+        <p class="page__lead">{{ page.header.lead }}</p>
+      {% elsif page.excerpt %}
         <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
       {% if site.read_time and page.read_time %}
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
       {% endif %}
-      {% if page.header.cta_url %}
-        <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+      {% if page.header.cta_url or page.header.cta2_url %}
+        <p class="page__hero-actions">
+          {% if page.header.cta_url %}
+            <a href="{{ cta_path }}" class="btn btn-naco">{{ page.header.cta_label | default: "Learn More" }}</a>
+          {% endif %}
+          {% if page.header.cta2_url %}
+            <a href="{{ page.header.cta2_url | prepend: base_path }}" class="btn btn-naco-outline">{{ page.header.cta2_label | default: "Learn More" }}</a>
+          {% endif %}
+        </p>
       {% endif %}
     </div>
   {% else %}
