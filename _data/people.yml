@@ -261,7 +261,8 @@ vermetten:
 wong:
     display_name: "Annie Wong"
     image: /img/people/wong.jpg
-    role: grad
+    role: alum
+    bio: "PhD, 2026."
 
 yin:
     display_name: "Haoran Yin"
@@ -271,7 +272,8 @@ yin:
 pan:
     display_name: "Shuaiqun Pan"
     image: /img/people/pan.jpg
-    role: grad
+    role: alum
+    bio: "PhD, 2026."
 
 kocaman:
     display_name: "Veysel Kocaman"
@@ -298,12 +300,14 @@ vonk:
 
 correia:
     display_name: "Lucas Correia"
-    role: grad
+    role: alum
+    bio: "PhD, 2026."
     image: /img/people/correia.jpg
 
 oosterzee:
     display_name: "Anna van Oosterzee"
-    role: grad
+    role: alum
+    bio: "PhD, 2026."
     
 ellmaier:
     display_name: "Sebastian Ellmaier"
@@ -520,6 +524,15 @@ mertens:
 
 ghosh:
     display_name: "Debargha Ghosh"
+    webpage: "https://www.hybrid-intelligence-centre.nl/who-is-who/debargha-ghosh/"
+    image: /img/people/ghosh.jpg
+    role: grad
+    bio: "PhD candidate, Utrecht University (Hybrid Intelligence)"
+
+cai:
+    display_name: "Shiyu Cai"
+    webpage: "https://universiteitleiden.nl/en/staffmembers/shiyu-cai"
+    image: /img/people/cai.jpg
     role: grad
 
 sahrani:

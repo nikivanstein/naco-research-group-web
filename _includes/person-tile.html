@@ -12,7 +12,7 @@ projects for everyone else, falling back to the bio or the role name.
 
 {% assign label = "" %}
 {% if person.role == "prof" %}
-    {% assign label = "Group leader" %}
+    {% assign label = "Cluster head" %}
 {% elsif person.role == "aprof" or person.role == "collab" %}
     {% assign label = person.bio %}
 {% else %}

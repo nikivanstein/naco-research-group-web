@@ -120,7 +120,7 @@ among the authors.
                                     {% if entry.key == k and entry.role %}{% assign label = entry.role %}{% endif %}
                                 {% endfor %}
                                 {% if label == "" %}
-                                    {% if person.role == "prof" %}{% assign label = "Group leader" %}
+                                    {% if person.role == "prof" %}{% assign label = "Cluster head" %}
                                     {% elsif person.role == "grad" %}{% assign label = "PhD candidate" %}
                                     {% elsif person.role == "postdoc" %}{% assign label = "Postdoc" %}
                                     {% elsif person.role == "alum" %}{% assign label = "Former member" %}

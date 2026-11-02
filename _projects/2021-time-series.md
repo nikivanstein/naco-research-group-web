@@ -1,6 +1,6 @@
 ---
 title: Time Series Anomaly
-status: active
+status: inactive
 
 notitle: false
 

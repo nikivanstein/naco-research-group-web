@@ -117,7 +117,7 @@ optional awards and publications, and up to three related projects.
                             {% assign person = site.data.people[uname] %}
                             {% if person %}
                                 {% if person.role == "prof" %}
-                                    {% assign label = "Group leader" %}
+                                    {% assign label = "Cluster head" %}
                                 {% elsif person.bio %}
                                     {% assign label = person.bio %}
                                 {% elsif person.role == "grad" %}

@@ -15,7 +15,7 @@ roles:
   - key: faculty
     name: Faculty
   - key: prof
-    name: Group leader
+    name: Cluster head
   - key: aprof
     name: Assistant and Associate Professors
   - key: staff
