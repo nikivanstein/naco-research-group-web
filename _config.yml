@@ -1,11 +1,11 @@
-name: Natural Computing Group
+name: Natural Computing Cluster
 url: https://naco.liacs.nl
 author: "Niki van Stein"
 description: >-
   The Natural Computing Cluster (NaCo) at LIACS, Leiden University, researches
   nature-inspired AI and optimisation: evolutionary computation, explainable AI,
   benchmarking, LLM-driven algorithm design and real-world applications.
-alternate_names: ["Natural Computing Cluster", "NaCo", "NACO LIACS"]
+alternate_names: ["NaCo", "Natural Computing Group", "NACO LIACS"]
 title_separator: "|"
 # Shown after the separator in browser titles: "Page | Natural Computing".
 title_suffix: "Natural Computing"

@@ -12,7 +12,7 @@ Generated from the site data so it stays in sync with projects, events and peopl
 
 > {{ site.description }}
 
-The {{ site.name }}, also known as the Natural Computing Cluster or NaCo, is part of the Leiden Institute of Advanced Computer Science (LIACS) at Leiden University, the Netherlands. It is led by Prof. Thomas Bäck (cluster head).
+The {{ site.name }} (NaCo), formerly the Natural Computing Group, is part of the Leiden Institute of Advanced Computer Science (LIACS) at Leiden University, the Netherlands. It is led by Prof. Thomas Bäck (cluster head).
 
 ## Main pages
 
