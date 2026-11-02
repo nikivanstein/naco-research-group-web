@@ -1,0 +1,71 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{%- comment -%}
+Plain-text summary of the site for LLM-based crawlers (https://llmstxt.org/).
+Generated from the site data so it stays in sync with projects, events and people.
+{%- endcomment -%}
+{%- assign seo_url = site.url | append: site.baseurl -%}
+# {{ site.name }} (LIACS, Leiden University)
+
+> {{ site.description }}
+
+The {{ site.name }}, also known as the Natural Computing Cluster or NaCo, is part of the Leiden Institute of Advanced Computer Science (LIACS) at Leiden University, the Netherlands. It is led by Prof. Thomas Bäck (cluster head).
+
+## Main pages
+
+- [Home]({{ seo_url }}/): overview of the cluster and its research areas
+- [Research projects]({{ seo_url }}/research/): current and finished research projects
+- [People]({{ seo_url }}/people/): faculty, researchers, PhD candidates and alumni
+- [News]({{ seo_url }}/blog/): announcements and news
+- [Events]({{ seo_url }}/events/): workshops, special sessions and tutorials we organise
+- [Contact]({{ seo_url }}/contact/)
+
+## Research areas
+{% for area in site.research_areas %}
+- {{ area.name }}
+{%- endfor %}
+
+## Current research projects
+{% assign projects_by_date = site.projects | sort: 'last-updated' | reverse %}
+{%- for p in projects_by_date -%}
+{%- if p.status != "inactive" %}
+- [{{ p.title }}]({{ seo_url }}{{ p.url }}): {{ p.description | strip_newlines | strip }}
+{%- endif -%}
+{%- endfor %}
+
+## Finished research projects
+{% for p in projects_by_date -%}
+{%- if p.status == "inactive" %}
+- [{{ p.title }}]({{ seo_url }}{{ p.url }}): {{ p.description | strip_newlines | strip }}
+{%- endif -%}
+{%- endfor %}
+
+## Events (most recent first)
+{% assign events_by_date = site.events | sort: 'eventdate' | reverse %}
+{%- for e in events_by_date limit: 15 %}
+- [{{ e.title }}]({{ seo_url }}{{ e.url }}) ({{ e.eventdate | date: "%Y-%m-%d" }}): {{ e.description | strip_newlines | strip }}
+{%- endfor %}
+
+## Recent news
+{% for post in site.posts limit: 10 %}
+- [{{ post.title }}]({{ seo_url }}{{ post.url }}) ({{ post.date | date: "%Y-%m-%d" }})
+{%- endfor %}
+
+## Faculty
+{% for entry in site.data.people -%}
+{%- assign person = entry[1] -%}
+{%- if person.role == "prof" or person.role == "aprof" %}
+- {{ person.display_name }}{% if person.bio %}: {{ person.bio }}{% endif %}{% if person.webpage %} ({{ person.webpage }}){% endif %}
+{%- endif -%}
+{%- endfor %}
+
+## Researchers and PhD candidates
+{% for entry in site.data.people -%}
+{%- assign person = entry[1] -%}
+{%- if person.role == "postdoc" or person.role == "grad" %}
+- {{ person.display_name }}{% if person.webpage %} ({{ person.webpage }}){% endif %}
+{%- endif -%}
+{%- endfor %}

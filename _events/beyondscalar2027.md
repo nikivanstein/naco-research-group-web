@@ -12,6 +12,8 @@ people:
   - stein
 
 eventdate: 2027-03-31
+enddate: 2027-04-02
+location: "Mainz, Germany"
 layout: event
 image: /img/events/beyondscalar2027.png
 header:
