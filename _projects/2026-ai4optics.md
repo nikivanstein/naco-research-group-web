@@ -47,6 +47,6 @@ High-tech devices, from chip-manufacturing equipment and advanced lighting to sa
 
 AI4optics brings together experts in computer science, mathematics and physics to develop AI-based methods for these inverse problems that take all relevant physical phenomena into account. The programme develops generative AI methods that can handle constraints and uncertainties, optimisation methods for conflicting design objectives, and explainable AI for simulation, design and reconstruction, each building in domain knowledge of optical-system design.
 
-At LIACS, the Natural Computing group contributes optimisation and (explainable) generative AI methods for the simulation and design of optical systems, building on earlier work on lens design with ASML.
+At LIACS, the Natural Computing Cluster contributes optimisation and (explainable) generative AI methods for the simulation and design of optical systems, building on earlier work on lens design with ASML.
 
 The research aims at smaller, more powerful and energy-efficient integrated circuits, less light pollution, and better earth observation from space.

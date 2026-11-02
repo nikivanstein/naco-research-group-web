@@ -1,0 +1,17 @@
+{%- comment -%}
+schema.org Person for a key in _data/people.yml, as one JSON object.
+Unknown keys fall back to just the name so the JSON stays valid.
+{%- endcomment -%}
+{%- assign person = site.data.people[include.key] -%}
+{%- assign seo_url = site.url | append: site.baseurl -%}
+{%- if person -%}
+{%- assign name = person.display_name | remove: "Prof. " | remove: "Dr. " -%}
+{"@type": "Person", "name": {{ name | jsonify }}
+{%- if person.bio and person.role != "alum" %}, "jobTitle": {{ person.bio | jsonify }}{% endif -%}
+{%- if person.webpage %}, "url": {{ person.webpage | jsonify }}{% endif -%}
+{%- if person.image %}, "image": {{ person.image | prepend: seo_url | jsonify }}{% endif -%}
+{%- if person.github %}, "sameAs": {{ person.github | prepend: "https://github.com/" | jsonify }}{% endif -%}
+}
+{%- else -%}
+{"@type": "Person", "name": {{ include.key | jsonify }}}
+{%- endif -%}
