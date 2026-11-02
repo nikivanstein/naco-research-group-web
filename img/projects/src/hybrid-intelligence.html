@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0}html,body{overflow:hidden}
+body{background:linear-gradient(135deg,#f7f9fc 0%,#e6edf6 100%);font-family:"Helvetica Neue",Arial,sans-serif;position:relative}
+svg{position:absolute;inset:0}
+.t{position:absolute;color:#1f1466;font-weight:800;letter-spacing:-1px}
+.s{position:absolute;color:#4a5875}
+</style></head><body>
+<svg id="s"></svg><div class="t" id="t">Hybrid Intelligence</div><div class="s" id="u">Causal insights · adaptive explanations</div>
+<script>
+// ?w=..&h=.. sets the canvas size; the DAG motif is laid out on the right-hand side
+const q=new URLSearchParams(location.search),W=+q.get('w'),H=+q.get('h'),wide=W/H>3;
+document.body.style.width=W+'px';document.body.style.height=H+'px';
+const s=document.getElementById('s');s.setAttribute('width',W);s.setAttribute('height',H);
+const t=document.getElementById('t'),u=document.getElementById('u');
+if(wide){t.style.cssText+=';left:48px;top:52px;font-size:58px';u.style.cssText+=';left:50px;top:125px;font-size:24px'}
+else{t.style.cssText+=';left:30px;top:200px;font-size:40px';u.style.cssText+=';left:31px;top:250px;font-size:18px'}
+const NS='http://www.w3.org/2000/svg',el=(n,a)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e};
+const d=el('defs',{});d.innerHTML='<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3d5a87"/></marker>';
+// small causal DAG; human node (orange) and model nodes (blue)
+const N=[[0,.2,'h'],[.3,.15,'m'],[.15,.6,'m'],[.5,.5,'m'],[.75,.2,'m'],[.7,.8,'m'],[1,.5,'h']];
+const E=[[0,1],[0,2],[1,3],[2,3],[1,4],[3,5],[4,6],[5,6],[3,6]];
+const box=wide?[W*.52,20,W*.44,H-40]:[50,25,W-100,150];
+const P=N.map(([x,y])=>[box[0]+x*box[2],box[1]+y*box[3]]),R=wide?15:13;
+E.forEach(([a,b])=>{const[x1,y1]=P[a],[x2,y2]=P[b],L=Math.hypot(x2-x1,y2-y1),k=(L-R-2)/L,j=(R+2)/L;
+ el('line',{x1:x1+(x2-x1)*j,y1:y1+(y2-y1)*j,x2:x1+(x2-x1)*k,y2:y1+(y2-y1)*k,stroke:'#3d5a87','stroke-width':2,'stroke-opacity':.6,'marker-end':'url(#a)'})});
+N.forEach(([,,c],i)=>{el('circle',{cx:P[i][0],cy:P[i][1],r:R,fill:c=='h'?'#e8632b':'#5b7bab','fill-opacity':.85});el('circle',{cx:P[i][0],cy:P[i][1],r:R+6,fill:'none',stroke:c=='h'?'#e8632b':'#5b7bab','stroke-opacity':.3})});
+</script></body></html>

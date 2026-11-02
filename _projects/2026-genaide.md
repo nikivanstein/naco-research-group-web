@@ -10,6 +10,7 @@ description: |
 
 people:
   - bodas
+  - cai
   - kovalchyk
   - gaval
   - strizak
