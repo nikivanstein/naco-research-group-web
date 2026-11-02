@@ -11,9 +11,9 @@ crawlers do not resolve relative paths.
 {% assign org_id = seo_url | append: "/#organization" %}
 
 {% if page.title %}
-  {% assign seo_title = page.title | markdownify | strip_html | strip_newlines | strip | append: " " | append: site.title_separator | append: " " | append: site.name | escape_once %}
+  {% assign seo_title = page.title | markdownify | strip_html | strip_newlines | strip | append: " " | append: site.title_separator | append: " " | append: site.title_suffix | escape_once %}
 {% else %}
-  {% assign seo_title = site.name %}
+  {% assign seo_title = site.title_suffix %}
 {% endif %}
 <title>{{ seo_title }}</title>
 

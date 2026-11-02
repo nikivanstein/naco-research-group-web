@@ -7,6 +7,8 @@ description: >-
   benchmarking, LLM-driven algorithm design and real-world applications.
 alternate_names: ["Natural Computing Cluster", "NaCo", "NACO LIACS"]
 title_separator: "|"
+# Shown after the separator in browser titles: "Page | Natural Computing".
+title_suffix: "Natural Computing"
 locale: en_GB
 
 exclude: [bibble, README.md, Gemfile, Gemfile.lock, LICENSE, Website.md, posts_to_send.md, '*.py', bib/, coauthors.json, Makefile, screenshot.png, vendor/, node_modules/, 'accept/', 'foga2025/', 'img/events/src/', 'img/projects/src/']
