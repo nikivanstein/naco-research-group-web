@@ -11,10 +11,13 @@ description: |
 people:
   - tamponi
   - kononova
+  - stein
   - back
 
 
 topics: [xai]
+links:
+  website: https://www.esdit.nl/about-esdit/researchers/
 
 layout: project
 image: "/img/projects/aicompliance.png"

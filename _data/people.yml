@@ -165,8 +165,7 @@ ye:
 godin-dubois:
     display_name: "Kevin Godin-Dubois"
     webpage: "https://vu.nl/en/research/scientists/kevin-godin-dubois"
-    role: postdoc
-    bio: "External PostDoc (VU Amsterdam)"
+    role: alum
 
 kang:
     display_name: "Zhuang Kang"
@@ -261,8 +260,7 @@ vermetten:
 wong:
     display_name: "Annie Wong"
     image: /img/people/wong.jpg
-    role: alum
-    bio: "PhD, 2026."
+    role: grad
 
 yin:
     display_name: "Haoran Yin"
