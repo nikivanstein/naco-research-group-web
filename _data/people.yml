@@ -260,8 +260,7 @@ vermetten:
 wong:
     display_name: "Annie Wong"
     image: /img/people/wong.jpg
-    role: alum
-    bio: "PhD, 2026."
+    role: grad
 
 yin:
     display_name: "Haoran Yin"
