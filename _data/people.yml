@@ -533,6 +533,12 @@ cai:
     image: /img/people/cai.jpg
     role: grad
 
+rice:
+    display_name: "Silke Rice"
+    webpage: "https://www.universiteitleiden.nl/en/staffmembers/silke-rice#tab-1"
+    image: /img/people/rice.jpg
+    role: grad
+
 sahrani:
     display_name: "Amir Sahrani"
     webpage: "https://universiteitleiden.nl/en/staffmembers/amir-sahrani"
