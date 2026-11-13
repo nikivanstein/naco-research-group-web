@@ -1,8 +1,9 @@
 {% comment %}
 Usage (inside <ul class="project-cards">):
     {% include event-card.html event=event %}
-An event as a project-style card: banner, status/type/venue labels, title,
-description, date and place, and the organisers as a face pile. The whole
+An event as a project-style card: banner, status/type/venue labels, date
+and place, and the organisers as a face pile. The banner already shows the
+event's name, so the title is only its alt text, not repeated below. The whole
 card is one link (to `link:` when the event sets one). `data-type` and
 `data-end` let the events page filter by type and sort upcoming from past.
 {% endcomment %}
@@ -20,7 +21,7 @@ card is one link (to `link:` when the event sets one). `data-type` and
         {% if event.image %}
             <span class="event-card__media">
                 {% capture orig %}{% if event.image contains "://" %}{{ event.image }}{% else %}{{ site.base }}{{ event.image }}{% endif %}{% endcapture %}
-                <img class="project-card__img event-card__img" src="{% include thumb-src.html src=event.image %}" alt=""
+                <img class="project-card__img event-card__img" src="{% include thumb-src.html src=event.image %}" alt="{{ event.title | escape }}"
                      width="1200" height="628" loading="lazy" decoding="async"
                      onerror="this.onerror=null;this.src='{{ orig }}'">
                 {% if event.pending %}
@@ -34,8 +35,7 @@ card is one link (to `link:` when the event sets one). `data-type` and
                 <span class="project-chip">{% include event-type.html event=event %}</span>
                 {% if event.venue %}<span class="project-chip">{{ event.venue }}</span>{% endif %}
             </span>
-            <span class="project-card__title">{{ event.title }}</span>
-            <span class="project-card__desc">{{ event.description | markdownify | strip_html | strip }}</span>
+            {% unless event.image %}<span class="project-card__title">{{ event.title }}</span>{% endunless %}
             {% if event.eventdate or event.location %}
                 <span class="event-card__meta">
                     {% if event.eventdate %}<span><i class="fa fa-calendar-o" aria-hidden="true"></i> {% include event-dates.html event=event %}</span>{% endif %}
