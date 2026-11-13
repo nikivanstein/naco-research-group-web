@@ -1,42 +1,51 @@
-
-{% assign group = include.group %}
-
-{% if group.link %}
-    {% assign group-url = group.link %}
+{% comment %}
+Usage (inside <ul class="project-cards">):
+    {% include event-card.html event=event %}
+An event as a project-style card: banner, status/type/venue labels, title,
+description, date and place, and the organisers as a face pile. The whole
+card is one link (to `link:` when the event sets one). `data-type` and
+`data-end` let the events page filter by type and sort upcoming from past.
+{% endcomment %}
+{% assign event = include.event %}
+{% assign now = site.time | date: "%Y-%m-%d" %}
+{% assign last = event.enddate | default: event.eventdate | date: "%Y-%m-%d" %}
+{% if event.link %}
+    {% assign event-url = event.link %}
 {% else %}
-    {% capture group-url %}{{site.base}}{{group.url}}{% endcapture %}
+    {% capture event-url %}{{ site.base }}{{ event.url }}{% endcapture %}
 {% endif %}
 
-<div class="card group-card{% if group.pending %} event-pending{% endif %}">
-    <div class="card-body">
-        {% if group.image %}
-            {% assign imgurl = group.image %}
-            {% capture init %}{{ group.image | slice: 0,1 }}{% endcapture %}
-            {% if init == "/" %}
-                {% capture imgurl %}{{site.base}}{{group.image}}{% endcapture %}
-            {% endif %}
-            <a href="{{ group-url }}" class="event-thumb">
-                <img class="img-fluid" src="{{imgurl}}" alt="{{group.title}}"/>
-                {% if group.pending %}
+<li data-type="{{ event.type }}" data-end="{{ last }}"{% if last < now %} hidden{% endif %}>
+    <a class="project-card event-card" href="{{ event-url }}">
+        {% if event.image %}
+            <span class="event-card__media">
+                {% capture orig %}{% if event.image contains "://" %}{{ event.image }}{% else %}{{ site.base }}{{ event.image }}{% endif %}{% endcapture %}
+                <img class="project-card__img event-card__img" src="{% include thumb-src.html src=event.image %}" alt=""
+                     width="1200" height="628" loading="lazy" decoding="async"
+                     onerror="this.onerror=null;this.src='{{ orig }}'">
+                {% if event.pending %}
                     <span class="pending-badge" title="Proposal submitted, not yet accepted"><i class="fa fa-hourglass-half" aria-hidden="true"></i> Pending acceptance</span>
                 {% endif %}
-            </a>
+            </span>
         {% endif %}
-        <!-- {% if group.notitle != true %}
-            <h4 class="card-title">
-                {{  group.title }}
-            </h4>
-        {% endif %}
-        {% if group.subtitle != null and group.subtitle != "" %}
-            <h6 class="card-subtitle mb-2 text-muted">
-                {{  group.subtitle }}
-            </h6>
-        {% endif %}
-        <div class="card-text">
-            {{ group.description | markdownify }}
-        </div> -->
-        {% if group.no-link != true or group.link %}
-            <a href="{{ group-url }}"> Read more &raquo;</a>
-        {% endif %}
-    </div>
-</div>
+        <span class="project-card__body">
+            <span class="project-chips">
+                <span class="project-chip project-chip--active">Upcoming</span>
+                <span class="project-chip">{% include event-type.html event=event %}</span>
+                {% if event.venue %}<span class="project-chip">{{ event.venue }}</span>{% endif %}
+            </span>
+            <span class="project-card__title">{{ event.title }}</span>
+            <span class="project-card__desc">{{ event.description | markdownify | strip_html | strip }}</span>
+            {% if event.eventdate or event.location %}
+                <span class="event-card__meta">
+                    {% if event.eventdate %}<span><i class="fa fa-calendar-o" aria-hidden="true"></i> {% include event-dates.html event=event %}</span>{% endif %}
+                    {% if event.location %}<span><i class="fa fa-map-marker" aria-hidden="true"></i> {{ event.location }}</span>{% endif %}
+                </span>
+            {% endif %}
+            <span class="project-card__foot">
+                {% include face-pile.html people=event.people %}
+                <span class="project-card__arrow" aria-hidden="true">&rarr;</span>
+            </span>
+        </span>
+    </a>
+</li>

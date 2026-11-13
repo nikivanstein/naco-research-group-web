@@ -1,60 +1,104 @@
 ---
 layout: default
 title: Events
+description: Conferences, workshops, special sessions and tutorials organised or co-organised by the Natural Computing Cluster at Leiden University.
 ---
 
-Welcome to the Events page of the Natural Computing Cluster. 
-Here, we showcase a diverse array of academic and professional gatherings that our group organizes or co-organizes. 
-These events include conferences, workshops, seminars, and tutorials, all aimed at fostering collaboration and advancing research in natural computing and related fields. 
-We invite you to explore our upcoming and past events to engage with the latest developments and connect with experts in the community.
+{% comment %}
+Laid out like the research page: event-type filter tabs, upcoming events as
+cards (soonest first), then past events as a compact list (most recent
+first). Every event is rendered in both lists; the build date decides which
+copy is shown, and the script below redoes that split with today's date so
+events move to "Past" without a rebuild. The tabs filter both lists.
+{% endcomment %}
+{% assign now = site.time | date: "%Y-%m-%d" %}
+{% assign upcoming = site.events | sort: 'eventdate' %}
+{% assign past = site.events | sort: 'eventdate' | reverse %}
 
-{% for type in site.event_types %}
-<h3 class="pt-3"> {{ type.name }} - Upcoming Events</h3>
-<div class="type {{ type.key }}">
+<p class="events-intro">
+    The Natural Computing Cluster organises and co-organises conferences, workshops, special sessions and tutorials
+    on natural computing, evolutionary computation, explainable AI and the use of large language models in optimisation.
+    Below are our upcoming events, followed by an archive of past ones.
+</p>
 
-    <div class="event-columns" id="upcoming-{{ type.key }}">
-        {% assign upcoming_events = site.events | where: "type", type.key | sort: 'eventdate' %}
-        {% for event in upcoming_events %}
-            <div class="event-card" data-eventdate="{{ event.eventdate }}">
-                {% include event-card.html group=event %}
-            </div>
+<div class="project-filter" data-event-filter>
+    <div class="people-tabs__bar" role="group" aria-label="Filter by event type" hidden>
+        <button type="button" class="people-tabs__tab is-on" aria-pressed="true" data-type="">All <span>{{ site.events.size }}</span></button>
+        {% for type in site.event_types %}
+            {% assign typed = site.events | where: "type", type.key %}
+            {% if typed.size > 0 %}
+                <button type="button" class="people-tabs__tab" aria-pressed="false" data-type="{{ type.key }}">{{ type.name }} <span>{{ typed.size }}</span></button>
+            {% endif %}
         {% endfor %}
     </div>
-</div>
-{% endfor %}
 
-<h3 class="pt-3">Past Events</h3>
-<div class="type past-events">
-    <div class="event-columns" id="past-events">
-        {% assign past_events = site.events | sort: 'eventdate' | reverse %}
-        {% for event in past_events %}
-            <div class="event-card" data-eventdate="{{ event.eventdate }}">
-                {% include event-card.html group=event %}
-            </div>
-        {% endfor %}
-    </div>
+    <section>
+        <h2>Upcoming events</h2>
+        <ul class="project-cards event-cards" data-section="upcoming">
+            {% for event in upcoming %}
+                {% include event-card.html event=event %}
+            {% endfor %}
+        </ul>
+        <p class="events-empty" data-empty="upcoming" hidden>No upcoming events of this type are announced yet.</p>
+    </section>
+
+    <section class="pt-4">
+        <h2>Past events</h2>
+        <ul class="project-list event-list" data-section="past">
+            {% for event in past %}
+                {% assign last = event.enddate | default: event.eventdate | date: "%Y-%m-%d" %}
+                {% if event.link %}{% assign event-url = event.link %}{% else %}{% capture event-url %}{{ site.base }}{{ event.url }}{% endcapture %}{% endif %}
+                <li data-type="{{ event.type }}" data-end="{{ last }}"{% if last >= now %} hidden{% endif %}>
+                    <a href="{{ event-url }}">
+                        {% if event.image %}
+                            <img src="{% include thumb-src.html src=event.image %}" alt="" width="88" height="46" loading="lazy" decoding="async">
+                        {% endif %}
+                        <span>
+                            <strong>{{ event.title }}</strong>
+                            <span class="event-list__meta">{% include event-type.html event=event %}{% if event.eventdate %} &middot; {% include event-dates.html event=event %}{% endif %}{% if event.location %} &middot; {{ event.location }}{% endif %}</span>
+                        </span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <p class="events-empty" data-empty="past" hidden>No past events of this type.</p>
+    </section>
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const today = new Date();
+(function () {
+    var root = document.querySelector('[data-event-filter]');
+    if (!root) return;
+    var bar = root.querySelector('[role="group"]');
+    var d = new Date();
+    var today = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+    var type = '';
 
-        function filterEvents(containerId, isUpcoming) {
-            const container = document.getElementById(containerId);
-            const events = container.querySelectorAll('.event-card');
-            events.forEach(event => {
-                const eventDate = new Date(event.getAttribute('data-eventdate'));
-                if (isUpcoming && eventDate < today) {
-                    event.style.display = 'none';
-                } else if (!isUpcoming && eventDate >= today) {
-                    event.style.display = 'none';
-                }
+    function apply() {
+        root.querySelectorAll('[data-section]').forEach(function (list) {
+            var upcoming = list.getAttribute('data-section') === 'upcoming';
+            var shown = 0;
+            list.querySelectorAll(':scope > li').forEach(function (li) {
+                var isUpcoming = li.getAttribute('data-end') >= today;
+                li.hidden = isUpcoming !== upcoming || (type !== '' && li.getAttribute('data-type') !== type);
+                if (!li.hidden) shown++;
             });
-        }
+            root.querySelector('[data-empty="' + list.getAttribute('data-section') + '"]').hidden = shown > 0;
+        });
+    }
 
-        {% for type in site.event_types %}
-        filterEvents('upcoming-{{ type.key }}', true);
-        {% endfor %}
-        filterEvents('past-events', false);
+    bar.hidden = false;
+    bar.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-type]');
+        if (!b) return;
+        type = b.getAttribute('data-type');
+        bar.querySelectorAll('[data-type]').forEach(function (x) {
+            var on = x === b;
+            x.classList.toggle('is-on', on);
+            x.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        apply();
     });
+    apply();
+})();
 </script>

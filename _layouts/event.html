@@ -16,13 +16,7 @@ built from the front matter. Front matter used:
 {% assign now = site.time | date: "%Y-%m-%d" %}
 {% assign start = page.eventdate | date: "%Y-%m-%d" %}
 {% assign last = page.enddate | default: page.eventdate | date: "%Y-%m-%d" %}
-{% case page.type %}
-    {% when "workshop" %}{% assign type_label = "Workshop" %}
-    {% when "tutorial" %}{% assign type_label = "Tutorial" %}
-    {% when "conference" %}{% assign type_label = "Conference" %}
-    {% else %}{% assign type_label = page.type | capitalize %}
-{% endcase %}
-{% if page.type_label %}{% assign type_label = page.type_label %}{% endif %}
+{% capture type_label %}{% include event-type.html event=page %}{% endcapture %}
 
 <article class="project-page event-page">
     {% if page.largeimage %}

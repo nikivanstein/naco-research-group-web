@@ -1,0 +1,14 @@
+{%- comment -%}
+Usage: {% include event-type.html event=event %}
+Singular label for an event's type; `type_label:` in the front matter wins.
+{%- endcomment -%}
+{%- if include.event.type_label -%}
+    {{ include.event.type_label }}
+{%- else -%}
+    {%- case include.event.type -%}
+        {%- when "workshop" -%}Workshop
+        {%- when "tutorial" -%}Tutorial
+        {%- when "conference" -%}Conference
+        {%- else -%}{{ include.event.type | capitalize }}
+    {%- endcase -%}
+{%- endif -%}

@@ -1,0 +1,21 @@
+{%- comment -%}
+Usage: {% include event-dates.html event=event %}
+Compact date range: "8 Apr 2026", "12–16 Jul 2027", "31 Mar – 2 Apr 2027"
+or "30 Dec 2026 – 2 Jan 2027".
+{%- endcomment -%}
+{%- assign e = include.event -%}
+{%- assign s_day = e.eventdate | date: "%Y-%m-%d" -%}
+{%- assign e_day = e.enddate | default: e.eventdate | date: "%Y-%m-%d" -%}
+{%- assign s_month = s_day | slice: 0, 7 -%}
+{%- assign e_month = e_day | slice: 0, 7 -%}
+{%- assign s_year = s_day | slice: 0, 4 -%}
+{%- assign e_year = e_day | slice: 0, 4 -%}
+{%- if e_day == s_day -%}
+    {{ e.eventdate | date: "%-d %b %Y" }}
+{%- elsif s_month == e_month -%}
+    {{ e.eventdate | date: "%-d" }}&ndash;{{ e.enddate | date: "%-d %b %Y" }}
+{%- elsif s_year == e_year -%}
+    {{ e.eventdate | date: "%-d %b" }} &ndash; {{ e.enddate | date: "%-d %b %Y" }}
+{%- else -%}
+    {{ e.eventdate | date: "%-d %b %Y" }} &ndash; {{ e.enddate | date: "%-d %b %Y" }}
+{%- endif -%}
