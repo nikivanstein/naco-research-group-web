@@ -22,13 +22,18 @@ image: /img/events/genai-wcci2026.png
 largeimage: /img/events/genai-wcci2026-wide.png
 header:
     og_image: events/genai-wcci2026.png
+links:
+  website: https://attend.ieee.org/wcci-2026/
+  submit: https://attend.ieee.org/wcci-2026/submissions/
+dates:
+  - {label: "Paper submission", date: 2026-01-31}
+dates_note: "Deadline is 23:59 Anywhere on Earth."
 last-updated: 2025-11-25
 ---
 
 We are excited to announce the special session on **Generative AI and Heuristic Optimization** at WCCI 2026.
 
 <div class="container">
-        <p style="text-align: center;"><a href="https://attend.ieee.org/wcci-2026/">IEEE World Congress on Computational Intelligence (WCCI) 2026, 21. June - 26. June 2026, MECC Maastricht, the Netherlands</a></p>
 	<h2>Special Session Organizers</h2>
 	<div class="text-body">
 	    <p>
@@ -64,17 +69,13 @@ We are excited to announce the special session on **Generative AI and Heuristic 
                     <li>Benchmarks and quality metrics for LLMs in evolutionary optimization</li>
                 </ul>
 	    <p></p>
-	    <h2>Important Dates</h2>
-            <p>
-                31 January: Paper submission deadline (23:59, anywhere on Earth, i.e. UTC-12), <a href="https://attend.ieee.org/wcci-2026/submissions/">WCCI 2026 Submission (external link)</a>
-            </p>
 	    <h2>Past Session</h2>
             <p>
                 <a href="http://www.soft-computing.de/CEC24-GAI.html">WCCI/CEC 2024 Special Session Link</a>
             </p>
 	    <h2>Acknowledgements</h2>
 	    <p>This special session is supported by IEEE CIS Task Force on Transfer Learning &amp; Transfer Optimization from ISATC.</p>
-            <p><img src="Flag1.png" style="float: left; width: 65px; height: 44px; margin-right: 10px;">This special session is partially supported by the European Union under Horizon Europe (GenAIDE, Grant Agreement No. 101226927). Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency (REA). Neither the European Union nor the granting authority can be held responsible for them.
+            <p><img src="/img/projects/EU.png" alt="European Union flag" style="float: left; width: 65px; height: 44px; margin-right: 10px;">This special session is partially supported by the European Union under Horizon Europe (GenAIDE, Grant Agreement No. 101226927). Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency (REA). Neither the European Union nor the granting authority can be held responsible for them.
             </p>
         </div>
     </div>

@@ -81,6 +81,7 @@ built from the front matter. Front matter used:
             {% if page.links %}
                 <div class="project-facts__links">
                     {% for link in page.links %}
+                        {% if link[0] == "submit" and last < now %}{% continue %}{% endif %}
                         {% case link[0] %}
                             {% when "website" %}{% assign label = "Official website" %}
                             {% when "submit" %}{% assign label = "Submit a paper" %}

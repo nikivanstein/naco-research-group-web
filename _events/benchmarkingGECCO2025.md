@@ -29,7 +29,3 @@ Comparing and evaluating optimization algorithms by empirical means is an import
 With this tutorial, we will share our experience on how to boost the efficacy of our benchmarking efforts at almost no cost using the IOHprofiler software framework and its recent extensions to anytime performance measures and multi-objective optimization. A strong focus will be put on demonstrating the ease by which IOHprofiler modules can be combined with other benchmarking and optimization toolboxes such as COCO, Nevergrad, and Pymoo.
 We will also discuss how benchmarking data can be more easily shared within the community and the benefits that this brings, in terms of core research contributions, but also towards more sustainable research practices in evolutionary computation.
 
-<!-- ### Previous Editions
-
-- (GECCO 2024)[https://aaboh.nl/2024/] -->
-

@@ -3,7 +3,6 @@ title: "BEComLLM Workshop at IEEE CAI 2026"
 status: active
 type: workshop
 
-
 notitle: false
 
 description: |
@@ -25,14 +24,17 @@ image: /img/events/becomllm2026.png
 largeimage: /img/events/becomllm2026-wide.png
 header:
     og_image: events/becomllm2026.png
+links:
+  website: https://www.ieeesmc.org/cai-2026/
+  submit: https://easychair.org/my/conference?conf=cai2026
+dates:
+  - {label: "Paper submission", date: 2025-11-30}
+  - {label: "Notification", date: 2025-12-15}
+  - {label: "Camera-ready", date: 2026-01-20}
 last-updated: 2025-11-01
 ---
 
 We are excited to announce the **BEComLLM Workshop at IEEE CAI 2026**. This workshop explores the convergence of **Large Language Models (LLMs)** and **Evolutionary Computing (EC)**, aiming to advance research through novel methodologies and applications in both fields.
-
-Official CAI website: [https://www.ieeesmc.org/cai-2026/](https://www.ieeesmc.org/cai-2026/)
-
-<a class="btn btn-success" href="https://easychair.org/my/conference?conf=cai2026" target="_blank">Submit your paper</a>
 
 ## BEComLLM: Bridging Evolutionary Computing and Large Language Models
 
@@ -59,15 +61,6 @@ The intersection of LLMs and Evolutionary Computing brings forth various topics 
 - **Explore Emerging Research**: Engage with pioneering techniques combining LLMs and EC to push AI's boundaries.
 - **Networking**: Connect with experts in both fields and form impactful collaborations.
 - **Practical Insights**: Gain insights into how LLM and EC integration can benefit real-world applications.
-
-### Key Dates
-
-- **Paper Submission Deadline**: November 30, 2025 AoE
-- **Notification of Acceptance**: December 15, 2025
-- **Final Camera-Ready copy deadline**:  January 20, 2026
-- **Workshop Date**: During IEEE CAI 2026
-
-<a class="btn btn-success" href="https://easychair.org/my/conference?conf=cai2026" target="_blank">Submit your paper</a>
 
 Join us and be part of the community shaping the future of AI through LLM-EC hybridization!
 

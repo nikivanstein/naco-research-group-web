@@ -63,7 +63,3 @@ rigorous evidence—embedding Bayesian comparison, stochastic dominance tests, a
 directly into workflows. These methods establish reproducible, uncertainty-aware benchmarks, turning LLMdriven discovery into a scientifically testable process rather than a heuristic exploration. Together, these ideas
 chart a practical path toward Auto-Science systems that both generate and justify new algorithms.
 
-<!-- ### Previous Editions
-
-- (GECCO 2024)[https://aaboh.nl/2024/] -->
-

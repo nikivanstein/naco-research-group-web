@@ -24,14 +24,13 @@ image: /img/events/aaboh2026.png
 largeimage: /img/events/aaboh2026-wide.png
 header:
     og_image: events/aaboh2026.png
+links:
+  website: https://aaboh.nl/
+  submit: https://ssl.linklings.net/conferences/gecco/
 last-updated: 2026-02-25
 ---
 
 We are excited to announce the **AABOH Workshop at GECCO 2026**. This workshop explores the analysis of **algorithm behaviour** of **optimisation heuristics**.
-
-Official website: [https://aaboh.nl/](https://aaboh.nl/)
-
-<a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
 
 ## Analysing algorithmic behaviour of optimisation heuristics
 
@@ -39,7 +38,6 @@ Optimisation and Machine Learning tools are among the most used tools in the mod
 
 Hence, with this workshop, we call for both theoretical and empirical achievements identifying the desired features of optimisation and machine learning algorithms, quantifying the importance of such features, spotting the presence of intrinsic structural biases and other undesired algorithmic flaws, studying the transitions in algorithmic behaviour in terms of convergence, any-time behaviour, traditional and alternative performance measures, robustness, exploration vs exploitation balance, diversity, algorithmic complexity, etc., with the goal of gathering the most recent advances to fill the aforementioned knowledge gap and disseminate the current state-of-the-art within the research community.
 Thus, we encourage submissions exploiting carefully designed experiments or data-heavy approaches that can come to help in analysing primary algorithmic behaviours and modelling internal dynamics causing them.
-
 
 ### Topics of Interest
 
@@ -57,11 +55,8 @@ We encourage submissions exploiting carefully designed experiments or data-heavy
 
 All accepted papers of this workshop will be included in the ACM Proceedings of the Genetic and Evolutionary Computation Conference (GECCO’25) Companion Volume.
 
-<a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
-
-
 ### Previous Editions
 
-- [https://aaboh.nl/gecco-25-workshop/](GECCO 2025)
-- [https://aaboh.nl/gecco-24-workshop/](GECCO 2024)
+- [GECCO 2025](https://aaboh.nl/gecco-25-workshop/)
+- [GECCO 2024](https://aaboh.nl/gecco-24-workshop/)
 
