@@ -78,7 +78,7 @@
 
         <div class="container">
 
-            {% unless page.layout == "project" or page.layout == "post" %}
+            {% unless page.layout == "project" or page.layout == "post" or page.layout == "event" %}
             {% if page.largeimage %}
                 {% assign orig = page.largeimage %}
                 <img src="{% include thumb-src.html src=page.largeimage %}"
