@@ -17,6 +17,7 @@ var BANNERS = {
     cai2025: {name: 'IEEE CAI', year: 2025, dates: '5 – 7 May', place: 'Santa Clara, USA', accent: '#1d6fb8', logos: ['ieee-cai.png'], logoBox: {card: {width: '300px', right: '80px'}, wide: {width: '210px', height: '110px', top: '45px', right: '50px'}}},
     cai2026: {name: 'IEEE CAI', year: 2026, dates: '8 – 10 May', place: 'Granada, Spain', accent: '#1d6fb8', logos: ['ieee-cai.png'], logoBox: {card: {width: '300px', right: '80px'}, wide: {width: '210px', height: '110px', top: '45px', right: '50px'}}},
     wcci2026: {name: 'IEEE WCCI', year: 2026, dates: '21 – 26 June', place: 'Maastricht, the Netherlands', accent: '#1f3a8a', logos: ['wcci2026.png']},
+    cec2027: {name: 'IEEE CEC', year: 2027, dates: '25 – 28 July', place: 'Edinburgh, UK', accent: '#3f9a3a', logos: ['cec2027.png'], logoBox: {card: {width: '400px', right: '40px'}, wide: {width: '300px', right: '30px'}}},
     cec2025: {name: 'IEEE CEC', year: 2025, dates: '8 – 12 June', place: 'Hangzhou, China', accent: '#1a6fd1', logos: ['cec2025.png']},
     ppsn2026: {name: 'PPSN', year: 2026, dates: '29 August – 2 September', place: 'Trento, Italy', accent: '#c2185b', logos: ['ppsn2026.png']},
     foga2025: {name: 'ACM/SIGEVO', year: '', dates: '27 – 29 August 2025', place: 'Leiden, the Netherlands', accent: '#4a9a3a', logos: ['foga2025.png']},
@@ -48,6 +49,7 @@ var BANNERS = {
     becomllm2026: {conf: 'cai2026', kicker: 'Workshop', title: 'BEComLLM', sub: 'Bridging Evolutionary Computing\nand Large Language Models', motif: 'network', seed: 22},
     'genai-wcci2026': {conf: 'wcci2026', kicker: 'Special session', title: 'GenAI and Heuristic Optimization', sub: 'Generative AI for heuristic optimization', subWide: '', motif: 'network', seed: 13},
     'llmaad-wcci2026': {conf: 'wcci2026', kicker: 'Tutorial', title: 'LLM-driven Algorithm Design', sub: 'Automated algorithm design with\nlarge language models: EASE and LLaMEA', subWide: '', motif: 'tree', seed: 8},
+    'genai-cec2027': {conf: 'cec2027', kicker: 'Special session', title: 'Real-World Applications', sub: 'of Combining Generative AI and\nEvolutionary Computation', motif: 'network', seed: 27, titleSize: 92, note: GENAI4EC},
     'sb-cec2025': {conf: 'cec2025', kicker: 'Tutorial', title: 'Structural Bias', sub: 'in Iterative Optimisation Heuristics', motif: 'scatter', seed: 3},
 
     // PPSN, FOGA
