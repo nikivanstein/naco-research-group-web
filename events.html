@@ -26,7 +26,7 @@ We invite you to explore our upcoming and past events to engage with the latest 
 <h3 class="pt-3">Past Events</h3>
 <div class="type past-events">
     <div class="event-columns" id="past-events">
-        {% assign past_events = site.events | sort: 'eventdate' %}
+        {% assign past_events = site.events | sort: 'eventdate' | reverse %}
         {% for event in past_events %}
             <div class="event-card" data-eventdate="{{ event.eventdate }}">
                 {% include event-card.html group=event %}
