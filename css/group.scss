@@ -407,29 +407,38 @@ svg {
     margin-bottom: 1rem;
 }
 
-/* Proposed events that have not been accepted yet (front matter: pending: true) */
-.event-pending .card-body {
+/* Proposed events that have not been accepted yet (front matter: pending: true).
+   The badge floats over the banner so it never changes the card height. */
+.event-thumb {
     position: relative;
-}
-.event-pending img {
-    opacity: 0.85;
+    display: block;
+    margin-bottom: 1rem;
 }
 .pending-badge {
-    background: #f0ad4e;
-    color: #3b2a00;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    background: linear-gradient(180deg, #ffa53a 0%, #f07f14 100%);
+    color: #fff;
+    font-size: 0.78rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
-    padding: 0.35em 0.6em;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.45em 0.75em;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 6px rgba(150, 70, 0, 0.35);
+    white-space: nowrap;
 }
-.event-pending .pending-badge {
+.event-thumb .pending-badge {
     position: absolute;
-    top: 1.75rem;
-    right: 1.75rem;
+    top: 8px;
+    right: 8px;
     z-index: 2;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 .pending-notice {
-    border-left: 4px solid #f0ad4e;
+    border-left: 4px solid #f07f14;
     background: #fff8ec;
     padding: 0.6rem 0.9rem;
     margin-bottom: 1.25rem;

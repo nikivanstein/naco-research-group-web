@@ -9,17 +9,17 @@
 
 <div class="card group-card{% if group.pending %} event-pending{% endif %}">
     <div class="card-body">
-        {% if group.pending %}
-            <span class="badge pending-badge" title="Proposal submitted, not yet accepted">Pending acceptance</span>
-        {% endif %}
         {% if group.image %}
             {% assign imgurl = group.image %}
             {% capture init %}{{ group.image | slice: 0,1 }}{% endcapture %}
             {% if init == "/" %}
                 {% capture imgurl %}{{site.base}}{{group.image}}{% endcapture %}
             {% endif %}
-            <a href="{{ group-url }}">
-                <img class="img-fluid mb-3" src="{{imgurl}}" alt="{{group.title}}"/>
+            <a href="{{ group-url }}" class="event-thumb">
+                <img class="img-fluid" src="{{imgurl}}" alt="{{group.title}}"/>
+                {% if group.pending %}
+                    <span class="pending-badge" title="Proposal submitted, not yet accepted"><i class="fa fa-hourglass-half" aria-hidden="true"></i> Pending acceptance</span>
+                {% endif %}
             </a>
         {% endif %}
         <!-- {% if group.notitle != true %}
