@@ -149,7 +149,21 @@ a > .fa {
 .event-columns .card {
     display: flex;
     width: 100%;
+    height: 100%;
     overflow: hidden;
+}
+
+/* Event cards fill row by row, so the date order reads left to right */
+.event-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 1rem;
+
+    .event-card { margin-bottom: 1rem; }
+}
+
+@media (min-width: 768px) {
+    .event-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .group-columns .card {
@@ -209,7 +223,6 @@ a > .fa {
     .role.alum      { column-count: 3 }
     .project-people { column-count: 3 }
     .group-columns   { column-count: 4 }
-    .event-columns   { column-count: 3 }
 }
 
 .title img {
