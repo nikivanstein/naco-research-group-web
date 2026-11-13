@@ -6,28 +6,39 @@ type: conference
 notitle: false
 
 description: |
-  19th International Joint Conference on Computational Intelligence, with ECTA, EXPLAINS, AGENTICS, NCTA and FCTA, Porto 2027
+  19th International Joint Conference on Computational Intelligence, with ECTA, EXPLAINS, AGENTICS, NCTA and FCTA
 
 people:
   - stein
 
+layout: event
 eventdate: 2027-10-27
 enddate: 2027-10-29
 location: "Porto, Portugal"
-layout: event
 image: /img/events/ijcci2027.png
+largeimage: /img/events/ijcci2027-wide.png
 header:
     og_image: events/ijcci2027.png
+links:
+  website: https://ijcci.scitevents.org/
+  submit: https://ijcci.scitevents.org/
+dates:
+  - {label: "Regular paper submission (1st stage)", date: 2027-04-27}
+  - {label: "Position / regular paper submission (2nd stage)", date: 2027-06-03}
+  - {label: "Workshop, special session, tutorial, demo and panel proposals", date: 2027-06-11}
+  - {label: "Notification (1st stage)", date: 2027-06-18}
+  - {label: "Camera ready (1st stage)", date: 2027-06-30}
+  - {label: "Notification (2nd stage)", date: 2027-07-26}
+  - {label: "Abstract submission", date: 2027-07-29}
+  - {label: "Camera ready (2nd stage)", date: 2027-09-06}
+  - {label: "Conference", date: 2027-10-27}
+dates_note: "All deadlines are Anywhere on Earth."
 last-updated: 2026-11-13
 ---
 
 We are happy to announce **IJCCI 2027**, the 19th International Joint Conference on Computational Intelligence, held 27–29 October 2027 in Porto, Portugal. Niki van Stein is program (co-)chair of three of its conferences: **ECTA**, **EXPLAINS** and **AGENTICS**.
 
-Official website: [https://ijcci.scitevents.org/](https://ijcci.scitevents.org/)
-
 IJCCI brings together researchers, engineers and practitioners in fuzzy, evolutionary and neural computation, complemented by the transversal areas of explainable AI and agentic and generative AI. Speakers who cannot travel may present remotely (hybrid support).
-
-<a class="btn btn-success" href="https://ijcci.scitevents.org/" target="_blank">Submit your paper</a>
 
 ## Conferences within IJCCI 2027
 
@@ -38,19 +49,6 @@ IJCCI brings together researchers, engineers and practitioners in fuzzy, evoluti
 - **FCTA**: 19th International Conference on Fuzzy Computation Theory and Applications. Program chair: Pietro Ducange (University of Pisa).
 
 Conference chair: Francesco Marcelloni (University of Pisa). IJCCI 2027 is held together with WEBIST, IC3K and IN4PL; registration to IJCCI gives free access to these conferences as a non-speaker.
-
-### Key Dates
-
-| | Regular papers (1st stage) | Position / regular papers (2nd stage) |
-|---|---|---|
-| Paper submission | 27 April 2027 | 3 June 2027 |
-| Authors notification | 18 June 2027 | 26 July 2027 |
-| Camera ready and registration | 30 June 2027 | 6 September 2027 |
-
-- **Workshop, special session, tutorial, demo and panel proposals**: 11 June 2027
-- **Abstracts track**: submission 29 July 2027, notification 13 September 2027, camera ready 22 September 2027
-
-All dates are Anywhere on Earth. See the [important dates](https://ijcci.scitevents.org/ImportantDates.aspx) page for updates.
 
 ### Publication
 

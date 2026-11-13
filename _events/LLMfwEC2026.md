@@ -9,9 +9,13 @@ description: |
   Large Language Models for and with Evolutionary Computation
 
 
-eventdate: 2026-07-13
 layout: event
-image: /img/events/llmfwec2026-header.png
+eventdate: 2026-07-13
+enddate: 2026-07-17
+location: "San José, Costa Rica"
+venue: "GECCO 2026"
+image: /img/events/llmfwec2026.png
+largeimage: /img/events/llmfwec2026-wide.png
 header:
     og_image: events/llmfwec2026.png
 last-updated: 2026-02-23

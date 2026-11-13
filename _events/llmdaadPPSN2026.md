@@ -11,11 +11,15 @@ description: |
 people:
   - stein
 
-eventdate: 2026-09-01
 layout: event
-image: /img/events/ppsn2026-llmaad.png
+eventdate: 2026-08-29
+enddate: 2026-09-02
+location: "Trento, Italy"
+venue: "PPSN 2026"
+image: /img/events/llmaad-ppsn2026.png
+largeimage: /img/events/llmaad-ppsn2026-wide.png
 header:
-    og_image: events/ppsn2026-llmaad.png
+    og_image: events/llmaad-ppsn2026.png
 last-updated: 2026-06-25
 ---
 

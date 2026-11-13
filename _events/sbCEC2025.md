@@ -12,11 +12,15 @@ people:
   - kononova
   - stein
 
-eventdate: 2025-07-14
 layout: event
-image: /img/events/sb-CEC.png
+eventdate: 2025-06-08
+enddate: 2025-06-12
+location: "Hangzhou, China"
+venue: "IEEE CEC 2025"
+image: /img/events/sb-cec2025.png
+largeimage: /img/events/sb-cec2025-wide.png
 header:
-    og_image: events/sb-CEC.png
+    og_image: events/sb-cec2025.png
 last-updated: 2024-12-25
 ---
 

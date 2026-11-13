@@ -7,19 +7,23 @@ pending: true
 notitle: false
 
 description: |
-  Large Language Models for Metaheuristic Design: from evolutionary program search to agentic algorithm discovery. Tutorial at GECCO 2027 (pending acceptance)
+  Large Language Models for Metaheuristic Design: from evolutionary program search to agentic algorithm discovery. Tutorial at GECCO 2027
 
 people:
   - stein
   - back
 
+layout: event
 eventdate: 2027-07-12
 enddate: 2027-07-16
 location: "Kraków, Poland"
-layout: event
+venue: "GECCO 2027"
 image: /img/events/llmmeta-gecco2027.png
+largeimage: /img/events/llmmeta-gecco2027-wide.png
 header:
     og_image: events/llmmeta-gecco2027.png
+links:
+  website: https://gecco-2027.sigevo.org/
 last-updated: 2026-11-13
 ---
 

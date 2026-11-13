@@ -2,6 +2,7 @@
 title: "EvoLLMs at EvoStar 2025"
 status: active
 type: workshop
+type_label: "Special session"
 
 notitle: false
 
@@ -13,11 +14,15 @@ people:
   - back
   - kononova
 
-eventdate: 2025-04-23
 layout: event
-image: /img/events/evollms-header.png
+eventdate: 2025-04-23
+enddate: 2025-04-25
+location: "Trieste, Italy"
+venue: "EvoStar 2025"
+image: /img/events/evollms2025.png
+largeimage: /img/events/evollms2025-wide.png
 header:
-    og_image: events/evollms.png
+    og_image: events/evollms2025.png
 last-updated: 2024-11-01
 ---
 

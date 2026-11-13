@@ -15,10 +15,13 @@ people:
   - zaharie
   - caraffini
 
-eventdate: 2026-07-13
 layout: event
+eventdate: 2026-07-13
+enddate: 2026-07-17
+location: "San José, Costa Rica"
+venue: "GECCO 2026"
 image: /img/events/aaboh2026.png
-largeimage: "/img/events/aaboh2026-header.png"
+largeimage: /img/events/aaboh2026-wide.png
 header:
     og_image: events/aaboh2026.png
 last-updated: 2026-02-25

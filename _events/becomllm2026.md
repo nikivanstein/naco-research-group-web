@@ -16,9 +16,13 @@ people:
   - senkerik
   - pluhacek
 
-eventdate: 2026-05-08
 layout: event
-image: /img/events/becomllm2026-header.png
+eventdate: 2026-05-08
+enddate: 2026-05-10
+location: "Granada, Spain"
+venue: "IEEE CAI 2026"
+image: /img/events/becomllm2026.png
+largeimage: /img/events/becomllm2026-wide.png
 header:
     og_image: events/becomllm2026.png
 last-updated: 2025-11-01

@@ -12,11 +12,15 @@ people:
   - stein
   - baeck
 
-eventdate: 2026-07-14
 layout: event
-image: /img/events/llmheuristics-gecco.png
+eventdate: 2026-07-13
+enddate: 2026-07-17
+location: "San José, Costa Rica"
+venue: "GECCO 2026"
+image: /img/events/llmheuristics-gecco2026.png
+largeimage: /img/events/llmheuristics-gecco2026-wide.png
 header:
-    og_image: events/llmheuristics-gecco.png
+    og_image: events/llmheuristics-gecco2026.png
 last-updated: 2026-01-25
 ---
 

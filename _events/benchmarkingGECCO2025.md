@@ -11,11 +11,15 @@ description: |
 people:
   - vermetten
 
-eventdate: 2025-07-14
 layout: event
-image: /img/events/benchmarking-gecco.png
+eventdate: 2025-07-14
+enddate: 2025-07-18
+location: "Málaga, Spain"
+venue: "GECCO 2025"
+image: /img/events/benchmarking-gecco2025.png
+largeimage: /img/events/benchmarking-gecco2025-wide.png
 header:
-    og_image: events/benchmarking-gecco.png
+    og_image: events/benchmarking-gecco2025.png
 last-updated: 2025-01-25
 ---
 

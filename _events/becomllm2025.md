@@ -16,11 +16,15 @@ people:
   - senkerik
   - pluhacek
 
-eventdate: 2025-07-05
 layout: event
-image: /img/events/becomllm-header.png
+eventdate: 2025-05-05
+enddate: 2025-05-07
+location: "Santa Clara, California, USA"
+venue: "IEEE CAI 2025"
+image: /img/events/becomllm2025.png
+largeimage: /img/events/becomllm2025-wide.png
 header:
-    og_image: events/becomllm.png
+    og_image: events/becomllm2025.png
 last-updated: 2024-11-01
 ---
 

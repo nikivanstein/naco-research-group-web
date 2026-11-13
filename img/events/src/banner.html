@@ -1,0 +1,128 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!--
+  One template for every event banner. Open as
+    banner.html?id=<event id>&size=card   (1200x628, events grid + social preview)
+    banner.html?id=<event id>&size=wide   (1180x200, top of the event page)
+  The event texts, logos and colours live in banners.js. Render all with render.js.
+-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow:hidden}
+body{font-family:"Helvetica Neue",Arial,sans-serif;background:linear-gradient(135deg,#f7f9fc 0%,#e9eff7 100%);position:relative;color:#1c2333}
+body.card{width:1200px;height:628px}
+body.wide{width:1180px;height:200px}
+svg.bg{position:absolute;inset:0}
+.conf .n{font-weight:800;letter-spacing:-.5px;white-space:nowrap}
+.conf .n span{color:var(--accent)}
+.conf .d{color:#4a5875;letter-spacing:.4px;white-space:nowrap}
+.kicker{font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+.title{color:#123e7a;font-weight:800;letter-spacing:-1.5px;line-height:1.02}
+.sub{color:#4a5875;line-height:1.3}
+.logos{position:absolute;display:flex;align-items:center;justify-content:center;gap:16px}
+.logos img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+.note{position:absolute;color:#6b7a96;letter-spacing:.3px;text-align:right}
+.note b{color:#123e7a}
+/* INSTICC-style conference balls, drawn in CSS so they stay sharp */
+.ball{flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;letter-spacing:.2px;
+  background:radial-gradient(circle at 50% 28%,rgba(255,255,255,.45) 0,rgba(255,255,255,0) 45%),radial-gradient(circle at 50% 60%,var(--c) 0,var(--c) 55%,var(--d) 100%);
+  box-shadow:0 6px 16px rgba(20,30,60,.22);text-shadow:0 1px 2px rgba(0,0,0,.35)}
+
+/* card layout */
+.card .left{position:absolute;left:60px;top:48px;bottom:44px;width:var(--textw,640px);display:flex;flex-direction:column}
+.card .conf .n{font-size:46px}
+.card .conf .d{font-size:22px;margin-top:4px}
+.card .main{margin:auto 0;display:flex;flex-direction:column;gap:14px;padding-top:10px}
+.card .kicker{font-size:20px}
+.card .title{font-size:112px}
+.card .sub{font-size:27px}
+.card .logos{right:56px;top:105px;width:380px;height:400px}
+.card .note{right:48px;bottom:34px;font-size:16px}
+
+/* wide layout */
+.wide .left{position:absolute;left:40px;top:26px;bottom:22px;width:var(--textw,720px);display:flex;flex-direction:column;justify-content:space-between}
+.wide .conf{display:flex;align-items:baseline;gap:14px}
+.wide .conf .n{font-size:24px}
+.wide .conf .d{font-size:14px}
+.wide .kicker{font-size:14px}
+.wide .row{display:flex;align-items:center;gap:22px}
+.wide .title{font-size:58px;letter-spacing:-1px;white-space:nowrap}
+.wide .sub{font-size:18px;white-space:nowrap}
+.wide .logos{right:30px;top:16px;width:270px;height:168px}
+.wide .note{display:none}
+</style></head>
+<body>
+<svg class="bg" id="s"></svg>
+<div class="left">
+  <div class="conf"><div class="n" id="conf"></div><div class="d" id="when"></div><div class="kicker" id="kw"></div></div>
+  <div class="main" id="main"><div class="kicker" id="kicker"></div><div class="row"><div class="title" id="title"></div><div class="sub" id="sub"></div></div></div>
+</div>
+<div class="logos" id="logos"></div>
+<div class="note" id="note"></div>
+<script src="banners.js"></script>
+<script>
+const q=new URLSearchParams(location.search), size=q.get('size')||'card', ev=BANNERS.events[q.get('id')];
+const C=BANNERS.conferences[ev.conf], W=size=='card'?1200:1180, H=size=='card'?628:200;
+document.body.className=size;
+document.body.style.setProperty('--accent',ev.accent||C.accent);
+const $=id=>document.getElementById(id);
+$('conf').innerHTML=`<span>${C.name}</span> ${C.year}`;
+$('when').textContent=[C.dates,C.place].filter(Boolean).join(' · ');
+$('title').textContent=ev.title;
+$('sub').innerHTML=(size=='wide'&&ev.subWide!==undefined?ev.subWide:ev.sub||'').replace(/\n/g,'<br>');
+if(size=='card'){$('kicker').textContent=ev.kicker;$('kw').remove();$('main').querySelector('.row').style.cssText='display:block';$('sub').style.marginTop='14px'}
+else{$('kw').textContent=ev.kicker;$('kicker').remove();$('when').textContent=[C.dates,C.place].filter(Boolean).join(' · ')}
+if(ev.note)$('note').innerHTML=ev.note;
+
+// logos: image files or INSTICC balls
+const logos=ev.logos||C.logos||[], box=$('logos');
+for(const l of logos){
+  if(l.ball){const b=document.createElement('div');b.className='ball';const d=(size=='card'?l.size:l.size*0.42);
+    b.style.cssText=`width:${d}px;height:${d}px;font-size:${d*(l.ball.length>5?0.15:0.22)}px;--c:${l.c};--d:${l.d}`;b.textContent=l.ball;box.appendChild(b)}
+  else{const i=document.createElement('img');i.src='logos/'+l;box.appendChild(i)}
+}
+if(logos.length&&logos[0].ball&&size=='wide')box.style.gap='8px';
+const lb=(ev.logoBox||C.logoBox||{})[size]; if(lb)Object.assign(box.style,lb);
+
+// fit the title: card may wrap to two lines, wide stays on one line
+const t=$('title'), maxW=size=='card'?(ev.textw||640):(ev.titleW||700);
+let f=size=='card'?(ev.titleSize||112):58;t.style.fontSize=f+'px';
+if(size=='card'){t.style.maxWidth=maxW+'px';while((t.scrollWidth>maxW||t.offsetHeight>f*1.05*2+2)&&f>40){f-=2;t.style.fontSize=f+'px'}}
+else{const avail=()=>t.offsetWidth+($('sub').offsetWidth?$('sub').offsetWidth+22:0);while(avail()>maxW&&f>30){f-=2;t.style.fontSize=f+'px'}}
+if(ev.textw)document.body.style.setProperty('--textw',ev.textw+'px');
+
+// background motif, drawn in the area around the logo
+const s=$('s'),NS='http://www.w3.org/2000/svg';s.setAttribute('width',W);s.setAttribute('height',H);
+let seed=ev.seed||7;const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e};
+const A=ev.accent||C.accent, B='#5b7bab', G='#e4a51c';
+const R=size=='card'?{x:640,y:40,w:540,h:560}:{x:740,y:8,w:430,h:184};
+const M={
+ network(){const n=[];for(let i=0;i<(size=='card'?26:22);i++)n.push([R.x+r()*R.w,R.y+r()*R.h,(size=='card'?4:2.5)+r()*(size=='card'?9:5)]);
+   const L=size=='card'?120:90;n.forEach((a,i)=>n.forEach((b,j)=>{if(j>i&&Math.hypot(a[0]-b[0],a[1]-b[1])<L)el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#3d5a87','stroke-opacity':.25,'stroke-width':1.1})}));
+   n.forEach(p=>el('circle',{cx:p[0],cy:p[1],r:p[2],fill:r()<.3?A:B,'fill-opacity':.55}))},
+ helix(){const yc=R.y+R.h*(size=='card'?.55:.5),amp=size=='card'?38:30,per=size=='card'?62:48;
+   for(let x=R.x-60;x<W;x+=4){const p=(x-R.x)/per,y=yc-(size=='card'?(x-R.x)*0.2:0);
+     el('circle',{cx:x,cy:y+amp*Math.sin(p),r:1.6,fill:G,'fill-opacity':.5});el('circle',{cx:x,cy:y+amp*Math.sin(p+Math.PI),r:1.6,fill:B,'fill-opacity':.5});
+     if(x%20==0)el('line',{x1:x,y1:y+amp*Math.sin(p),x2:x,y2:y+amp*Math.sin(p+Math.PI),stroke:'#8aa0c2','stroke-opacity':.35})}
+   for(let i=0;i<50;i++)el('text',{x:R.x+r()*R.w,y:R.y+10+r()*R.h,'font-size':9+r()*7,'font-family':'monospace',fill:B,'fill-opacity':.1+r()*.15}).textContent=r()<.5?'0':'1'},
+ curves(){for(let k=0;k<5;k++){let d='';const a=.6+r()*.5,c=2+r()*4;for(let i=0;i<=60;i++){const x=R.x+i/60*R.w,y=R.y+R.h-(R.h*.85)*a*(1-Math.exp(-c*i/60));d+=(i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)}
+   el('path',{d,fill:'none',stroke:[A,B,G,'#3d9a8a','#8a6bbf'][k],'stroke-opacity':.4,'stroke-width':2.2})}
+   el('line',{x1:R.x,y1:R.y+R.h,x2:R.x+R.w,y2:R.y+R.h,stroke:'#8aa0c2','stroke-opacity':.6});el('line',{x1:R.x,y1:R.y,x2:R.x,y2:R.y+R.h,stroke:'#8aa0c2','stroke-opacity':.6})},
+ tree(){const N=[[R.x+R.w*.3,R.y+R.h]];for(let i=1;i<(size=='card'?40:34);i++){const p=N[Math.floor(r()*i)];
+   const n=[Math.max(R.x,Math.min(R.x+R.w,p[0]+(r()-.5)*(size=='card'?150:120))),Math.max(R.y+8,p[1]-(size=='card'?30+r()*45:18+r()*30))];
+   if(size=='wide'){n[0]=p[0]+20+r()*60;n[1]=Math.max(R.y+8,Math.min(R.y+R.h-8,p[1]+(r()-.5)*70));if(i==1){p[0]=R.x;p[1]=R.y+R.h/2}}
+   N.push(n);el('path',{d:size=='card'?`M${p[0]} ${p[1]} C ${p[0]} ${(p[1]+n[1])/2}, ${n[0]} ${(p[1]+n[1])/2}, ${n[0]} ${n[1]}`:`M${p[0]} ${p[1]} C ${(p[0]+n[0])/2} ${p[1]}, ${(p[0]+n[0])/2} ${n[1]}, ${n[0]} ${n[1]}`,fill:'none',stroke:'#3d5a87','stroke-opacity':.25,'stroke-width':1.3})}
+   N.forEach((n,i)=>el('circle',{cx:n[0],cy:n[1],r:(size=='card'?3:2)+r()*(size=='card'?6:4),fill:i%5==0?A:(i%3==0?G:B),'fill-opacity':.5}))},
+ scatter(){const n=size=='card'?180:150;for(let i=0;i<n;i++){const u=r(),v=r(),x=R.x+R.w*(i%3==0?u:Math.pow(u,1.8)),y=R.y+R.h*v;el('circle',{cx:x,cy:y,r:size=='card'?3:2,fill:i%7==0?A:B,'fill-opacity':.35})}
+   el('rect',{x:R.x,y:R.y,width:R.w,height:R.h,fill:'none',stroke:'#8aa0c2','stroke-opacity':.5})},
+ fuzzy(){const b=R.y+R.h-(size=='card'?40:10),h=size=='card'?150:80;[[.12,.08,A],[.35,.1,'#0a7f8c'],[.58,.09,B],[.8,.08,G]].forEach(([m,w,c])=>{let d='';for(let x=R.x;x<=R.x+R.w;x+=4){const z=(x-R.x)/R.w;d+=(x==R.x?'M':'L')+x+' '+(b-h*Math.exp(-(((z-m)/w)**2)))}el('path',{d,fill:'none',stroke:c,'stroke-opacity':.45,'stroke-width':2.5})});
+   el('line',{x1:R.x,y1:b+1,x2:R.x+R.w,y2:b+1,stroke:'#8aa0c2','stroke-opacity':.6});
+   for(let i=0;i<40;i++){const t=r();el('circle',{cx:R.x+R.w-t*R.w*.7,cy:R.y+R.h*.25+(r()-.5)*R.h*.3*t,r:2+3*(1-t),fill:B,'fill-opacity':.2+.4*(1-t)})}}
+};
+(M[ev.motif]||M.network)();
+// population dots, bottom left of the card (shared detail of all banners)
+if(size=='card')for(let x=0;x<14;x++)for(let y=0;y<6;y++)el('circle',{cx:62+x*14,cy:540+y*12,r:1.6,fill:'#8aa0c2','fill-opacity':.45});
+document.title='ready';
+</script>
+</body></html>

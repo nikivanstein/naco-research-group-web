@@ -2,6 +2,7 @@
 title: "EvoLLMs at EvoStar 2026"
 status: active
 type: workshop
+type_label: "Special session"
 
 notitle: false
 
@@ -13,9 +14,13 @@ people:
   - back
   - kononova
 
-eventdate: 2026-04-08
 layout: event
-image: /img/events/evollms2026-header.png
+eventdate: 2026-04-08
+enddate: 2026-04-10
+location: "Toulouse, France"
+venue: "EvoStar 2026"
+image: /img/events/evollms2026.png
+largeimage: /img/events/evollms2026-wide.png
 header:
     og_image: events/evollms2026.png
 last-updated: 2025-11-20

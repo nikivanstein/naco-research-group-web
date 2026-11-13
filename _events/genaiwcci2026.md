@@ -2,6 +2,7 @@
 title: "GenAI and Heuristic Optimization"
 status: active
 type: workshop
+type_label: "Special session"
 
 notitle: false
 
@@ -12,11 +13,15 @@ people:
   - stein
   - back
 
-eventdate: 2026-07-21
 layout: event
-image: /img/events/wcci2026-genai.png
+eventdate: 2026-06-21
+enddate: 2026-06-26
+location: "Maastricht, the Netherlands"
+venue: "IEEE WCCI 2026"
+image: /img/events/genai-wcci2026.png
+largeimage: /img/events/genai-wcci2026-wide.png
 header:
-    og_image: events/wcci2026-genai.png
+    og_image: events/genai-wcci2026.png
 last-updated: 2025-11-25
 ---
 
