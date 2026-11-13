@@ -98,6 +98,7 @@ const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAt
 const A=ev.accent||C.accent, B='#5b7bab', G='#e4a51c';
 const R=size=='card'?{x:640,y:40,w:540,h:560}:{x:740,y:8,w:430,h:184};
 const M={
+ none(){},
  network(){const n=[];for(let i=0;i<(size=='card'?26:22);i++)n.push([R.x+r()*R.w,R.y+r()*R.h,(size=='card'?4:2.5)+r()*(size=='card'?9:5)]);
    const L=size=='card'?120:90;n.forEach((a,i)=>n.forEach((b,j)=>{if(j>i&&Math.hypot(a[0]-b[0],a[1]-b[1])<L)el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#3d5a87','stroke-opacity':.25,'stroke-width':1.1})}));
    n.forEach(p=>el('circle',{cx:p[0],cy:p[1],r:p[2],fill:r()<.3?A:B,'fill-opacity':.55}))},

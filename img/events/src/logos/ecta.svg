@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380">
+  <!-- ECTA: a population converging on the optimum of a fitness landscape -->
+  <defs>
+    <radialGradient id="g" cx="58%" cy="44%" r="62%">
+      <stop offset="0" stop-color="#0a7f8c" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#5fb3b8" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#dbe7f0" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e8632b"/></marker>
+  </defs>
+  <ellipse cx="236" cy="170" rx="180" ry="160" fill="url(#g)"/>
+  <g fill="none" stroke="#0a7f8c" stroke-width="2">
+    <ellipse cx="240" cy="168" rx="172" ry="134" stroke-opacity=".18" transform="rotate(-12 240 168)"/>
+    <ellipse cx="243" cy="166" rx="148" ry="110" stroke-opacity=".25" transform="rotate(-12 243 166)"/>
+    <ellipse cx="246" cy="164" rx="112" ry="82" stroke-opacity=".35" transform="rotate(-10 246 164)"/>
+    <ellipse cx="248" cy="163" rx="78" ry="56" stroke-opacity=".5" transform="rotate(-8 248 163)"/>
+    <ellipse cx="250" cy="162" rx="46" ry="33" stroke-opacity=".65" transform="rotate(-6 250 162)"/>
+    <ellipse cx="251" cy="162" rx="18" ry="13" stroke-opacity=".85"/>
+  </g>
+  <!-- generations: grey (early) to teal (late) -->
+  <g fill="#8aa0c2" fill-opacity=".75">
+    <circle cx="70" cy="290" r="7"/><circle cx="112" cy="318" r="7"/><circle cx="58" cy="236" r="7"/><circle cx="140" cy="276" r="7"/><circle cx="96" cy="262" r="7"/>
+  </g>
+  <g fill="#5b7bab" fill-opacity=".85">
+    <circle cx="150" cy="226" r="8"/><circle cx="176" cy="252" r="8"/><circle cx="132" cy="206" r="8"/><circle cx="188" cy="214" r="8"/>
+  </g>
+  <g fill="#0a7f8c">
+    <circle cx="226" cy="180" r="9"/><circle cx="240" cy="196" r="9"/><circle cx="216" cy="160" r="9"/>
+  </g>
+  <circle cx="251" cy="162" r="11" fill="#e8632b"/>
+  <circle cx="251" cy="162" r="20" fill="none" stroke="#e8632b" stroke-width="3"/>
+  <g stroke="#e8632b" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#a)">
+    <path d="M100 280 C130 260 140 245 150 232"/>
+    <path d="M160 226 C185 205 200 192 214 184"/>
+  </g>
+</svg>
