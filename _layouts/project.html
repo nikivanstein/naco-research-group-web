@@ -112,41 +112,7 @@ optional awards and publications, and up to three related projects.
             {% if page.people %}
                 <div>
                     <h2 class="project-facts__label">Team &middot; {{ page.people.size }}</h2>
-                    <ul class="project-team">
-                        {% for uname in page.people %}
-                            {% assign person = site.data.people[uname] %}
-                            {% if person %}
-                                {% if person.role == "prof" %}
-                                    {% assign label = "Cluster head" %}
-                                {% elsif person.bio %}
-                                    {% assign label = person.bio %}
-                                {% elsif person.role == "grad" %}
-                                    {% assign label = "PhD candidate" %}
-                                {% elsif person.role == "postdoc" %}
-                                    {% assign label = "Postdoc" %}
-                                {% elsif person.role == "alum" %}
-                                    {% assign label = "Alumnus" %}
-                                {% else %}
-                                    {% assign label = "Collaborator" %}
-                                {% endif %}
-                                <li>
-                                    {% if person.webpage %}<a href="{{ person.webpage | escape }}" target="_blank" rel="noopener">{% else %}<span>{% endif %}
-                                    {% if person.image %}
-                                        {% capture orig %}{{ site.base }}{{ person.image }}{% endcapture %}
-                                        <img src="{% include thumb-src.html src=person.image %}" alt="" width="36" height="36"
-                                             loading="lazy" decoding="async" onerror="this.onerror=null;this.src='{{ orig }}'">
-                                    {% else %}
-                                        <span class="project-team__initials" aria-hidden="true">{{ person.display_name | remove_first: "Prof. " | split: " " | first | slice: 0 }}{{ person.display_name | split: " " | last | slice: 0 }}</span>
-                                    {% endif %}
-                                    <span class="project-team__text">
-                                        <span class="project-team__name">{{ person.display_name | remove_first: "Prof. " }}</span>
-                                        <span class="project-team__role">{{ label }}</span>
-                                    </span>
-                                    {% if person.webpage %}</a>{% else %}</span>{% endif %}
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
+                    {% include team-list.html people=page.people %}
                 </div>
             {% endif %}
         </aside>

@@ -2,6 +2,7 @@
 title: "Beyond a Performance Scalar at EvoStar 2027"
 status: active
 type: workshop
+type_label: "Special session"
 
 notitle: false
 
@@ -11,19 +12,27 @@ description: |
 people:
   - stein
 
+layout: event
 eventdate: 2027-03-31
 enddate: 2027-04-02
 location: "Mainz, Germany"
-layout: event
+venue: "EvoStar 2027"
 image: /img/events/beyondscalar2027.png
+largeimage: /img/events/beyondscalar2027-wide.png
 header:
     og_image: events/beyondscalar2027.png
+links:
+  website: https://www.evostar.org/2027/evoapps/beyond-a-performance-scalar-evaluation-science-for-evolutionary-computation/
+dates:
+  - {label: "Paper submission", date: 2026-11-01}
+  - {label: "Notification of acceptance", date: 2027-01-10}
+  - {label: "Camera-ready submission", date: 2027-01-24}
+  - {label: "EvoStar 2027 conference", date: 2027-03-31}
 last-updated: 2026-10-26
 ---
 
 We are excited to announce the special session **Beyond a Performance Scalar: Evaluation Science for Evolutionary Computation** at EvoStar 2027 (EvoApps).
 
-Official website: [https://www.evostar.org/2027/evoapps/beyond-a-performance-scalar-evaluation-science-for-evolutionary-computation/](https://www.evostar.org/2027/evoapps/beyond-a-performance-scalar-evaluation-science-for-evolutionary-computation/)
 
 ## Evaluation Science for Evolutionary Computation
 
@@ -48,13 +57,6 @@ Papers whose main contribution is a new optimizer judged only by final-fitness t
 - Cost- and decision-aware evaluation in real-world applications
 - Evaluation of evolutionary machine learning, AutoML, automated algorithm design, and LLM-assisted evolutionary computation
 - Frameworks linking theory, benchmarks, and practical outcomes
-
-### Key Dates
-
-- **Paper Submission Deadline**: 1 November 2026
-- **Notification of Acceptance**: 10 January 2027
-- **Camera-ready Submission**: 24 January 2027
-- **EvoStar 2027 Conference**: 31 March - 2 April 2027, Mainz, Germany
 
 ### Organisers
 

@@ -15,7 +15,7 @@
               href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{{ site.base }}/css/group.css">
+        <link rel="stylesheet" href="{{ site.base }}/css/group.css?v={{ site.time | date: '%s' }}">
         {% capture hero_thumb %}/img/thumbs/{{ page.header.overlay_image }}.webp{% endcapture %}
         {% assign hero_thumb_file = site.static_files | where: "path", hero_thumb | first %}
         {% if page.header.overlay_image and hero_thumb_file %}
@@ -78,7 +78,7 @@
 
         <div class="container">
 
-            {% unless page.layout == "project" or page.layout == "post" %}
+            {% unless page.layout == "project" or page.layout == "post" or page.layout == "event" %}
             {% if page.largeimage %}
                 {% assign orig = page.largeimage %}
                 <img src="{% include thumb-src.html src=page.largeimage %}"

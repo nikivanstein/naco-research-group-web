@@ -2,6 +2,7 @@
 title: "EvoLLMs at EvoStar 2026"
 status: active
 type: workshop
+type_label: "Special session"
 
 notitle: false
 
@@ -13,17 +14,25 @@ people:
   - back
   - kononova
 
-eventdate: 2026-04-08
 layout: event
-image: /img/events/evollms2026-header.png
+eventdate: 2026-04-08
+enddate: 2026-04-10
+location: "Toulouse, France"
+venue: "EvoStar 2026"
+image: /img/events/evollms2026.png
+largeimage: /img/events/evollms2026-wide.png
 header:
     og_image: events/evollms2026.png
+links:
+  website: https://www.evostar.org/2026/evoapps/evollms/
+dates:
+  - {label: "Paper submission", date: 2025-11-15}
+  - {label: "EvoStar 2026 conference", date: 2026-04-08}
+dates_note: "Deadlines are Anywhere on Earth."
 last-updated: 2025-11-20
 ---
 
 We are thrilled to announce an exciting special session at EvoStar 2026: **EvoLLMs: Integrating Evolutionary Computing with Large Language Models**. This session will delve into the innovative intersection of large language models (LLMs) and evolutionary computing (EC), a frontier in AI and computational intelligence that is rapidly gaining traction.
-
-Official website: [https://www.evostar.org/2026/evoapps/evollms/](https://www.evostar.org/2026/evoapps/evollms/)
 
 ## EvoLLMs: Integrating Evolutionary Computing with Large Language Models
 
@@ -47,13 +56,7 @@ can push the boundaries of both fields. Potential topics of interest include, bu
 - **Networking Opportunities**: Connect with leading experts in both evolutionary computing and LLMs, fostering collaborations that push the boundaries of AI research.
 - **Practical Insights**: Learn about real-world applications where LLMs and EC can enhance each other, providing actionable insights into how to leverage these technologies for your work.
 
-### Key Dates:
-
-- **Paper Submission Deadline**: November 15 2025 AoE
-- **Notification of Acceptance**: TBA
-- **EvoStar 2025 Conference**: 8-10 April 2026, Toulouse, France
-
-Don’t miss out on this opportunity to be part of the conversation that’s shaping the future of AI! For more details, visit the EvoLLMs session page [here](https://www.evostar.org/2026/evoapps/evollms/).
+Don’t miss out on this opportunity to be part of the conversation that’s shaping the future of AI!
 
 Join us in Toulouse and help define the next generation of AI systems!
 

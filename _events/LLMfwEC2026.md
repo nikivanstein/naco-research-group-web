@@ -8,19 +8,23 @@ notitle: false
 description: |
   Large Language Models for and with Evolutionary Computation
 
-
-eventdate: 2026-07-13
 layout: event
-image: /img/events/llmfwec2026-header.png
+eventdate: 2026-07-13
+enddate: 2026-07-17
+location: "San José, Costa Rica"
+venue: "GECCO 2026"
+image: /img/events/llmfwec2026.png
+largeimage: /img/events/llmfwec2026-wide.png
 header:
     og_image: events/llmfwec2026.png
+links:
+  website: https://gecco-2026.sigevo.org/
+  cfp: https://gecco-2026.sigevo.org/Workshop?itemId=8250
+  submit: https://ssl.linklings.net/conferences/gecco/
 last-updated: 2026-02-23
 ---
 
 We are excited to announce the **LLMfwEC Workshop at GECCO 2026**. This workshop explores the convergence of **Large Language Models (LLMs)** and **Evolutionary Computing (EC)**, aiming to advance research through novel methodologies and applications in both fields.
-
-
-<a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
 
 ## Large Language Models for and with Evolutionary Computation
 
@@ -31,7 +35,6 @@ One answer is evolutionary search heuristics (LLM with EC), with operators that 
 Another answer is using LLM for EC. LLMs may help researchers select feasible candidates from the pool of algorithms based on user-specified goals and provide a basic description of the methods or propose novel hybrid methods. Further, the models can help identify and describe distinct components suitable for adaptive enhancement or hybridization and provide a pseudo-code, implementation, and reasoning for the proposed methodology. Finally, LLMs have the potential to transform automated metaheuristic design and configuration by generating codes, iteratively improving the initially designed solutions or algorithm templates (with or without performance or other data-driven feedback), and even guiding implementations.
 
 This workshop aims to encourage innovative approaches that leverage the strengths of LLMs and EC techniques, thus enabling the creation of more adaptive, efficient, and scalable algorithms by integrating evolutionary mechanisms with advanced LLM capabilities. Thanks to the collaborative platform for researchers and practitioners, the workshop may Inspire novel research directions that could reshape AI, specifically LLMs, and optimization fields through this hybridization and achieve a better understanding and explanation of how these two seemingly disparate fields are related and how knowledge of their functions and operations can be leveraged.
-
 
 ### Topics of Interest
 
@@ -73,21 +76,14 @@ The intersection of LLMs and Evolutionary Computing brings forth various topics 
 - **Networking**: Connect with experts in both fields and form impactful collaborations.
 - **Practical Insights**: Gain insights into how LLM and EC integration can benefit real-world applications.
 
-### Key Dates
-
-- See <a href="https://gecco-2026.sigevo.org/Workshop?itemId=8250" target="_blank">here</a>.
-
-<a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
-
 Join us and be part of the community shaping the future of AI through LLM-EC hybridization!
 
 ### Previous Editions
 
-- (GECCO 2025)[https://sites.google.com/view/llmfwec-2025]
-- (GECCO 2024)[https://sites.google.com/view/llmfwec-2024]
+- [GECCO 2025](/events/LLMfwEC2025/)
+- [GECCO 2024](https://sites.google.com/view/llmfwec-2024)
 
 ### Organizers
-
 
 **Erik Hemberg** is a Research Scientist in the AnyScale Learning For All (ALFA) group at Massachusetts Institute of Technology Computer Science and Artificial Intelligence Lab, USA. He has a PhD in Computer Science from University College Dublin, Ireland and an MSc in Industrial Engineering and Applied Mathematics from Chalmers University of Technology, Sweden. His research interests involves coevolutionary algorithms, grammatical representations and generative models. His work focuses on developing autonomous, pro-active cyber defenses that are anticipatory and adapt to counter attacks. He is also interested in automated semantic parsing of law, and data science for education and healthcare.
 

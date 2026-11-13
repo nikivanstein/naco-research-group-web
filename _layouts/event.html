@@ -2,19 +2,134 @@
 layout: default
 ---
 
-{% if page.pending %}
-<div class="pending-notice">
-    <span class="badge pending-badge">Pending acceptance</span>
-    This event has been proposed and is awaiting acceptance by the conference organisers. Details may change.
-</div>
-{% endif %}
+{% comment %}
+Event page, in the style of the project pages: optional wide banner
+(`largeimage`), labels, title and lead, then the text with a green facts
+panel (when, where, host conference, links, important dates, organisers)
+built from the front matter. Front matter used:
+  eventdate, enddate, location, venue, pending, largeimage, type_label,
+  links: {website, submit, cfp, program, ...}
+  dates: [{label, date}]
+  people: [usernames from _data/people.yml]
+{% endcomment %}
 
-{{ content }}
+{% assign now = site.time | date: "%Y-%m-%d" %}
+{% assign start = page.eventdate | date: "%Y-%m-%d" %}
+{% assign last = page.enddate | default: page.eventdate | date: "%Y-%m-%d" %}
+{% case page.type %}
+    {% when "workshop" %}{% assign type_label = "Workshop" %}
+    {% when "tutorial" %}{% assign type_label = "Tutorial" %}
+    {% when "conference" %}{% assign type_label = "Conference" %}
+    {% else %}{% assign type_label = page.type | capitalize %}
+{% endcase %}
+{% if page.type_label %}{% assign type_label = page.type_label %}{% endif %}
 
-<h2> Organizers: </h2>
-<section class="people project-people">
-    {% for uname in page.people %}
-        {% assign person = site.data.people[uname] %}
-        {% include person.html person=person image=true%}
-    {% endfor %}
-</section>
+<article class="project-page event-page">
+    {% if page.largeimage %}
+        {% capture orig %}{{ site.base }}{{ page.largeimage }}{% endcapture %}
+        <img class="project-page__banner" src="{% include thumb-src.html src=page.largeimage %}" alt=""
+             fetchpriority="high" onerror="this.onerror=null;this.src='{{ orig }}'">
+    {% endif %}
+
+    <header class="project-page__head">
+        <span class="project-chips">
+            {% if page.pending %}
+                <span class="pending-badge"><i class="fa fa-hourglass-half" aria-hidden="true"></i> Pending acceptance</span>
+            {% elsif last < now %}
+                <span class="project-chip">Past event</span>
+            {% else %}
+                <span class="project-chip project-chip--active">Upcoming</span>
+            {% endif %}
+            <span class="project-chip">{{ type_label }}</span>
+            {% if page.venue %}<span class="project-chip">{{ page.venue }}</span>{% endif %}
+        </span>
+        {% if page.notitle != true %}<h1>{{ page.title }}</h1>{% endif %}
+        {% if page.description %}
+            <p class="project-page__lead">{{ page.description | markdownify | strip_html | strip }}</p>
+        {% endif %}
+    </header>
+
+    <div class="project-page__grid">
+        <div class="project-page__body">
+            {% if page.pending %}
+                <p class="pending-notice">This event has been proposed and is awaiting acceptance by the conference organisers. Details may change.</p>
+            {% endif %}
+            {{ content }}
+        </div>
+
+        <aside class="project-facts" aria-label="Event facts">
+            <dl>
+                <div>
+                    <dt>When</dt>
+                    <dd>
+                        {% if page.enddate %}
+                            {% assign m1 = page.eventdate | date: "%B %Y" %}{% assign m2 = page.enddate | date: "%B %Y" %}
+                            {% if m1 == m2 %}
+                                {{ page.eventdate | date: "%-d" }}&ndash;{{ page.enddate | date: "%-d %B %Y" }}
+                            {% else %}
+                                {{ page.eventdate | date: "%-d %B" }} &ndash; {{ page.enddate | date: "%-d %B %Y" }}
+                            {% endif %}
+                        {% else %}
+                            {{ page.eventdate | date: "%-d %B %Y" }}
+                        {% endif %}
+                    </dd>
+                </div>
+                {% if page.location %}<div><dt>Where</dt><dd>{{ page.location }}</dd></div>{% endif %}
+                {% if page.venue %}<div><dt>Part of</dt><dd>{{ page.venue }}</dd></div>{% endif %}
+            </dl>
+
+            {% if page.links %}
+                <div class="project-facts__links">
+                    {% for link in page.links %}
+                        {% if link[0] == "submit" and last < now %}{% continue %}{% endif %}
+                        {% case link[0] %}
+                            {% when "website" %}{% assign label = "Official website" %}
+                            {% when "submit" %}{% assign label = "Submit a paper" %}
+                            {% when "cfp" %}{% assign label = "Call for papers" %}
+                            {% when "program" %}{% assign label = "Programme" %}
+                            {% else %}{% assign label = link[0] | capitalize %}
+                        {% endcase %}
+                        <a class="btn btn-naco-outline btn-sm" href="{{ link[1] }}" target="_blank" rel="noopener">{{ label }} &nearr;</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if page.dates %}
+                <div>
+                    <h2 class="project-facts__label">Important dates</h2>
+                    <ol class="event-dates">
+                        {% for d in page.dates %}
+                            {% assign dd = d.date | date: "%Y-%m-%d" %}
+                            <li class="{% if dd < now %}is-past{% endif %}" data-date="{{ dd }}">
+                                <time datetime="{{ dd }}">{{ d.date | date: "%-d %b %Y" }}</time>
+                                <span>{{ d.label }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                    {% if page.dates_note %}<p class="event-dates__note">{{ page.dates_note }}</p>{% endif %}
+                </div>
+            {% endif %}
+
+            {% if page.people %}
+                <div>
+                    <h2 class="project-facts__label">{% if page.type == "tutorial" %}Presenters{% else %}Organisers{% endif %} from our cluster</h2>
+                    {% include team-list.html people=page.people %}
+                </div>
+            {% endif %}
+        </aside>
+    </div>
+</article>
+
+<script>
+/* Re-mark past dates in the browser, so the list stays right between builds,
+   and highlight the next upcoming deadline. */
+(function () {
+    var today = new Date().toISOString().slice(0, 10), next = null;
+    document.querySelectorAll('.event-dates li[data-date]').forEach(function (li) {
+        var past = li.getAttribute('data-date') < today;
+        li.classList.toggle('is-past', past);
+        if (!past && !next) next = li;
+    });
+    if (next) next.classList.add('is-next');
+})();
+</script>

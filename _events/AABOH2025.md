@@ -15,20 +15,28 @@ people:
   - zaharie
   - caraffini
 
-eventdate: 2025-07-14
 layout: event
-image: /img/events/aaboh.png
-largeimage: "/img/events/aaboh-header.png"
+eventdate: 2025-07-14
+enddate: 2025-07-18
+location: "Málaga, Spain"
+venue: "GECCO 2025"
+image: /img/events/aaboh2025.png
+largeimage: /img/events/aaboh2025-wide.png
 header:
-    og_image: events/aaboh.png
+    og_image: events/aaboh2025.png
+links:
+  website: https://aaboh.nl/
+  submit: https://ssl.linklings.net/conferences/gecco/
+dates:
+  - {label: "Submission opening", date: 2025-02-10}
+  - {label: "Submission deadline (extended)", date: 2025-04-02}
+  - {label: "Notification", date: 2025-04-28}
+  - {label: "Camera-ready", date: 2025-05-05}
+  - {label: "Author registration", date: 2025-05-08}
 last-updated: 2025-03-25
 ---
 
 We are excited to announce the **AABOH Workshop at GECCO 2025**. This workshop explores the analysis of **algorithm behaviour** of **optimisation heuristics**.
-
-Official website: [https://aaboh.nl/](https://aaboh.nl/)
-
-<a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
 
 ## Analysing algorithmic behaviour of optimisation heuristics
 
@@ -36,7 +44,6 @@ Optimisation and Machine Learning tools are among the most used tools in the mod
 
 Hence, with this workshop, we call for both theoretical and empirical achievements identifying the desired features of optimisation and machine learning algorithms, quantifying the importance of such features, spotting the presence of intrinsic structural biases and other undesired algorithmic flaws, studying the transitions in algorithmic behaviour in terms of convergence, any-time behaviour, traditional and alternative performance measures, robustness, exploration vs exploitation balance, diversity, algorithmic complexity, etc., with the goal of gathering the most recent advances to fill the aforementioned knowledge gap and disseminate the current state-of-the-art within the research community.
 Thus, we encourage submissions exploiting carefully designed experiments or data-heavy approaches that can come to help in analysing primary algorithmic behaviours and modelling internal dynamics causing them.
-
 
 ### Topics of Interest
 
@@ -54,18 +61,7 @@ We encourage submissions exploiting carefully designed experiments or data-heavy
 
 All accepted papers of this workshop will be included in the ACM Proceedings of the Genetic and Evolutionary Computation Conference (GECCO’25) Companion Volume.
 
-### Key Dates
-
-- Submission opening: February 10, 2025
-- Submission deadline: April 2 (Extended!), 2025
-- Notification: April 28, 2025
-- Camera-ready: May 5, 2025
-- Author's mandatory registration: May 8, 2025
-
-<a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
-
-
 ### Previous Editions
 
-- [https://aaboh.nl/gecco-24-workshop/](GECCO 2024)
+- [GECCO 2024](https://aaboh.nl/gecco-24-workshop/)
 

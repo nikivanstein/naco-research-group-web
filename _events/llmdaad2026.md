@@ -11,11 +11,15 @@ description: |
 people:
   - stein
 
-eventdate: 2026-07-21
 layout: event
-image: /img/events/wcci2026-llmaad.png
+eventdate: 2026-06-21
+enddate: 2026-06-26
+location: "Maastricht, the Netherlands"
+venue: "IEEE WCCI 2026"
+image: /img/events/llmaad-wcci2026.png
+largeimage: /img/events/llmaad-wcci2026-wide.png
 header:
-    og_image: events/wcci2026-llmaad.png
+    og_image: events/llmaad-wcci2026.png
 last-updated: 2025-11-25
 ---
 
@@ -58,8 +62,4 @@ auditable. Finally, the tutorial will introduce a statistical validation layer t
 rigorous evidence—embedding Bayesian comparison, stochastic dominance tests, and sequential evaluation
 directly into workflows. These methods establish reproducible, uncertainty-aware benchmarks, turning LLMdriven discovery into a scientifically testable process rather than a heuristic exploration. Together, these ideas
 chart a practical path toward Auto-Science systems that both generate and justify new algorithms.
-
-<!-- ### Previous Editions
-
-- (GECCO 2024)[https://aaboh.nl/2024/] -->
 

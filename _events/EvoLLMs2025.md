@@ -2,6 +2,7 @@
 title: "EvoLLMs at EvoStar 2025"
 status: active
 type: workshop
+type_label: "Special session"
 
 notitle: false
 
@@ -13,17 +14,25 @@ people:
   - back
   - kononova
 
-eventdate: 2025-04-23
 layout: event
-image: /img/events/evollms-header.png
+eventdate: 2025-04-23
+enddate: 2025-04-25
+location: "Trieste, Italy"
+venue: "EvoStar 2025"
+image: /img/events/evollms2025.png
+largeimage: /img/events/evollms2025-wide.png
 header:
-    og_image: events/evollms.png
+    og_image: events/evollms2025.png
+links:
+  website: https://www.evostar.org/2025/evoapps/evollms/
+dates:
+  - {label: "Paper submission (extended)", date: 2024-11-15}
+  - {label: "EvoStar 2025 conference", date: 2025-04-23}
+dates_note: "Deadlines are Anywhere on Earth."
 last-updated: 2024-11-01
 ---
 
 We are thrilled to announce an exciting special session at EvoStar 2025: **EvoLLMs: Integrating Evolutionary Computing with Large Language Models**. This session will delve into the innovative intersection of large language models (LLMs) and evolutionary computing (EC), a frontier in AI and computational intelligence that is rapidly gaining traction.
-
-Official website: [https://www.evostar.org/2025/evoapps/evollms/](https://www.evostar.org/2025/evoapps/evollms/)
 
 ## EvoLLMs: Integrating Evolutionary Computing with Large Language Models
 
@@ -47,13 +56,7 @@ can push the boundaries of both fields. Potential topics of interest include, bu
 - **Networking Opportunities**: Connect with leading experts in both evolutionary computing and LLMs, fostering collaborations that push the boundaries of AI research.
 - **Practical Insights**: Learn about real-world applications where LLMs and EC can enhance each other, providing actionable insights into how to leverage these technologies for your work.
 
-### Key Dates:
-
-- **Paper Submission Deadline**: November 15 (extended) 2024 AoE
-- **Notification of Acceptance**: TBA
-- **EvoStar 2025 Conference**: April 23-25, 2025 in Trieste, Italy
-
-Don’t miss out on this opportunity to be part of the conversation that’s shaping the future of AI! For more details, visit the EvoLLMs session page [here](https://www.evostar.org/2025/evoapps/evollms/).
+Don’t miss out on this opportunity to be part of the conversation that’s shaping the future of AI!
 
 Join us in Trieste and help define the next generation of AI systems!
 

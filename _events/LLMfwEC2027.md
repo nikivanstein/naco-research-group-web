@@ -7,19 +7,24 @@ pending: true
 notitle: false
 
 description: |
-  3rd Workshop on Large Language Models for and with Evolutionary Computation at GECCO 2027 (pending acceptance)
+  3rd Workshop on Large Language Models for and with Evolutionary Computation
 
 people:
   - stein
   - kononova
 
+layout: event
 eventdate: 2027-07-12
 enddate: 2027-07-16
 location: "Kraków, Poland"
-layout: event
+venue: "GECCO 2027"
 image: /img/events/llmfwec2027.png
+largeimage: /img/events/llmfwec2027-wide.png
 header:
     og_image: events/llmfwec2027.png
+links:
+  website: https://gecco-2027.sigevo.org/
+dates_note: "Submission deadlines will be announced once the workshop is accepted."
 last-updated: 2026-11-13
 ---
 
@@ -63,10 +68,6 @@ Accepted papers will appear in the GECCO 2027 Companion volume in the ACM Digita
 - **Invited keynote** on LLM-driven discovery, open-endedness or program synthesis.
 - **Panel discussion with the audience** on benchmarking LLM-designed algorithms, explaining what the LLM contributed, and models, cost and scaling, steered by audience questions and live polls.
 - **Shared roadmap board** where participants collect and vote on the most pressing open problems.
-
-### Key Dates
-
-To be announced once the workshop is accepted. GECCO 2027 takes place 12–16 July 2027 in Kraków, Poland.
 
 ### Previous Editions
 

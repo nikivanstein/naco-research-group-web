@@ -12,9 +12,13 @@ people:
   - kononova
   - stein
 
-eventdate: 2026-09-01
 layout: event
+eventdate: 2026-08-29
+enddate: 2026-09-02
+location: "Trento, Italy"
+venue: "PPSN 2026"
 image: /img/events/sb-ppsn2026.png
+largeimage: /img/events/sb-ppsn2026-wide.png
 header:
     og_image: events/sb-ppsn2026.png
 last-updated: 2026-06-25

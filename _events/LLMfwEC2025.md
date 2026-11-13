@@ -8,19 +8,28 @@ notitle: false
 description: |
   Large Language Models for and with Evolutionary Computation
 
-
-eventdate: 2025-07-14
 layout: event
-image: /img/events/llmfwec-header.png
+eventdate: 2025-07-14
+enddate: 2025-07-18
+location: "Málaga, Spain"
+venue: "GECCO 2025"
+image: /img/events/llmfwec2025.png
+largeimage: /img/events/llmfwec2025-wide.png
 header:
-    og_image: events/llmfwec.png
+    og_image: events/llmfwec2025.png
+links:
+  website: https://gecco-2025.sigevo.org/
+  submit: https://ssl.linklings.net/conferences/gecco/
+dates:
+  - {label: "Submission opening", date: 2025-02-10}
+  - {label: "Submission deadline (extended)", date: 2025-04-02}
+  - {label: "Notification", date: 2025-04-28}
+  - {label: "Camera-ready", date: 2025-05-05}
+  - {label: "Author registration", date: 2025-05-08}
 last-updated: 2025-01-27
 ---
 
 We are excited to announce the **LLMfwEC Workshop at GECCO 2025**. This workshop explores the convergence of **Large Language Models (LLMs)** and **Evolutionary Computing (EC)**, aiming to advance research through novel methodologies and applications in both fields.
-
-
-<a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
 
 ## Large Language Models for and with Evolutionary Computation
 
@@ -31,7 +40,6 @@ One answer is evolutionary search heuristics (LLM with EC), with operators that 
 Another answer is using LLM for EC. LLMs may help researchers select feasible candidates from the pool of algorithms based on user-specified goals and provide a basic description of the methods or propose novel hybrid methods. Further, the models can help identify and describe distinct components suitable for adaptive enhancement or hybridization and provide a pseudo-code, implementation, and reasoning for the proposed methodology. Finally, LLMs have the potential to transform automated metaheuristic design and configuration by generating codes, iteratively improving the initially designed solutions or algorithm templates (with or without performance or other data-driven feedback), and even guiding implementations.
 
 This workshop aims to encourage innovative approaches that leverage the strengths of LLMs and EC techniques, thus enabling the creation of more adaptive, efficient, and scalable algorithms by integrating evolutionary mechanisms with advanced LLM capabilities. Thanks to the collaborative platform for researchers and practitioners, the workshop may Inspire novel research directions that could reshape AI, specifically LLMs, and optimization fields through this hybridization and achieve a better understanding and explanation of how these two seemingly disparate fields are related and how knowledge of their functions and operations can be leveraged.
-
 
 ### Topics of Interest
 
@@ -73,21 +81,11 @@ The intersection of LLMs and Evolutionary Computing brings forth various topics 
 - **Networking**: Connect with experts in both fields and form impactful collaborations.
 - **Practical Insights**: Gain insights into how LLM and EC integration can benefit real-world applications.
 
-### Key Dates
-
-- Submission opening: February 10, 2025
-- Submission deadline: April 2 (Extended!), 2025
-- Notification: April 28, 2025
-- Camera-ready: May 5, 2025
-- Author's mandatory registration: May 8, 2025
-
-<a class="btn btn-success" href="https://ssl.linklings.net/conferences/gecco/" target="_blank">Submit your paper</a>
-
 Join us and be part of the community shaping the future of AI through LLM-EC hybridization!
 
 ### Previous Editions
 
-- (GECCO 2024)[https://sites.google.com/view/llmfwec-2024]
+- [GECCO 2024](https://sites.google.com/view/llmfwec-2024)
 
 ### Organizers
 
