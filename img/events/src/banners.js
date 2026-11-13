@@ -17,6 +17,7 @@ var BANNERS = {
     cai2025: {name: 'IEEE CAI', year: 2025, dates: '5 – 7 May', place: 'Santa Clara, USA', accent: '#1d6fb8', logos: ['ieee-cai.png'], logoBox: {card: {width: '300px', right: '80px'}, wide: {width: '210px', height: '110px', top: '45px', right: '50px'}}},
     cai2026: {name: 'IEEE CAI', year: 2026, dates: '8 – 10 May', place: 'Granada, Spain', accent: '#1d6fb8', logos: ['ieee-cai.png'], logoBox: {card: {width: '300px', right: '80px'}, wide: {width: '210px', height: '110px', top: '45px', right: '50px'}}},
     wcci2026: {name: 'IEEE WCCI', year: 2026, dates: '21 – 26 June', place: 'Maastricht, the Netherlands', accent: '#1f3a8a', logos: ['wcci2026.png']},
+    cec2027: {name: 'IEEE CEC', year: 2027, dates: '25 – 28 July', place: 'Edinburgh, UK', accent: '#3f9a3a', logos: ['cec2027.png'], logoBox: {card: {width: '400px', right: '40px'}, wide: {width: '300px', right: '30px'}}},
     cec2025: {name: 'IEEE CEC', year: 2025, dates: '8 – 12 June', place: 'Hangzhou, China', accent: '#1a6fd1', logos: ['cec2025.png']},
     ppsn2026: {name: 'PPSN', year: 2026, dates: '29 August – 2 September', place: 'Trento, Italy', accent: '#c2185b', logos: ['ppsn2026.png']},
     foga2025: {name: 'ACM/SIGEVO', year: '', dates: '27 – 29 August 2025', place: 'Leiden, the Netherlands', accent: '#4a9a3a', logos: ['foga2025.png']},
@@ -48,6 +49,7 @@ var BANNERS = {
     becomllm2026: {conf: 'cai2026', kicker: 'Workshop', title: 'BEComLLM', sub: 'Bridging Evolutionary Computing\nand Large Language Models', motif: 'network', seed: 22},
     'genai-wcci2026': {conf: 'wcci2026', kicker: 'Special session', title: 'GenAI and Heuristic Optimization', sub: 'Generative AI for heuristic optimization', subWide: '', motif: 'network', seed: 13},
     'llmaad-wcci2026': {conf: 'wcci2026', kicker: 'Tutorial', title: 'LLM-driven Algorithm Design', sub: 'Automated algorithm design with\nlarge language models: EASE and LLaMEA', subWide: '', motif: 'tree', seed: 8},
+    'genai-cec2027': {conf: 'cec2027', kicker: 'Special session', title: 'Real-World Applications', sub: 'of Combining Generative AI and\nEvolutionary Computation', motif: 'network', seed: 27, titleSize: 92, note: GENAI4EC},
     'sb-cec2025': {conf: 'cec2025', kicker: 'Tutorial', title: 'Structural Bias', sub: 'in Iterative Optimisation Heuristics', motif: 'scatter', seed: 3},
 
     // PPSN, FOGA
@@ -56,13 +58,13 @@ var BANNERS = {
     foga2025: {conf: 'foga2025', kicker: '18th Conference', title: 'FOGA 2025', sub: 'Foundations of Genetic Algorithms', motif: 'scatter', seed: 17},
 
     // IJCCI conferences
-    ecta2024: {conf: 'ijcci2024', kicker: '16th International Conference', title: 'ECTA 2024', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', logos: [tag('ECTA', 64)]},
-    ecta2025: {conf: 'ijcci2025', kicker: '17th International Conference', title: 'ECTA 2025', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', seed: 4, logos: [tag('ECTA', 64)]},
-    ecta2026: {conf: 'ijcci2026', kicker: '18th International Conference', title: 'ECTA 2026', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', seed: 6, logos: [tag('ECTA', 64)]},
-    explains2024: {conf: 'ijcci2024', kicker: '1st International Conference', title: 'EXPLAINS 2024', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 31, logos: [tag('EXPLAINS', 64)]},
-    explains2025: {conf: 'ijcci2025', kicker: '2nd International Conference', title: 'EXPLAINS 2025', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 32, logos: [tag('EXPLAINS', 64)]},
-    explains2026: {conf: 'ijcci2026', kicker: '3rd International Conference', title: 'EXPLAINS 2026', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 33, logos: [tag('EXPLAINS', 64)]},
-    agentics2026: {conf: 'ijcci2026', kicker: '2nd International Conference', title: 'AGENTICS 2026', sub: 'Agentic and Generative Techniques\nin Intelligent Computational Systems', motif: 'network', seed: 34, logos: [tag('AGENTICS', 64)]},
+    ecta2024: {conf: 'ijcci2024', kicker: '16th International Conference', title: 'ECTA 2024', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'none', logoBox: {card: {width: '440px', height: '430px', top: '90px', right: '40px'}, wide: {width: '320px', height: '180px', top: '10px'}}, logos: ['ecta.svg']},
+    ecta2025: {conf: 'ijcci2025', kicker: '17th International Conference', title: 'ECTA 2025', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'none', seed: 4, logoBox: {card: {width: '440px', height: '430px', top: '90px', right: '40px'}, wide: {width: '320px', height: '180px', top: '10px'}}, logos: ['ecta.svg']},
+    ecta2026: {conf: 'ijcci2026', kicker: '18th International Conference', title: 'ECTA 2026', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'none', seed: 6, logoBox: {card: {width: '440px', height: '430px', top: '90px', right: '40px'}, wide: {width: '320px', height: '180px', top: '10px'}}, logos: ['ecta.svg']},
+    explains2024: {conf: 'ijcci2024', kicker: '1st International Conference', title: 'EXPLAINS 2024', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'none', seed: 31, logoBox: {card: {width: '440px', height: '430px', top: '90px', right: '40px'}, wide: {width: '320px', height: '180px', top: '10px'}}, logos: ['explains.svg']},
+    explains2025: {conf: 'ijcci2025', kicker: '2nd International Conference', title: 'EXPLAINS 2025', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'none', seed: 32, logoBox: {card: {width: '440px', height: '430px', top: '90px', right: '40px'}, wide: {width: '320px', height: '180px', top: '10px'}}, logos: ['explains.svg']},
+    explains2026: {conf: 'ijcci2026', kicker: '3rd International Conference', title: 'EXPLAINS 2026', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'none', seed: 33, logoBox: {card: {width: '440px', height: '430px', top: '90px', right: '40px'}, wide: {width: '320px', height: '180px', top: '10px'}}, logos: ['explains.svg']},
+    agentics2026: {conf: 'ijcci2026', kicker: '2nd International Conference', title: 'AGENTICS 2026', sub: 'Agentic and Generative Techniques\nin Intelligent Computational Systems', motif: 'none', seed: 34, logoBox: {card: {width: '440px', height: '430px', top: '90px', right: '40px'}, wide: {width: '320px', height: '180px', top: '10px'}}, logos: ['agentics.svg']},
     ijcci2027: {conf: 'ijcci2027', kicker: '19th Joint Conference', title: 'IJCCI 2027', sub: 'International Joint Conference\non Computational Intelligence', motif: 'fuzzy', seed: 19,
       logos: [tag('ECTA', 24), tag('EXPLAINS', 24), tag('AGENTICS', 24), tag('NCTA', 24, false), tag('FCTA', 24, false)],
       tagsInText: true, logoBox: {wide: {width: 'auto', height: 'auto', top: '40px', right: '34px', flexWrap: 'nowrap'}}},

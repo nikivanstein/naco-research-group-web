@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380">
+  <!-- EXPLAINS: a network whose prediction is traced back to the input features that matter -->
+  <defs><linearGradient id="h" x1="0" x2="1"><stop offset="0" stop-color="#e8632b"/><stop offset="1" stop-color="#e4a51c"/></linearGradient></defs>
+  <!-- input feature grid (heat map) -->
+  <g transform="translate(20 70)">
+    <rect x="-8" y="-8" width="156" height="256" rx="10" fill="#fff" fill-opacity=".7" stroke="#cfd9e6"/>
+  </g>
+  <!-- edges: relevant paths highlighted -->
+  <g stroke="#8aa0c2" stroke-opacity=".35" stroke-width="1.5">
+    <path d="M168 110L250 120M168 110L250 190M168 110L250 260M168 190L250 120M168 190L250 190M168 190L250 260M168 270L250 120M168 270L250 190M168 270L250 260M250 120L350 190M250 190L350 190M250 260L350 190"/>
+  </g>
+  <g stroke="url(#h)" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M168 110L250 120L350 190"/><path d="M168 190L250 120"/>
+  </g>
+  <g fill="#0a7f8c"><circle cx="168" cy="110" r="12"/><circle cx="168" cy="190" r="12"/><circle cx="168" cy="270" r="12" fill="#8aa0c2"/>
+    <circle cx="250" cy="120" r="14"/><circle cx="250" cy="190" r="14" fill="#8aa0c2"/><circle cx="250" cy="260" r="14" fill="#8aa0c2"/></g>
+  <circle cx="350" cy="190" r="22" fill="#123e7a"/>
+  <path d="M340 190l7 8 14-16" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- magnifier on the important features -->
+  <g transform="translate(62 116)">
+    <circle r="44" fill="none" stroke="#123e7a" stroke-width="7"/>
+    <path d="M31 31L62 62" stroke="#123e7a" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <!-- heat map cells written out (8 x 6): value 0..1 -->
+  <g transform="translate(20 70)">
+    <g>
+      <rect x="0" y="0" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".15"/><rect x="24" y="0" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".3"/><rect x="48" y="0" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".55"/><rect x="72" y="0" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".35"/><rect x="96" y="0" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".15"/><rect x="120" y="0" width="20" height="38" rx="3" fill="#5b7bab" fill-opacity=".1"/>
+      <rect x="0" y="40" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".35"/><rect x="24" y="40" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".85"/><rect x="48" y="40" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".95"/><rect x="72" y="40" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".6"/><rect x="96" y="40" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".2"/><rect x="120" y="40" width="20" height="38" rx="3" fill="#5b7bab" fill-opacity=".12"/>
+      <rect x="0" y="80" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".25"/><rect x="24" y="80" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".7"/><rect x="48" y="80" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".8"/><rect x="72" y="80" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".45"/><rect x="96" y="80" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".25"/><rect x="120" y="80" width="20" height="38" rx="3" fill="#5b7bab" fill-opacity=".15"/>
+      <rect x="0" y="120" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".12"/><rect x="24" y="120" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".2"/><rect x="48" y="120" width="22" height="38" rx="3" fill="#e8632b" fill-opacity=".25"/><rect x="72" y="120" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".2"/><rect x="96" y="120" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".3"/><rect x="120" y="120" width="20" height="38" rx="3" fill="#5b7bab" fill-opacity=".2"/>
+      <rect x="0" y="160" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".1"/><rect x="24" y="160" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".15"/><rect x="48" y="160" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".2"/><rect x="72" y="160" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".3"/><rect x="96" y="160" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".35"/><rect x="120" y="160" width="20" height="38" rx="3" fill="#5b7bab" fill-opacity=".25"/>
+      <rect x="0" y="200" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".1"/><rect x="24" y="200" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".1"/><rect x="48" y="200" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".15"/><rect x="72" y="200" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".2"/><rect x="96" y="200" width="22" height="38" rx="3" fill="#5b7bab" fill-opacity=".25"/><rect x="120" y="200" width="20" height="38" rx="3" fill="#5b7bab" fill-opacity=".2"/>
+    </g>
+  </g>
+</svg>

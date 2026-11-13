@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380">
+  <!-- AGENTICS: an agent in a loop of plan, act with tools, observe -->
+  <defs><marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0a7f8c"/></marker></defs>
+  <circle cx="210" cy="190" r="150" fill="none" stroke="#0a7f8c" stroke-opacity=".18" stroke-width="2" stroke-dasharray="4 8"/>
+  <!-- loop arrows between tools -->
+  <g fill="none" stroke="#0a7f8c" stroke-width="3" stroke-linecap="round" marker-end="url(#m)">
+    <path d="M250 62 A150 150 0 0 1 338 128"/>
+    <path d="M352 236 A150 150 0 0 1 270 326"/>
+    <path d="M150 326 A150 150 0 0 1 68 236"/>
+    <path d="M82 128 A150 150 0 0 1 170 62"/>
+  </g>
+  <!-- spokes -->
+  <g stroke="#8aa0c2" stroke-width="2" stroke-dasharray="3 5"><path d="M210 190L210 45M210 190L360 190M210 190L210 340M210 190L60 190"/></g>
+  <!-- tools -->
+  <g>
+    <rect x="178" y="14" width="64" height="64" rx="14" fill="#fff" stroke="#cfd9e6" stroke-width="2"/>
+    <path d="M200 34l-10 12 10 12M220 34l10 12-10 12" stroke="#123e7a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="328" y="158" width="64" height="64" rx="14" fill="#fff" stroke="#cfd9e6" stroke-width="2"/>
+    <circle cx="355" cy="185" r="12" stroke="#123e7a" stroke-width="5" fill="none"/><path d="M364 194l11 11" stroke="#123e7a" stroke-width="6" stroke-linecap="round"/>
+    <rect x="178" y="308" width="64" height="64" rx="14" fill="#fff" stroke="#cfd9e6" stroke-width="2"/>
+    <path d="M192 357v-10M204 357v-20M216 357v-14M228 357v-26" stroke="#e8632b" stroke-width="6" stroke-linecap="round"/>
+    <rect x="28" y="158" width="64" height="64" rx="14" fill="#fff" stroke="#cfd9e6" stroke-width="2"/>
+    <path d="M46 176h28M46 188h28M46 200h18" stroke="#123e7a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- agent -->
+  <rect x="150" y="130" width="120" height="120" rx="28" fill="#0a7f8c"/>
+  <rect x="172" y="160" width="76" height="52" rx="14" fill="#fff" fill-opacity=".95"/>
+  <circle cx="194" cy="186" r="7" fill="#123e7a"/><circle cx="226" cy="186" r="7" fill="#123e7a"/>
+  <path d="M210 130v-14" stroke="#0a7f8c" stroke-width="5" stroke-linecap="round"/><circle cx="210" cy="112" r="7" fill="#e4a51c"/>
+  <path d="M268 132l6-14 6 14 14 6-14 6-6 14-6-14-14-6z" fill="#e4a51c"/>
+</svg>
