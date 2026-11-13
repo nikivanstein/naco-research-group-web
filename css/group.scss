@@ -406,6 +406,35 @@ svg {
 .event-card {
     margin-bottom: 1rem;
 }
+
+/* Proposed events that have not been accepted yet (front matter: pending: true) */
+.event-pending .card-body {
+    position: relative;
+}
+.event-pending img {
+    opacity: 0.85;
+}
+.pending-badge {
+    background: #f0ad4e;
+    color: #3b2a00;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 0.35em 0.6em;
+}
+.event-pending .pending-badge {
+    position: absolute;
+    top: 1.75rem;
+    right: 1.75rem;
+    z-index: 2;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.pending-notice {
+    border-left: 4px solid #f0ad4e;
+    background: #fff8ec;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 1.25rem;
+    .pending-badge { margin-right: 0.4rem; }
+}
 /* "See all" link under a trimmed homepage section */
 .section-more {
     margin-top: 0.75rem;

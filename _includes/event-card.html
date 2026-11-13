@@ -7,8 +7,11 @@
     {% capture group-url %}{{site.base}}{{group.url}}{% endcapture %}
 {% endif %}
 
-<div class="card group-card">
+<div class="card group-card{% if group.pending %} event-pending{% endif %}">
     <div class="card-body">
+        {% if group.pending %}
+            <span class="badge pending-badge" title="Proposal submitted, not yet accepted">Pending acceptance</span>
+        {% endif %}
         {% if group.image %}
             {% assign imgurl = group.image %}
             {% capture init %}{{ group.image | slice: 0,1 }}{% endcapture %}

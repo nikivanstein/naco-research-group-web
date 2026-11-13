@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"><link rel="stylesheet" href="gecco.css">
+<style>.title{top:220px;font-size:62px;line-height:1.02;letter-spacing:-1px;width:700px}.sub{top:372px;font-size:25px;line-height:1.35;width:640px}
+.ed{position:absolute;left:62px;top:188px;font-size:20px;font-weight:700;letter-spacing:2px;color:#e4a51c;text-transform:uppercase}</style></head><body>
+<svg class="bg" width="1200" height="628" id="s"></svg>
+<div class="conf"><div class="n"><span>GECCO</span> 2027</div><div class="d">12 – 16 July · Kraków, Poland</div></div>
+<div class="ed">Tutorial</div>
+<div class="title">LLMs for<br>Metaheuristic Design</div>
+<div class="sub">From Evolutionary Program Search to Agentic<br>Algorithm Discovery: Tools, Benchmarking,<br>Explainability and Open Challenges</div>
+<img class="logo" src="gecco2027-logo.png">
+<div class="tf"><b>EASE</b> · <b>LLaMEA</b> · <b>BLADE</b></div>
+<script>
+let seed=5;const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const s=document.getElementById('s'),NS='http://www.w3.org/2000/svg';
+const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e};
+// code-evolution tree behind the logo
+const N=[[760,560,0]];for(let i=1;i<40;i++){const p=N[Math.floor(r()*Math.min(i,i<8?i:12+i/2))%i];const n=[p[0]+(r()-.5)*150,p[1]-30-r()*45,p[2]+1];if(n[1]<30)n[1]=30+r()*40;n[0]=Math.max(640,Math.min(1170,n[0]));N.push(n);
+ el('path',{d:`M${p[0]} ${p[1]} C ${p[0]} ${(p[1]+n[1])/2}, ${n[0]} ${(p[1]+n[1])/2}, ${n[0]} ${n[1]}`,fill:'none',stroke:'#3d5a87','stroke-opacity':.28,'stroke-width':1.3})}
+N.forEach((n,i)=>el('circle',{cx:n[0],cy:n[1],r:3+r()*6,fill:i%5==0?'#e30a2b':(i%3==0?'#e4a51c':'#5b7bab'),'fill-opacity':.55}));
+// code lines (LLM output)
+for(let i=0;i<9;i++)el('rect',{x:470+(i%3)*14,y:500+i*11,width:60+r()*120,height:5,rx:2.5,fill:'#8aa0c2','fill-opacity':.35});
+</script></body></html>

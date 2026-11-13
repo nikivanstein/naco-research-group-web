@@ -2,6 +2,13 @@
 layout: default
 ---
 
+{% if page.pending %}
+<div class="pending-notice">
+    <span class="badge pending-badge">Pending acceptance</span>
+    This event has been proposed and is awaiting acceptance by the conference organisers. Details may change.
+</div>
+{% endif %}
+
 {{ content }}
 
 <h2> Organizers: </h2>
