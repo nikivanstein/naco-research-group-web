@@ -2,12 +2,8 @@
 // conferences: host conference shown in the top-left line and its logo.
 // events: one entry per _events/*.md file; the key is the output file name,
 //   <key>.png (card, 1200x628) and <key>-wide.png (1180x200).
-const ball = (name, c, d, size) => ({ball: name, c, d, size});
-const BALLS = {
-  ECTA: ['#c9393f', '#7a1418'], NCTA: ['#3f9a46', '#1d5a22'], FCTA: ['#c4a429', '#7d6510'],
-  EXPLAINS: ['#6d6d6d', '#2f2f2f'], AGENTICS: ['#7a4a2a', '#3c2010'],
-};
-const b = (name, size) => ball(name, BALLS[name][0], BALLS[name][1], size);
+// IJCCI conferences are shown as flat tags: filled = (co-)chaired by us, outlined = other.
+const tag = (name, size, on = true) => ({tag: name, size, on});
 const GENAI4EC = 'Supported by the IEEE CIS Task Force <b>GenAI4EC</b>';
 
 var BANNERS = {
@@ -60,16 +56,16 @@ var BANNERS = {
     foga2025: {conf: 'foga2025', kicker: '18th Conference', title: 'FOGA 2025', sub: 'Foundations of Genetic Algorithms', motif: 'scatter', seed: 17},
 
     // IJCCI conferences
-    ecta2024: {conf: 'ijcci2024', kicker: '16th International Conference', title: 'ECTA 2024', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', logos: [b('ECTA', 260)]},
-    ecta2025: {conf: 'ijcci2025', kicker: '17th International Conference', title: 'ECTA 2025', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', seed: 4, logos: [b('ECTA', 260)]},
-    ecta2026: {conf: 'ijcci2026', kicker: '18th International Conference', title: 'ECTA 2026', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', seed: 6, logos: [b('ECTA', 260)]},
-    explains2024: {conf: 'ijcci2024', kicker: '1st International Conference', title: 'EXPLAINS 2024', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 31, logos: [b('EXPLAINS', 260)]},
-    explains2025: {conf: 'ijcci2025', kicker: '2nd International Conference', title: 'EXPLAINS 2025', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 32, logos: [b('EXPLAINS', 260)]},
-    explains2026: {conf: 'ijcci2026', kicker: '3rd International Conference', title: 'EXPLAINS 2026', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 33, logos: [b('EXPLAINS', 260)]},
-    agentics2026: {conf: 'ijcci2026', kicker: '2nd International Conference', title: 'AGENTICS 2026', sub: 'Agentic and Generative Techniques\nin Intelligent Computational Systems', motif: 'network', seed: 34, logos: [b('AGENTICS', 260)]},
+    ecta2024: {conf: 'ijcci2024', kicker: '16th International Conference', title: 'ECTA 2024', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', logos: [tag('ECTA', 64)]},
+    ecta2025: {conf: 'ijcci2025', kicker: '17th International Conference', title: 'ECTA 2025', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', seed: 4, logos: [tag('ECTA', 64)]},
+    ecta2026: {conf: 'ijcci2026', kicker: '18th International Conference', title: 'ECTA 2026', sub: 'Evolutionary Computation\nTheory and Applications', motif: 'helix', seed: 6, logos: [tag('ECTA', 64)]},
+    explains2024: {conf: 'ijcci2024', kicker: '1st International Conference', title: 'EXPLAINS 2024', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 31, logos: [tag('EXPLAINS', 64)]},
+    explains2025: {conf: 'ijcci2025', kicker: '2nd International Conference', title: 'EXPLAINS 2025', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 32, logos: [tag('EXPLAINS', 64)]},
+    explains2026: {conf: 'ijcci2026', kicker: '3rd International Conference', title: 'EXPLAINS 2026', sub: 'Explainable AI for Neural\nand Symbolic Methods', motif: 'network', seed: 33, logos: [tag('EXPLAINS', 64)]},
+    agentics2026: {conf: 'ijcci2026', kicker: '2nd International Conference', title: 'AGENTICS 2026', sub: 'Agentic and Generative Techniques\nin Intelligent Computational Systems', motif: 'network', seed: 34, logos: [tag('AGENTICS', 64)]},
     ijcci2027: {conf: 'ijcci2027', kicker: '19th Joint Conference', title: 'IJCCI 2027', sub: 'International Joint Conference\non Computational Intelligence', motif: 'fuzzy', seed: 19,
-      logos: [b('ECTA', 150), b('EXPLAINS', 150), b('AGENTICS', 150), b('NCTA', 110), b('FCTA', 110)],
-      logoBox: {card: {flexWrap: 'wrap', width: '480px', right: '40px', gap: '14px 18px'}, wide: {width: '360px', right: '24px'}}},
+      logos: [tag('ECTA', 24), tag('EXPLAINS', 24), tag('AGENTICS', 24), tag('NCTA', 24, false), tag('FCTA', 24, false)],
+      tagsInText: true, logoBox: {wide: {width: 'auto', height: 'auto', top: '40px', right: '34px', flexWrap: 'nowrap'}}},
   },
 };
 if (typeof module !== 'undefined') module.exports = BANNERS;

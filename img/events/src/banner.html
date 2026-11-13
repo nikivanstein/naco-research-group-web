@@ -23,10 +23,9 @@ svg.bg{position:absolute;inset:0}
 .logos img{display:block;max-width:100%;max-height:100%;object-fit:contain}
 .note{position:absolute;color:#6b7a96;letter-spacing:.3px;text-align:right}
 .note b{color:#123e7a}
-/* INSTICC-style conference balls, drawn in CSS so they stay sharp */
-.ball{flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;letter-spacing:.2px;
-  background:radial-gradient(circle at 50% 28%,rgba(255,255,255,.45) 0,rgba(255,255,255,0) 45%),radial-gradient(circle at 50% 60%,var(--c) 0,var(--c) 55%,var(--d) 100%);
-  box-shadow:0 6px 16px rgba(20,30,60,.22);text-shadow:0 1px 2px rgba(0,0,0,.35)}
+/* IJCCI conference tags: flat, rounded corners */
+.tag{flex:none;border:3px solid #0a7f8c;background:#0a7f8c;color:#fff;font-weight:700;letter-spacing:.04em;line-height:1;border-radius:.28em;padding:.42em .6em .36em}
+.tag.off{background:rgba(255,255,255,.6);border-color:#b8c6dc;color:#4a5875}
 
 /* card layout */
 .card .left{position:absolute;left:60px;top:48px;bottom:44px;width:var(--textw,640px);display:flex;flex-direction:column}
@@ -74,14 +73,15 @@ if(size=='card'){$('kicker').textContent=ev.kicker;$('kw').remove();$('main').qu
 else{$('kw').textContent=ev.kicker;$('kicker').remove();$('when').textContent=[C.dates,C.place].filter(Boolean).join(' · ')}
 if(ev.note)$('note').innerHTML=ev.note;
 
-// logos: image files or INSTICC balls
+// logos: image files or IJCCI conference tags
 const logos=ev.logos||C.logos||[], box=$('logos');
 for(const l of logos){
-  if(l.ball){const b=document.createElement('div');b.className='ball';const d=(size=='card'?l.size:l.size*0.42);
-    b.style.cssText=`width:${d}px;height:${d}px;font-size:${d*(l.ball.length>5?0.15:0.22)}px;--c:${l.c};--d:${l.d}`;b.textContent=l.ball;box.appendChild(b)}
+  if(l.tag){const b=document.createElement('div');b.className='tag'+(l.on?'':' off');
+    b.style.fontSize=(size=='card'?l.size:l.size*(l.size>40?0.6:0.66))+'px';if(size=='wide')b.style.borderWidth='2px';b.textContent=l.tag;box.appendChild(b)}
   else{const i=document.createElement('img');i.src='logos/'+l;box.appendChild(i)}
 }
-if(logos.length&&logos[0].ball&&size=='wide')box.style.gap='8px';
+if(logos.length&&logos[0].tag&&size=='wide')box.style.gap='8px';
+if(ev.tagsInText&&size=='card'){box.style.cssText='position:static;justify-content:flex-start;gap:12px;margin-top:22px;width:auto;height:auto';$('main').appendChild(box)}
 const lb=(ev.logoBox||C.logoBox||{})[size]; if(lb)Object.assign(box.style,lb);
 
 // fit the title: card may wrap to two lines, wide stays on one line
@@ -118,7 +118,9 @@ const M={
    el('rect',{x:R.x,y:R.y,width:R.w,height:R.h,fill:'none',stroke:'#8aa0c2','stroke-opacity':.5})},
  fuzzy(){const b=R.y+R.h-(size=='card'?40:10),h=size=='card'?150:80;[[.12,.08,A],[.35,.1,'#0a7f8c'],[.58,.09,B],[.8,.08,G]].forEach(([m,w,c])=>{let d='';for(let x=R.x;x<=R.x+R.w;x+=4){const z=(x-R.x)/R.w;d+=(x==R.x?'M':'L')+x+' '+(b-h*Math.exp(-(((z-m)/w)**2)))}el('path',{d,fill:'none',stroke:c,'stroke-opacity':.45,'stroke-width':2.5})});
    el('line',{x1:R.x,y1:b+1,x2:R.x+R.w,y2:b+1,stroke:'#8aa0c2','stroke-opacity':.6});
-   for(let i=0;i<40;i++){const t=r();el('circle',{cx:R.x+R.w-t*R.w*.7,cy:R.y+R.h*.25+(r()-.5)*R.h*.3*t,r:2+3*(1-t),fill:B,'fill-opacity':.2+.4*(1-t)})}}
+   if(size=='card'){const L=[[4,760],[6,870],[6,980],[3,1090]],P=L.map(([n,x])=>Array.from({length:n},(_,i)=>[x,70+(i+.5)*(290/n)]));
+     for(let l=0;l<P.length-1;l++)P[l].forEach(a=>P[l+1].forEach(c=>el('line',{x1:a[0],y1:a[1],x2:c[0],y2:c[1],stroke:'#3d5a87','stroke-opacity':.1+r()*.22,'stroke-width':1.1})));
+     P.flat().forEach((n,i)=>el('circle',{cx:n[0],cy:n[1],r:9,fill:i%7==3?'#e8632b':'#0a7f8c','fill-opacity':.75}))}}
 };
 (M[ev.motif]||M.network)();
 // population dots, bottom left of the card (shared detail of all banners)
