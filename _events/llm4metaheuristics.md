@@ -10,7 +10,7 @@ description: |
 
 people:
   - stein
-  - baeck
+  - back
 
 layout: event
 eventdate: 2026-07-13

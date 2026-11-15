@@ -158,10 +158,31 @@ crawlers do not resolve relative paths.
   "eventStatus": "https://schema.org/EventScheduled",
   "url": {{ canonical_url | jsonify }},
   "image": {{ seo_image | jsonify }},
+  {%- comment -%}
+  Registration goes through the host conference, so the offer points at
+  `links.registration` or the event website. A price is only given when the
+  front matter sets `price` (and optionally `currency`, default EUR).
+  {%- endcomment -%}
+  {%- assign seo_today = site.time | date: "%Y-%m-%d" -%}
+  {%- assign event_end = page.enddate | default: page.eventdate | date: "%Y-%m-%d" -%}
+  {%- assign offer_url = page.links.registration | default: page.links.website | default: canonical_url %}
+  "offers": {
+    "@type": "Offer",
+    "url": {{ offer_url | jsonify }}
+    {%- if page.price != nil %}, "price": {{ page.price | jsonify }}, "priceCurrency": {{ page.currency | default: "EUR" | jsonify }}{% endif -%}
+    {%- unless page.pending or event_end < seo_today %}, "availability": "https://schema.org/InStock"{% endunless %}
+  },
   "organizer": [
     {"@id": {{ org_id | jsonify }}}
     {%- for key in page.people -%}
       ,{% include seo-person.html key=key %}
+    {%- endfor -%}
+  ],
+  "performer": [
+    {%- for key in page.people -%}
+      {% include seo-person.html key=key %}{% unless forloop.last %},{% endunless %}
+    {%- else -%}
+      {"@id": {{ org_id | jsonify }}}
     {%- endfor -%}
   ]
 }
