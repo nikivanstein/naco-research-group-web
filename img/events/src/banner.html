@@ -26,6 +26,12 @@ svg.bg{position:absolute;inset:0}
 /* IJCCI conference tags: flat, rounded corners */
 .tag{flex:none;border:3px solid #0a7f8c;background:#0a7f8c;color:#fff;font-weight:700;letter-spacing:.04em;line-height:1;border-radius:.28em;padding:.42em .6em .36em}
 .tag.off{background:rgba(255,255,255,.6);border-color:#b8c6dc;color:#4a5875}
+/* event tags (e.g. conference tracks we chair), in the conference colour */
+.tags{display:flex;flex-wrap:wrap;gap:12px}
+.tags .tag{border-color:var(--accent);background:var(--accent)}
+.card .tags{margin-top:8px}
+.wide .tags{gap:8px;flex-wrap:nowrap}
+.wide .tags .tag{border-width:2px}
 
 /* card layout */
 .card .left{position:absolute;left:60px;top:48px;bottom:44px;width:var(--textw,640px);display:flex;flex-direction:column}
@@ -72,6 +78,10 @@ $('sub').innerHTML=(size=='wide'&&ev.subWide!==undefined?ev.subWide:ev.sub||'').
 if(size=='card'){$('kicker').textContent=ev.kicker;$('kw').remove();$('main').querySelector('.row').style.cssText='display:block';$('sub').style.marginTop='14px'}
 else{$('kw').textContent=ev.kicker;$('kicker').remove();$('when').textContent=[C.dates,C.place].filter(Boolean).join(' · ')}
 if(ev.note)$('note').innerHTML=ev.note;
+// tags: [tag(name, size)] shown under the subtitle (card) or after the title (wide)
+if(ev.tags){const tb=document.createElement('div');tb.className='tags';
+  for(const l of ev.tags){const b=document.createElement('div');b.className='tag';b.style.fontSize=(size=='card'?l.size:l.size*0.66)+'px';b.textContent=l.tag;tb.appendChild(b)}
+  if(size=='card')$('main').appendChild(tb);else $('main').querySelector('.row').appendChild(tb)}
 
 // logos: image files or IJCCI conference tags
 const logos=ev.logos||C.logos||[], box=$('logos');
@@ -88,7 +98,8 @@ const lb=(ev.logoBox||C.logoBox||{})[size]; if(lb)Object.assign(box.style,lb);
 const t=$('title'), maxW=size=='card'?(ev.textw||640):(ev.titleW||700);
 let f=size=='card'?(ev.titleSize||112):58;t.style.fontSize=f+'px';
 if(size=='card'){t.style.maxWidth=maxW+'px';while((t.scrollWidth>maxW||t.offsetHeight>f*1.05*2+2)&&f>40){f-=2;t.style.fontSize=f+'px'}}
-else{const avail=()=>t.offsetWidth+($('sub').offsetWidth?$('sub').offsetWidth+22:0);while(avail()>maxW&&f>30){f-=2;t.style.fontSize=f+'px'}}
+else{const tw=document.querySelector('.tags')?document.querySelector('.tags').offsetWidth+22:0;
+  const avail=()=>t.offsetWidth+($('sub').offsetWidth?$('sub').offsetWidth+22:0)+tw;while(avail()>maxW&&f>30){f-=2;t.style.fontSize=f+'px'}}
 if(ev.textw)document.body.style.setProperty('--textw',ev.textw+'px');
 
 // background motif, drawn in the area around the logo
