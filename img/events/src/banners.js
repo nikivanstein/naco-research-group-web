@@ -39,11 +39,12 @@ var BANNERS = {
     llmfwec2027: {conf: 'gecco2027', kicker: '3rd Workshop', title: 'LLMfwEC', sub: 'Large Language Models for and with\nEvolutionary Computation', motif: 'helix', seed: 11, note: GENAI4EC},
     aaboh2025: {conf: 'gecco2025', kicker: '5th Workshop', title: 'AABOH', sub: 'Analysing Algorithmic Behaviour\nof Optimisation Heuristics', motif: 'curves'},
     aaboh2026: {conf: 'gecco2026', kicker: '6th Workshop', title: 'AABOH', sub: 'Analysing Algorithmic Behaviour\nof Optimisation Heuristics', motif: 'curves', seed: 9},
+    aaboh2027: {conf: 'gecco2027', kicker: '7th Workshop', title: 'AABOH', sub: 'Analysing Algorithmic Behaviour\nof Optimisation Heuristics', motif: 'curves', seed: 17},
     'benchmarking-gecco2025': {conf: 'gecco2025', kicker: 'Tutorial', title: 'Benchmarking Optimization Algorithms', sub: 'Single- and multi-objective: how to make\nyour experimental data more valuable', subWide: '', motif: 'curves', seed: 4},
     'sb-gecco2025': {conf: 'gecco2025', kicker: 'Tutorial', title: 'Structural Bias', sub: 'in Iterative Optimisation Heuristics', motif: 'scatter'},
     'llmheuristics-gecco2026': {conf: 'gecco2026', kicker: 'Tutorial', title: 'LLMs for Metaheuristic Design', sub: 'Large Language Models and\nEvolutionary Computation', subWide: '', motif: 'tree'},
     gecco2027: {conf: 'gecco2027', kicker: 'Track chairs', title: 'GECCO 2027', sub: 'Genetic and Evolutionary\nComputation Conference', subWide: '', motif: 'curves', seed: 13,
-      tags: [tag('ECOM', 30), tag('L4EC', 30)]},
+      tags: [tag('ECOM', 30), tag('L4EC', 30), tag('HOP', 30)]},
     'llmmeta-gecco2027': {conf: 'gecco2027', kicker: 'Tutorial', title: 'LLMs for Metaheuristic Design', sub: 'From Evolutionary Program Search to Agentic\nAlgorithm Discovery: Tools, Benchmarking,\nExplainability and Open Challenges', subWide: '', motif: 'tree', seed: 5, note: '<b>EASE</b> · <b>LLaMEA</b> · <b>BLADE</b>'},
 
     // IEEE CAI, WCCI, CEC

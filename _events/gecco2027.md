@@ -1,16 +1,17 @@
 ---
-title: "GECCO 2027: ECOM and L4EC tracks"
+title: "GECCO 2027: ECOM, L4EC and HOP tracks"
 status: active
 type: conference
 
 notitle: false
 
 description: |
-  Genetic and Evolutionary Computation Conference 2027, where we chair the ECOM and L4EC tracks
+  Genetic and Evolutionary Computation Conference 2027, where we chair the ECOM, L4EC and Hot Off the Press tracks
 
 people:
   - stein
   - raponi
+  - kononova
 
 layout: event
 eventdate: 2027-07-12
@@ -29,10 +30,10 @@ dates:
   - {label: "Camera ready", date: 2027-04-09}
   - {label: "Presenter mandatory registration", date: 2027-05-10}
   - {label: "Conference", date: 2027-07-12}
-last-updated: 2026-11-23
+last-updated: 2026-11-24
 ---
 
-We are happy to be part of **[GECCO 2027](https://gecco-2027.sigevo.org/)**, the Genetic and Evolutionary Computation Conference, held 12–16 July 2027 in Kraków, Poland. Members of the Natural Computing Cluster chair two of its tracks: **ECOM** and **L4EC**.
+We are happy to be part of **[GECCO 2027](https://gecco-2027.sigevo.org/)**, the Genetic and Evolutionary Computation Conference, held 12–16 July 2027 in Kraków, Poland. Members of the Natural Computing Cluster chair three of its tracks: **ECOM**, **L4EC** and **Hot Off the Press (HOP)**.
 
 ## Tracks we chair
 
@@ -68,6 +69,12 @@ Topics include:
 - Surrogate-based and surrogate-assisted optimisation of expensive fitness functions, including multi-fidelity approaches
 - Feature-based characterisation of problems, such as exploratory and fitness landscape analysis
 
+### Hot Off the Press (HOP)
+
+Track chair: **Anna V. Kononova** (LIACS, Leiden University).
+
+The Hot Off the Press track gives authors of recent work in evolutionary computation that has already been published or accepted at another venue, such as a journal or another conference, the chance to present it to the GECCO audience. It is the one GECCO track that accepts work already published elsewhere, so it is a good way to bring strong results from journals and other communities to GECCO.
+
 ## Also at GECCO 2027
 
-We have also proposed the [LLMfwEC workshop](/events/LLMfwEC2027/) and the [LLMs for Metaheuristic Design tutorial](/events/llmmetaGECCO2027/) at GECCO 2027.
+We have also proposed the [LLMfwEC workshop](/events/LLMfwEC2027/), the [AABOH workshop](/events/AABOH2027/) and the [LLMs for Metaheuristic Design tutorial](/events/llmmetaGECCO2027/) at GECCO 2027.
