@@ -101,6 +101,7 @@ optional awards and publications, and up to three related projects.
                             {% when "news" %}{% assign label = "News" %}
                             {% when "paper" %}{% assign label = "Paper" %}
                             {% when "nwo" %}{% assign label = "NWO project page" %}
+                            {% when "leiden" %}{% assign label = "Leiden University page" %}
                             {% when "blade" %}{% assign label = "BLADE benchmark" %}
                             {% else %}{% assign label = link[0] | capitalize %}
                         {% endcase %}

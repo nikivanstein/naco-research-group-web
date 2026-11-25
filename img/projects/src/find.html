@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- FIND project card and banner in the style of foundation4industry.nl (logo: find-logo.png). -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{overflow:hidden}
+body{background:#fafafa;font-family:"Helvetica Neue",Arial,sans-serif;position:relative}
+.bar{position:absolute;left:0;right:0;top:0;background:linear-gradient(90deg,#6b8fd0,#c0398c 55%,#f1a85a)}
+.k{position:absolute;color:#c0398c;letter-spacing:.06em;text-transform:uppercase}
+.t{position:absolute;color:#1c2333;font-family:Georgia,"Times New Roman",serif;line-height:1.12}
+img{position:absolute}
+</style></head><body>
+<div class="bar" id="bar"></div>
+<div class="k" id="k">Foundation for Industry</div>
+<div class="t" id="t">Large AI models for a resilient high-tech industry</div>
+<img id="logo" src="find-logo.png" alt="">
+<script>
+// ?w=..&h=.. sets the canvas size: card (500x300) or wide banner (1180x200)
+const q=new URLSearchParams(location.search),W=+q.get('w'),H=+q.get('h'),wide=W/H>3;
+document.body.style.width=W+'px';document.body.style.height=H+'px';
+const S=(id,css)=>Object.assign(document.getElementById(id).style,css);
+if(wide){
+  S('bar',{height:'6px'});
+  S('k',{left:'56px',top:'52px',fontSize:'20px'});
+  S('t',{left:'56px',top:'84px',fontSize:'40px',width:'760px'});
+  S('logo',{right:'70px',top:'8px',width:'186px'});
+}else{
+  S('bar',{height:'16px'}); // top ~10px is cropped on the 16:9 project cards
+  S('k',{left:'26px',top:'86px',fontSize:'13px'});
+  S('t',{left:'26px',top:'108px',fontSize:'25px',width:'230px'});
+  S('logo',{right:'12px',top:'34px',width:'238px'});
+}
+</script></body></html>
